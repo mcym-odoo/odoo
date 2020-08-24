@@ -1,0 +1,33 @@
+# -*- coding: utf-8 -*-
+
+from odoo import tools
+from odoo import models, fields, api, _
+from odoo.exceptions import UserError
+
+import logging
+_logger = logging.getLogger(__name__)
+
+
+class PurchaseOrder(models.Model):
+    _inherit = 'purchase.order'
+
+    def button_confirm(self):
+        res = super(PurchaseOrder, self).button_confirm()
+        for po in self:
+            for line in po.order_line:
+                #comprobamos si existe variacion del precio anterior con el actual antes de actualizar el costo
+                costo_anterior = line.product_id.as_last_price_purchase
+                proporcion = line.price_unit - costo_anterior
+                if proporcion > 0:
+                    precio_new = line.product_id.list_price+proporcion
+                    line.product_id.list_price = precio_new
+                    line.product_id.product_tmpl_id.list_price = precio_new
+                    #se actualiza los p;recio en las listas de precios 
+                    items = self.env['product.pricelist.item'].search(['|',('product_tmpl_id','=',line.product_id.product_tmpl_id.id),('product_id','=',line.product_id.id)])
+                    if items:
+                        for value in items:
+                            precio_new_list = value.fixed_price+proporcion
+                            value.update({'fixed_price':precio_new_list})
+
+                line.product_id.as_last_price_purchase = line.price_unit
+        return res
