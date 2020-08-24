@@ -2,7 +2,7 @@
 {
     'name': 'Product Cost Price History',
     
-    'author' : 'Softhealer Technologies',
+    'author' : 'Ahorasoft',
     
     'website': 'https://www.softhealer.com',
     

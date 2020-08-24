@@ -1,4 +1,4 @@
-# © 2018-Today Aktiv Software (http://www.aktivsoftware.com).
+# © 2018-Today Ahorasoft (http://www.Ahorasoft.com).
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 {
     'name': "Customer Sale History",
@@ -15,8 +15,8 @@
         the shopping history of the customer Easily.
     """,
 
-    'author': "Aktiv Software",
-    'website': "http://www.aktivsoftware.com",
+    'author': "Ahorasoft",
+    'website': "http://www.ahorasoft.com",
     'license': "AGPL-3",
 
     'category': 'Sales',

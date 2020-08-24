@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+as_aprobe_sale,as_aprobe_sale.report,model_as_aprobe_sale,,1,1,1,1
