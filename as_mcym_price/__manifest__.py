@@ -10,7 +10,7 @@ Customizaciones para MCYM
 Custom module for MYCM
     """,
     'category' : "Sale",
-    'depends' : ["purchase","product",'sale','sh_purchase_price_history'],
+    'depends' : ["purchase","product",'sale'],
     'website': 'http://www.ahorasoft.com',
     'data' : [
         'views/as_product_template.xml',
