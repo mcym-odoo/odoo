@@ -10,7 +10,9 @@ Customizaciones para MCYM
 Custom module for MYCM
     """,
     'category' : "Sale",
-    'depends' : ["purchase","product",'sale'],
+    'depends' : [ "base",
+        "sale_management",
+        'product',"purchase",'sale','sales_commission_generic'],
     'website': 'http://www.ahorasoft.com',
     'data' : [
         'views/as_product_template.xml',

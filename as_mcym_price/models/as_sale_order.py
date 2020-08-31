@@ -22,7 +22,7 @@ class SaleOrder(models.Model):
                 if (line.as_margin_porcentaje  < float(margin_minimo)):
                     access= True
             if access:
-                action = self.env.ref('as_mcym_price.action_aprobe_sales_qweb').read()[0]
+                action = self.env.ref('as_mcym_price.action_aprobe_sales_mcym_qweb').read()[0]
                 action.update({
                     'context': {
                         'default_as_sale': self.id,
@@ -30,10 +30,8 @@ class SaleOrder(models.Model):
                     },
                 })
                 return action  
-            elif no_access:
-                raise ValidationError('No se puede confirmar la venta, modifique sus precios')
-        product=[]
         res = super(SaleOrder, self).action_confirm()
+        return res
 
 class SaleOrderLine(models.Model):
     _inherit="sale.order.line"
