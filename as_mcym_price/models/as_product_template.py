@@ -10,6 +10,16 @@ _logger = logging.getLogger(__name__)
 class ProductTemplate(models.Model):
     _inherit = 'product.template'
 
-    as_last_price_purchase = fields.Float(string='Last purchase cost', compute="get_product_supplier_price",store=True)
+    def _get_product_supplier_price(self):
+        for product in self:
+            if  product.as_last_price_purchase <= 0.0:
+                product.as_last_price_purchase = product.standard_price
+                product.as_compute = True
+            else:
+                product.as_compute = False
+
+
+    as_last_price_purchase = fields.Float(string='Last purchase cost', compute='_get_product_supplier_price',store=True)
     as_profit = fields.Float(string='Profit %')
+    as_compute = fields.Boolean(string='Computar costo en cero',compute='_get_product_supplier_price')
    
