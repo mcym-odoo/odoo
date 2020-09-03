@@ -10,6 +10,7 @@
                 <xpath expr="//field[@name='uom_po_id']" position="after">
                     <field name="as_last_price_purchase" />
                     <field name="as_profit" />
+                    <field name="as_compute" invisible="True"/>
 
                 </xpath>
 
