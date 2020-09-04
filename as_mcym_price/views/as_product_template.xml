@@ -17,6 +17,12 @@
             </data>
         </field>
     </record>
-
+    <record id="as_cost_iqual_confirm" model="ir.actions.server">
+        <field name="name">Igualar Costos</field>
+        <field name="model_id" ref="model_product_template"/>
+        <field name="binding_model_id" ref="model_product_template"/>
+        <field name="state">code</field>
+        <field name="code">records._get_product_supplier_price()</field>
+    </record>
   
 </odoo>
