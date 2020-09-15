@@ -18,6 +18,7 @@ class PurchaseOrder(models.Model):
                 #comprobamos si existe variacion del precio anterior con el actual antes de actualizar el costo
                 costo_anterior = line.product_id.as_last_price_purchase
                 proporcion = line.price_unit - costo_anterior
+                costo_mayor = self.get_costo_mayor(line.product_id)
                 if proporcion > 0:
                     precio_new = line.product_id.list_price+proporcion
                     line.product_id.list_price = precio_new
@@ -28,6 +29,12 @@ class PurchaseOrder(models.Model):
                         for value in items:
                             precio_new_list = value.fixed_price+proporcion
                             value.update({'fixed_price':precio_new_list})
-
-                line.product_id.as_last_price_purchase = line.price_unit
+                if line.price_unit > costo_mayor:
+                    line.product_id.as_last_price_purchase = line.price_unit
         return res
+
+    def get_costo_mayor(self,product_id):
+        prices = []
+        for line in product_id.purchase_price_history_line_ids:
+            prices.append(line.purchase_price)
+        return max(prices)
