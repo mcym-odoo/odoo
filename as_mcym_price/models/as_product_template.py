@@ -14,12 +14,14 @@ class ProductTemplate(models.Model):
         for product in self:
             if  product.as_last_price_purchase <= 0.0:
                 product.as_last_price_purchase = product.standard_price
+                product.as_last_price_purchase_condicionado = product.standard_price
                 product.as_compute = True
             else:
                 product.as_compute = False
 
 
     as_last_price_purchase = fields.Float(string='Last purchase cost', default='_get_product_supplier_price',store=True)
+    as_last_price_purchase_condicionado = fields.Float(string='Last purchase cost condicionado',store=True)
     as_profit = fields.Float(string='Profit %')
     as_compute = fields.Boolean(string='Computar costo en cero',compute='_get_product_supplier_price')
    

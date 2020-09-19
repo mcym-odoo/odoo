@@ -16,9 +16,13 @@ class PurchaseOrder(models.Model):
         for po in self:
             for line in po.order_line:
                 #comprobamos si existe variacion del precio anterior con el actual antes de actualizar el costo
-                costo_anterior = line.product_id.as_last_price_purchase
-                proporcion = line.price_unit - costo_anterior
-                costo_mayor = self.get_costo_mayor(line.product_id)
+                price = 0.0
+                costo_mayor = self.get_costo_mayor(line.product_id,line.price_unit)
+                if line.product_id.as_last_price_purchase_condicionado > costo_mayor:
+                    price = line.product_id.as_last_price_purchase_condicionado
+                else:
+                    price = costo_mayor
+                proporcion = line.price_unit - price
                 if proporcion > 0:
                     precio_new = line.product_id.list_price+proporcion
                     line.product_id.list_price = precio_new
@@ -29,12 +33,19 @@ class PurchaseOrder(models.Model):
                         for value in items:
                             precio_new_list = value.fixed_price+proporcion
                             value.update({'fixed_price':precio_new_list})
-                if line.price_unit > costo_mayor:
-                    line.product_id.as_last_price_purchase = line.price_unit
+                line.product_id.as_last_price_purchase = line.price_unit
+                if line.price_unit > line.product_id.as_last_price_purchase_condicionado:
+                    line.product_id.as_last_price_purchase_condicionado = line.price_unit
         return res
 
-    def get_costo_mayor(self,product_id):
+    def get_costo_mayor(self,product_id,price):
         prices = []
+        id_last = product_id.purchase_price_history_line_ids[0].id
         for line in product_id.purchase_price_history_line_ids:
-            prices.append(line.purchase_price)
-        return max(prices)
+            if id_last != line.id:
+                prices.append(line.purchase_price)
+        if prices != []:
+            precio = max(prices)
+        else:
+            precio = 0.0
+        return precio
