@@ -11,6 +11,12 @@
 			<xpath expr="//notebook//page[@name='order_lines']/field[@name='order_line']/tree" position="inside">
 				<field name="as_margin_porcentaje" optional="hide" />
 			</xpath>
+			<xpath expr="//field[@name='payment_term_id']" position="after">
+				<field name="as_aprobe" invisible="1" />
+				<field name="as_password"  password="True" 
+					attrs="{'invisible': [('as_aprobe', '!=', True)],'required': [('as_aprobe', '=', True)]}" />
+			</xpath>
+
 
 		</field>
 	</record>
