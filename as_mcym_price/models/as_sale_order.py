@@ -12,7 +12,7 @@ class SaleOrderLine(models.Model):
     
     as_margin_porcentaje = fields.Float('Margen Porcentaje',compute='get_margin_porcentaje',store=True)
 
-    @api.onchange('price_unit','product_uom_qty')
+    @api.depends('price_unit','product_uom_qty')
     def get_margin_porcentaje(self):
         for sale_line in self:
             if sale_line.price_unit:
@@ -37,33 +37,42 @@ class SaleOrder(models.Model):
     _inherit = "sale.order"
 
     as_aprobe = fields.Boolean(string='Aporbar Venta',default=False,compute='_amount_all_marigin')
-    as_password = fields.Char(string='Contraseña para aprobar Ventas')
+    as_password = fields.Char(string='Contraseña para procesar Ventas')
 
-    @api.depends('order_line.price_unit')
+    @api.depends('order_line.as_margin_porcentaje')
     def _amount_all_marigin(self):
         for order in self:
-            for sale_line in order.order_line:
-                margin_minimo = sale_line.product_id.as_profit
-                if (sale_line.as_margin_porcentaje  < float(margin_minimo)):
-                    order.as_aprobe = True
-                else:
-                    order.as_aprobe = False
-
-    def as_aprobe_sale(self):
-        password_config = self.env['ir.config_parameter'].sudo().get_param('as_sale_pricelist.as_password_ventas1')
-        if self.as_aprobe == True:
-            if self.as_password == password_config:
-                self.update({'as_aprobe':True})
-                return True
+            if order.order_line:
+                for sale_line in order.order_line:
+                    margin_minimo = sale_line.product_id.as_profit
+                    if (sale_line.as_margin_porcentaje  < float(margin_minimo)):
+                        order.as_aprobe = True
+                    else:
+                        order.as_aprobe = False
             else:
-                raise UserError('Contraseña incorrecta, no se puede aprobar la venta')
+                order.as_aprobe = False
+
+    # def as_aprobe_sale(self):
+    #     password_config = self.env['ir.config_parameter'].sudo().get_param('as_sale_pricelist.as_password_ventas1')
+    #     if self.as_aprobe == True:
+    #         if self.as_password == password_config:
+    #             self.update({'as_aprobe':True})
+    #             return True
+    #         else:
+    #             raise UserError('Contraseña incorrecta, no se puede procesar la venta')
 
     @api.model
     def create(self, vals):
         res =super(SaleOrder, self).create(vals)
         if res.as_aprobe == True:
             if res.as_aprobe:
-                self.as_aprobe_sale()
+                password_config = self.env['ir.config_parameter'].sudo().get_param('as_sale_pricelist.as_password_ventas1')
+                if res.as_aprobe == True:
+                    if res.as_password == password_config:
+                        res.update({'as_aprobe':True})
+                        return res
+                    else:
+                        raise UserError('Contraseña incorrecta, no se puede procesar la venta')
                 return res  
         return res
 
@@ -71,7 +80,13 @@ class SaleOrder(models.Model):
         res =super(SaleOrder, self).write(vals)
         if self.as_aprobe == True:
             if self.as_aprobe:
-                self.as_aprobe_sale()
+                password_config = self.env['ir.config_parameter'].sudo().get_param('as_sale_pricelist.as_password_ventas1')
+                if self.as_aprobe == True:
+                    if self.as_password == password_config:
+                        self.update({'as_aprobe':True})
+                        return res
+                    else:
+                        raise UserError('Contraseña incorrecta, no se puede procesar la venta')
                 return res  
         return res
 
