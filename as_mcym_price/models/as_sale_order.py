@@ -69,11 +69,9 @@ class SaleOrder(models.Model):
                 password_config = self.env['ir.config_parameter'].sudo().get_param('as_sale_pricelist.as_password_ventas1')
                 if res.as_aprobe == True:
                     if res.as_password == password_config:
-                        res.update({'as_aprobe':True})
                         return res
                     else:
                         raise UserError('Contraseña incorrecta, no se puede procesar la venta')
-                return res  
         return res
 
     def write(self, vals):
@@ -83,7 +81,6 @@ class SaleOrder(models.Model):
                 password_config = self.env['ir.config_parameter'].sudo().get_param('as_sale_pricelist.as_password_ventas1')
                 if self.as_aprobe == True:
                     if self.as_password == password_config:
-                        self.update({'as_aprobe':True})
                         return res
                     else:
                         raise UserError('Contraseña incorrecta, no se puede procesar la venta')
