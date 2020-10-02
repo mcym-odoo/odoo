@@ -47,11 +47,7 @@ class SaleOrder(models.Model):
                     margin_minimo = sale_line.product_id.as_profit
                     if (sale_line.as_margin_porcentaje  < float(margin_minimo)):
                         order.as_aprobe = True
-                    else:
-                        order.as_aprobe = False
-            else:
-                order.as_aprobe = False
-
+        
     # def as_aprobe_sale(self):
     #     password_config = self.env['ir.config_parameter'].sudo().get_param('as_sale_pricelist.as_password_ventas1')
     #     if self.as_aprobe == True:
