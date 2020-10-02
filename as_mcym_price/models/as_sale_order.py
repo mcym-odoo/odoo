@@ -10,18 +10,20 @@ _logger = logging.getLogger(__name__)
 class SaleOrderLine(models.Model):
     _inherit="sale.order.line"
     
-    as_margin_porcentaje = fields.Float('Margen Porcentaje',compute='get_margin_porcentaje',store=True)
-
     @api.depends('price_unit','product_uom_qty')
     def get_margin_porcentaje(self):
         for sale_line in self:
-            if sale_line.price_unit:
-                costo = sale_line.product_id.as_last_price_purchase
-                price = sale_line.price_unit
-                price_total_unit = price*sale_line.product_uom_qty
-                price_total_cost = costo*sale_line.product_uom_qty
-                if price_total_unit > 0:
-                    sale_line.as_margin_porcentaje = ((price_total_unit-price_total_cost)/price_total_unit)*100
+            if sale_line:
+                if sale_line.price_unit:
+                    costo = sale_line.product_id.as_last_price_purchase
+                    price = sale_line.price_unit
+                    price_total_unit = price*sale_line.product_uom_qty
+                    price_total_cost = costo*sale_line.product_uom_qty
+                    if price_total_unit > 0:
+                        sale_line.as_margin_porcentaje = ((price_total_unit-price_total_cost)/price_total_unit)*100
+    
+    as_margin_porcentaje = fields.Float('Margen Porcentaje',compute='get_margin_porcentaje',store=True)
+
 
 
     # @api.depends('as_margin_porcentaje')
@@ -39,9 +41,10 @@ class SaleOrder(models.Model):
     as_aprobe = fields.Boolean(string='Aporbar Venta',default=False,compute='_amount_all_marigin')
     as_password = fields.Char(string='Contraseña para procesar Ventas')
 
-    @api.depends('order_line.as_margin_porcentaje')
+    @api.depends('order_line.price_unit')
     def _amount_all_marigin(self):
         for order in self:
+            order.as_aprobe = False
             if order.order_line:
                 for sale_line in order.order_line:
                     margin_minimo = sale_line.product_id.as_profit
@@ -67,7 +70,7 @@ class SaleOrder(models.Model):
                     if res.as_password == password_config:
                         return res
                     else:
-                        raise UserError('Contraseña incorrecta, no se puede procesar la venta')
+                        raise UserError('Contraseña incorrecta, no se puede procesar la venta su utilidad esta por debajo de lo permitido')
         return res
 
     def write(self, vals):
