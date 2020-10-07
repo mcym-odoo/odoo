@@ -20,7 +20,7 @@ class ProductTemplate(models.Model):
                 product.as_compute = False
 
 
-    as_last_price_purchase = fields.Float(string='Last purchase cost', default='_get_product_supplier_price',store=True)
+    as_last_price_purchase = fields.Float(string='Last purchase cost',store=True)
     as_last_price_purchase_condicionado = fields.Float(string='Last purchase cost condicionado',store=True)
     as_profit = fields.Float(string='Profit %')
     as_compute = fields.Boolean(string='Computar costo en cero',compute='_get_product_supplier_price')
