@@ -12,11 +12,12 @@ Custom module for MYCM
     'category' : "Sale",
     'depends' : [ "base",
         "sale_management",
-        'product',"purchase",'sale','sales_commission_generic'],
+        'product',"purchase",'sale','sales_commission_generic','l10n_mx_edi'],
     'website': 'http://www.ahorasoft.com',
     'data' : [
         'views/as_product_template.xml',
         'views/as_res_config.xml',
+        'views/as_res_partner.xml',
         'views/sale_order_inherit_view.xml',
         'wizard/as_aprobe_utility.xml',
         'security/ir.model.access.csv',
