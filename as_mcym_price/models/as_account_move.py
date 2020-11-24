@@ -19,3 +19,10 @@ class SaleOrder(models.Model):
         self.l10n_mx_edi_payment_method_id = self.partner_id.l10n_mx_edi_payment_method_id
         self.l10n_mx_edi_usage = self.partner_id.l10n_mx_edi_usage
 
+class SaleAdvancePaymentInv(models.TransientModel):
+    _inherit = "sale.advance.payment.inv"
+
+    def _create_invoice(self, order, so_line, amount):
+        res = super(SaleAdvancePaymentInv,self)._create_invoice(order, so_line, amount)
+        res.write({'l10n_mx_edi_payment_method_id':order.partner_id.l10n_mx_edi_payment_method_id.id,'l10n_mx_edi_usage':order.partner_id.l10n_mx_edi_usage})
+        return res
