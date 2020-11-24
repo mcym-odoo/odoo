@@ -26,6 +26,7 @@ class SaleOrderLine(models.Model):
 
 
 
+
     # @api.depends('as_margin_porcentaje')
     # def get_option_price(self):    
     #     for sale_line in self:
@@ -50,7 +51,13 @@ class SaleOrder(models.Model):
                     margin_minimo = sale_line.product_id.as_profit
                     if (sale_line.as_margin_porcentaje  < float(margin_minimo)):
                         order.as_aprobe = True
-        
+
+    def _prepare_invoice(self):
+        invoice_vals = super(SaleOrder, self)._prepare_invoice()
+        invoice_vals['l10n_mx_edi_payment_method_id'] = self.partner_id.l10n_mx_edi_payment_method_id.id
+        invoice_vals['l10n_mx_edi_usage'] = self.partner_id.l10n_mx_edi_usage
+        return invoice_vals
+
     # def as_aprobe_sale(self):
     #     password_config = self.env['ir.config_parameter'].sudo().get_param('as_sale_pricelist.as_password_ventas1')
     #     if self.as_aprobe == True:
