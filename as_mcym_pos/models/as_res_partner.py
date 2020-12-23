@@ -10,4 +10,4 @@ _logger = logging.getLogger(__name__)
 class SaleOrderLine(models.Model):
     _inherit="res.partner"
 
-    as_medico = fields.Boolean(string='Es médico',default=False)
+    # as_medico = fields.Boolean(string='Es médico',default=False)
