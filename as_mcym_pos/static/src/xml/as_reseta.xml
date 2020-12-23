@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="pos_discount_odoo_template" inherit_id="point_of_sale.template" xml:space="preserve">
+    <t t-name="ResetaLinePopupWidget">
+        <div role="dialog" class="modal-dialog">
+            <div class="popup popup-text" style="width: 70% !important;height: 70% !important; ">
+                <hr />
+                <header class="title">
+                    <t t-esc=" widget.options.title || '' " />
+                </header>
+                <!-- <img src="/as_mcym_pos/static/description/mcym_icono.png" style="width: 100px" /> -->
+                <main style="padding:20px">
+                    <!-- <select class='mi-selector' name='marcas[]' multiple='multiple'>
+				<option>1</option>
+				<option>2</option>
+				</select> -->
+                    <table style="width:100%;">
+                        <tr>
+                            <td style="width:40%">
+                                Folio Receta:
+                                <div class="ui-widget">
+                                    <input type="text" name="folio_receta" id="folio_receta"
+                                        autocomplete='folio_receta' />
+                                </div>
+                            </td>
+                            <td style="width:40%">
+                                <input type="checkbox" name="retener" id="retener" />Retener
+                            </td>
+                            <td style="width:40%">
+                                Folio interna:
+                                <group>
+                                    <input type="text" name="folio_receta_correlativo" id="folio_receta_correlativo"
+                                        t-attf-class="ui-autocomplete-input" autocomplete='class_product'
+                                        width="100px" />
+                                </group>
+                            </td>
+                        </tr>
+                    </table>
+                    <h3 style="color:blue">Datos del Médico</h3>
+                    <hr />
+                    <table style="width:100%;">
+                        <tr>
+                            <td style="width:60%;text-align:left">
+                                Buscar:
+                                <div class="ui-widget">
+                                    <input type="text" name="search_receta" id="search_receta"
+                                        autocomplete='search_receta' />
+                                </div>
+                            </td>
+                            <td style="width:40%">
+                                <div class="button search">
+                                    Buscar
+                                </div>
+                            </td>
+
+                        </tr>
+                    </table>
+                    <div style='overflow: scroll;height:70px;width:100%;"'>
+                    <table id="as_clientes_medicos" >
+                        <tbody class="selecter_id">
+                        </tbody>
+                    </table>
+                    </div>
+                    <hr />
+
+                    <table style="width:100%;text-align:left;padding-left:10px !important">
+                        <tr>
+                            <td style="width:50%">
+                                Cédula:
+                                <div class="form-control">
+                                    <input type="text" name="cedula" id="cedula" autocomplete='cedula' />
+                                </div>
+                            </td>
+
+                            <td style="width:50%">
+                                Nombre:
+                                <group class="form-control">
+                                    <input type="text" name="name_med" id="name_med" class="o_social_twitter_users_autocomplete" />
+                                    <input type="hidden" name="name_med_id" id="name_med_id" class="o_social_twitter_users_autocomplete" />
+                                </group>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                Domicilio:
+                                <div class="form-control">
+                                    <input type="text" name="domicilio" id="domicilio" autocomplete='domicilio' />
+                                </div>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td style="width:50%">
+                                Localidad:
+                                <div class="form-control">
+                                    <input type="text" name="localidad" id="localidad" autocomplete='localidad' />
+                                </div>
+                            </td>
+
+                            <td style="width:50%">
+                                Municipio:
+                                <div class="form-control">
+                                    <input type="text" name="municipio" id="municipio" />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:50%">
+                                Estado:
+                                <div class="form-control">
+                                    <input type="text" name="state" id="state" autocomplete='state' />
+                                </div>
+                            </td>
+
+                            <td style="width:50%">
+                                Pais:
+                                <div class="form-control">
+                                    <input type="text" name="country" id="country" />
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <!-- <t t-if="widget.options.pack_lot_lines">
+                        <t t-set="focus_lot_line" t-value="widget.focus_model || widget.options.pack_lot_lines.get_empty_model()"/>
+                        <t t-foreach='widget.options.pack_lot_lines.models' t-as='lot_line'>
+                            <input type="text" t-att-cid="lot_line.cid"
+                                t-att-value="lot_line.get('lot_name')"
+                                t-att-autofocus="lot_line === focus_lot_line ? 'autofocus': undefined"
+                                class="popup-input packlot-line-input"
+                                placeholder="Serial/Lot Number"/>
+                            <i class="oe_link_icon remove-lot fa fa-trash-o" role="img" aria-label="Remove" title="Remove"></i>
+                        </t>
+                    </t> -->
+                </main>
+                <footer class="footer">
+                    <div class="button confirm">
+                        Guardar
+                    </div>
+                    <div class="button cancel">
+                        Cancel
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </t>
+</templates>

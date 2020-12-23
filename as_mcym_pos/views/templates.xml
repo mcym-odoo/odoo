@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- vim:fdn=3:
+-->
+<odoo>
+    <data>
+
+
+        <template id="assets" inherit_id='point_of_sale.assets' name="Stock Index">&lt;!DOCTYPE html&gt;
+            <xpath expr="//link[@id='pos-stylesheet']" position="after">
+                <link rel="stylesheet" href="/as_mcym_pos/static/src/css/style.css" />
+                <link rel="stylesheet" href="/as_mcym_pos/static/src/css/jquery-ui.css" />
+            </xpath>
+        </template>
+
+        <template id="assets_for_pos_loyalty_odoo" inherit_id="point_of_sale.assets">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/as_mcym_pos/static/src/js/as_product.js"></script>
+                <script type="text/javascript" src="/as_mcym_pos/static/src/js/as_reseta.js"></script>
+                <script type="text/javascript" src="/as_mcym_pos/static/src/js/as_order_line.js"></script>
+            </xpath>
+        </template>
+    </data>
+</odoo>

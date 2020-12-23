@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- vim:fdl=1:
+-->
+<templates id="template" xml:space="preserve">
+
+    <t t-extend="Product" name="ProductStockWidget">
+        <t t-jquery="div.product-img" t-operation="replace">
+            <div class="product-img">
+                <img t-att-src='image_url' alt="Product image" />
+
+                <t t-if="product.as_product_reseta">
+                    <span class="product-qty-low" id="stockqty">
+                        <i style="font-size:20px" class="fa fa-user-md"></i>
+                    </span>
+                </t>
+
+
+                <t t-if="!product.to_weight">
+                    <span class="price-tag">
+                        <t t-esc="widget.format_currency(product.get_price(pricelist, 1),'Product Price')" />
+                    </span>
+                </t>
+                <t t-if="product.to_weight">
+                    <span class="price-tag">
+                        <t
+                            t-esc="widget.format_currency(product.get_price(pricelist, 1),'Product Price')+'/'+widget.pos.units_by_id[product.uom_id[0]].name" />
+                    </span>
+                </t>
+
+            </div>
+        </t>
+    </t>
+    <t t-extend="Orderline">
+        <t t-jquery=".price" t-operation="after">
+            <t t-if="line.get_as_availity_reset()">
+                <span class="boton_reseta" style="float:right">
+                    <button class="boton-tipoOrden2" id="botton_reseta">
+                        <i style="font-size:20px;background:red;color:#FFFFFF" class="fa fa-user-md"></i>
+                    </button>
+                </span>
+            </t>
+        </t>
+    </t>
+
+</templates>

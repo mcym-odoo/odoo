@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_pos_posI_form_inh" model="ir.ui.view">
+        <field name="name">pos.order.form</field>
+        <field name="model">pos.order</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_pos_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='extra']" position="after">
+                <page name="extra2" string="Recetas Medicas">
+                    <field name="lines_recetas_ids">
+                        <tree string="Pagos" editable="bottom" >
+                    
+                            <field name="folio" />
+                            <field name="product_id" />
+                            <field name="partner_id" />
+                            <field name="qty" />
+                            <field name="price_unit" />
+                            <field name="price_subtotal" />
+                        
+                           
+                        </tree>
+                    </field>
+
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+
+</odoo>
