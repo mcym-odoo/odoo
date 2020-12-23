@@ -2,7 +2,7 @@
 <templates id="pos_discount_odoo_template" inherit_id="point_of_sale.template" xml:space="preserve">
     <t t-name="ResetaLinePopupWidget">
         <div role="dialog" class="modal-dialog">
-            <div class="popup popup-text" style="width: 70% !important;height: 70% !important; ">
+            <div class="popup popup-text" style="width: 70% !important;height: 80% !important; ">
                 <hr />
                 <header class="title">
                     <t t-esc=" widget.options.title || '' " />
