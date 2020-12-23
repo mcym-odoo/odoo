@@ -10,6 +10,10 @@
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='vat']" position="after">
                     <field name="as_medico"/>
+                    <field name="localidad"/>
+                    <field name="municipio"/>
+                    <field name="estado"/>
+                    <field name="pais"/>
                   
                 </xpath>
             </field>

@@ -22,7 +22,7 @@ class SaleOrder(models.Model):
     def get_client_with_search(self,criterio):
         vals=[]
         consulta_pos = ("""
-            select id,vat,name from res_partner where (name ilike '%"""+str(criterio)+"""%' or vat ilike '%"""+str(criterio)+"""%')
+            select id,vat,name,localidad,municipio,estado,pais from res_partner where (name ilike '%"""+str(criterio)+"""%' or vat ilike '%"""+str(criterio)+"""%')
             and as_medico = true
             """)    
 
@@ -57,9 +57,14 @@ class SaleOrderLine(models.Model):
                 partner_id = self.env['res.partner'].create(
                     {'name': result.name_partner, 
                     'vat': result.vat,
+                    'localidad': result.localidad,
+                    'municipio': result.municipio,
+                    'estado': result.estado,
+                    'pais': result.pais,
                     'as_medico': True,
                     'street': result.street+' '+result.localidad+' '+result.estado+' '+result.pais,
                     })
                 result.partner_id = partner_id.id
 
         return result
+
