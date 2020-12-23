@@ -2,15 +2,14 @@
 <odoo>
     <data>
         <!-- Formulario cliente, campos adicionales -->
-        <record id="as_sale_view_partner_form" model="ir.ui.view">
+        <record id="as_sale_view_partner_form_mcym" model="ir.ui.view">
             <field name="name">as.res.partner.form</field>
             <field name="model">res.partner</field>
             <field name="type">form</field>
             <field name="inherit_id" ref="base.view_partner_form" />
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='vat']" position="after">
-                    <field name="l10n_mx_edi_payment_method_id"/>
-                    <field name="l10n_mx_edi_usage"/>
+                    <field name="as_medico"/>
                   
                 </xpath>
             </field>

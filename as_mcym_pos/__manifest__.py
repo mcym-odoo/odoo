@@ -19,6 +19,7 @@ Custom module for MYCM
         'views/as_sequence.xml',
         'views/as_product_category.xml',
         'views/por_order.xml',
+        'views/as_res_partner.xml',
         # 'wizard/as_aprobe_utility.xml',
         # 'security/ir.model.access.csv',
      

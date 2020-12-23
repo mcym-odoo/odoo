@@ -23,7 +23,7 @@
                                 </div>
                             </td>
                             <td style="width:40%">
-                                <input type="checkbox" name="retener" id="retener" />Retener
+                                <input type="checkbox" name="retener" id="retener" />Generar Folio
                             </td>
                             <td style="width:40%">
                                 Folio interna:
@@ -35,15 +35,13 @@
                             </td>
                         </tr>
                     </table>
-                    <h3 style="color:blue">Datos del Médico</h3>
-                    <hr />
+                                <h4 style="color:blue">Datos del Médico</h4>
                     <table style="width:100%;">
                         <tr>
                             <td style="width:60%;text-align:left">
-                                Buscar:
                                 <div class="ui-widget">
                                     <input type="text" name="search_receta" id="search_receta"
-                                        autocomplete='search_receta' />
+                                        autocomplete='search_receta' placeholder="Buscar"/>
                                 </div>
                             </td>
                             <td style="width:40%">
@@ -54,7 +52,7 @@
 
                         </tr>
                     </table>
-                    <div style='overflow: scroll;height:70px;width:100%;"'>
+                    <div style='overflow: scroll;height:60px;width:100%;"'>
                     <table id="as_clientes_medicos" >
                         <tbody class="selecter_id">
                         </tbody>

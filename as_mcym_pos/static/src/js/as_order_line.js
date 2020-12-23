@@ -36,6 +36,7 @@ odoo.define('as_mcym_pos.as_order_line', function (require) {
             json.folio = this.folio;
             json.folio_receta = this.folio_receta;
             json.name_partner = this.name_partner;
+            json.vat = this.vat;
             return json;
         },
         init_from_JSON: function(json){
@@ -49,6 +50,7 @@ odoo.define('as_mcym_pos.as_order_line', function (require) {
             this.folio = json.folio;
             this.folio_receta = json.folio_receta;
             this.name_partner = json.name_partner;
+            this.vat = json.vat;
         },
     });
     

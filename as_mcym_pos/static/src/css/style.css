@@ -11,9 +11,9 @@
 }
 .pos .product .product-qty-low {
     position: absolute;
-    top: 2px;
-    left: 2px;
-    vertical-align: top;
+    top: 40px;
+    left: 95px;
+    vertical-align: center;
     color: white;
     line-height: 13px;
     background: red;

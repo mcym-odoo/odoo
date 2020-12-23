@@ -22,7 +22,8 @@ class SaleOrder(models.Model):
     def get_client_with_search(self,criterio):
         vals=[]
         consulta_pos = ("""
-            select id,vat,name from res_partner where name ilike '%"""+str(criterio)+"""%' or vat ilike '%"""+str(criterio)+"""%'
+            select id,vat,name from res_partner where (name ilike '%"""+str(criterio)+"""%' or vat ilike '%"""+str(criterio)+"""%')
+            and as_medico = true
             """)    
 
         self.env.cr.execute(consulta_pos)
@@ -40,7 +41,25 @@ class SaleOrderLine(models.Model):
     municipio = fields.Char(string='Municipio')
     estado = fields.Char(string='Estado')
     pais = fields.Char(string='Pais')
-    folio = fields.Char(string='Pais')
+    folio = fields.Char(string='Folio Interno')
     vat = fields.Char(string='ci')
     name_partner = fields.Char(string='name partner')
-    folio_receta = fields.Char(string='name partner')
+    folio_receta = fields.Char(string='Folio Receta')
+
+    @api.model
+    def create(self, vals):
+        result = super(SaleOrderLine, self).create(vals)
+        if result.name_partner:
+            partner_id = self.env['res.partner'].search([('name','=',result.name_partner),('as_medico','=',True)])
+            if partner_id:
+                result.partner_id = partner_id.id
+            else:
+                partner_id = self.env['res.partner'].create(
+                    {'name': result.name_partner, 
+                    'vat': result.vat,
+                    'as_medico': True,
+                    'street': result.street+' '+result.localidad+' '+result.estado+' '+result.pais,
+                    })
+                result.partner_id = partner_id.id
+
+        return result

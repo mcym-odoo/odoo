@@ -44,6 +44,7 @@ odoo.define('as_mcym_pos.as_reseta', function (require) {
                 var nombres = $('#as_clientes_medicos');
                 console.log('entro al recetario')
                 var buscando = $('#search_receta').val();
+                $('#as_clientes_medicos > tbody > tr').remove();
                 var cantidad = 0;
                 console.log(buscando)
                 rpc.query({
