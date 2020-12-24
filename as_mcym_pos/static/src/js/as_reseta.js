@@ -57,7 +57,7 @@ odoo.define('as_mcym_pos.as_reseta', function (require) {
                     $('.selecter_id').show();
                     var res_html = '';
                     for (var row = 0; row < output.length; row++) {
-                        var selector = "$('#name_med').val('"+output[row][2]+"');"+"$('#cedula').val('"+output[row][1]+"');"+"$('.selecter_id').hide();"+"$('#name_med_id').val('"+output[row][0]+"');"
+                        var selector = "$('#name_med').val('"+output[row][2]+"');"+"$('#cedula').val('"+output[row][1]+"');"+"$('#domicilio').val('"+output[row][3]+"');"+"$('#localidad').val('"+output[row][4]+"');"+"$('#municipio').val('"+output[row][5]+"');"+"$('#state').val('"+output[row][6]+"');"+"$('#country').val('"+output[row][7]+"');"+"$('.selecter_id').hide();"+"$('#name_med_id').val('"+output[row][0]+"');"
                         name_med_id
                         window.lect =selector;
                     res_html += '<tr class="item_'+output[row][0]+'" onclick="'+selector+'"><td width="65%" class="nombres">'+output[row][1]+'</td><td width="20%">'+output[row][2]+'</td></tr>';

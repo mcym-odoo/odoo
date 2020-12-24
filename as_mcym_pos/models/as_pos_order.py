@@ -22,7 +22,7 @@ class SaleOrder(models.Model):
     def get_client_with_search(self,criterio):
         vals=[]
         consulta_pos = ("""
-            select id,vat,name,localidad,municipio,estado,pais from res_partner where (name ilike '%"""+str(criterio)+"""%' or vat ilike '%"""+str(criterio)+"""%')
+            select id,vat,name,street,localidad,municipio,estado,pais from res_partner where (name ilike '%"""+str(criterio)+"""%' or vat ilike '%"""+str(criterio)+"""%')
             and as_medico = true
             """)    
 
