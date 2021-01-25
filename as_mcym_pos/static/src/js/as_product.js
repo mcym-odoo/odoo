@@ -77,6 +77,19 @@ models.Order = models.Order.extend({
         });
     }
   },
+  display_lot_popup: function() {
+    console.log('entro a al funcion de mostrar lotes');
+    var order_line = this.get_selected_orderline();
+    if (order_line && !order_line.product.as_product_reseta){
+        var pack_lot_lines =  order_line.compute_lot_lines();
+        this.pos.gui.show_popup('packlotline', {
+            'title': _t('Lot/Serial Number(s) Required'),
+            'pack_lot_lines': pack_lot_lines,
+            'order_line': order_line,
+            'order': this,
+        });
+    }
+},
 });
 
 });

@@ -85,18 +85,30 @@ odoo.define('as_mcym_pos.as_reseta', function (require) {
             var order_line = this.options.order_line;
             order_line.name_partner = $('#name_med').val();
             order_line.vat = $('#cedula').val();
-            order_line.partner_id = $('#name_med_id').val();
-            order_line.street = $('#domicilio').val();
-            order_line.localidad =  $('#localidad').val();
-            order_line.municipio = $('#municipio').val();
-            order_line.estado =  $('#state').val();
-            order_line.pais = $('#country').val();
-            order_line.folio = $('#folio_receta').val();
-            order_line.folio_receta = $('#folio_receta_correlativo').val();
-            window.confirmate = this.options;
-            this.options.order.save_to_db();
-            this.options.order_line.trigger('change', this.options.order_line);
-            this.gui.close_popup();
+            if (!order_line.vat) {
+                console.log('entro a el modal');
+                $('#mensaje').html("* La cedula del Médico es requerido");
+                // this.gui.show_popup('error',_t('La cedula del Médico es requerida'));
+            }
+            if (!order_line.name_partner) {
+                console.log('entro a el modal de nombre de medico');
+                $('#mensaje').html("* El nombre del Médico es requerido");
+                // this.gui.show_popup('error',_t('El nombre del Médico es requerida'));
+            }
+            if (order_line.vat && order_line.name_partner){
+                order_line.partner_id = $('#name_med_id').val();
+                order_line.street = $('#domicilio').val();
+                order_line.localidad =  $('#localidad').val();
+                order_line.municipio = $('#municipio').val();
+                order_line.estado =  $('#state').val();
+                order_line.pais = $('#country').val();
+                order_line.folio = $('#folio_receta').val();
+                order_line.folio_receta = $('#folio_receta_correlativo').val();
+                window.confirmate = this.options;
+                this.options.order.save_to_db();
+                this.options.order_line.trigger('change', this.options.order_line);
+                this.gui.close_popup();
+            }
         },
     
         add_lot: function(ev) {

@@ -1,19 +1,36 @@
 odoo.define('as_mcym_pos.as_order_line', function (require) {
     "use strict";
-    
+
     var models = require('point_of_sale.models');
     var screens = require('point_of_sale.screens');
     var core = require('web.core');
-    
-    var QWeb = core.qweb;
-    var _t   = core._t;
-    
-    var _super_orderline = models.Orderline.prototype;
-    models.load_fields("pos.order.line",['partner_id','street','localidad','municipio','estado','pais','folio','name_partner','folio_receta']);
 
+    var QWeb = core.qweb;
+    var _t = core._t;
+    var _super_order = models.Order.prototype;
+    models.load_fields("pos.order.line", ['partner_id', 'street', 'localidad', 'municipio', 'estado', 'pais', 'folio', 'name_partner', 'folio_receta']);
+
+
+    models.Order = models.Order.extend({
+    add_product : function (product, options) {
+        var result = _super_order.add_product.apply(this, arguments);
+
+        if(product.as_product_reseta !== undefined){
+            console.log('ENTRO A MOSTRAR RESETA');
+            var order = this.pos.get_order();
+            window.mostrat_line = order;
+            order.display_reseta_popup();
+            console.log('debio generar el POPUP');
+        }
+        return result;
+
+    }
+    });
+
+    var _super_orderline = models.Orderline.prototype;
     models.Orderline = models.Orderline.extend({
-        initialize: function(attr, options) {
-            _super_orderline.initialize.call(this,attr,options);
+        initialize: function (attr, options) {
+            _super_orderline.initialize.call(this, attr, options);
             this.partner_id = this.partner_id || "";
             this.street = this.street || "";
             this.localidad = this.localidad || "";
@@ -25,7 +42,7 @@ odoo.define('as_mcym_pos.as_order_line', function (require) {
             this.name_partner = this.name_partner || "";
             this.vat = this.vat || "";
         },
-        export_as_JSON: function(){
+        export_as_JSON: function () {
             var json = _super_orderline.export_as_JSON.call(this);
             json.partner_id = this.partner_id;
             json.street = this.street;
@@ -39,8 +56,8 @@ odoo.define('as_mcym_pos.as_order_line', function (require) {
             json.vat = this.vat;
             return json;
         },
-        init_from_JSON: function(json){
-            _super_orderline.init_from_JSON.apply(this,arguments);
+        init_from_JSON: function (json) {
+            _super_orderline.init_from_JSON.apply(this, arguments);
             this.partner_id = json.partner_id;
             this.street = json.street;
             this.localidad = json.localidad;
@@ -52,7 +69,7 @@ odoo.define('as_mcym_pos.as_order_line', function (require) {
             this.name_partner = json.name_partner;
             this.vat = json.vat;
         },
+        
     });
-    
-    });
-    
+
+});

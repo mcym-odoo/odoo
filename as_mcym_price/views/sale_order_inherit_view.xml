@@ -11,6 +11,9 @@
 			<xpath expr="//notebook//page[@name='order_lines']/field[@name='order_line']/tree" position="inside">
 				<field name="as_margin_porcentaje" optional="hide" />
 			</xpath>
+			<xpath expr="//notebook//page[@name='order_lines']/field[@name='order_line']/tree/field[@name='product_id']" position="before">
+				<field name="as_image" widget="image" class="oe_avatar"/>
+			</xpath>
 			<xpath expr="//field[@name='payment_term_id']" position="after">
 				<field name="as_aprobe" invisible="1" />
 				<field name="as_password"  password="True" 

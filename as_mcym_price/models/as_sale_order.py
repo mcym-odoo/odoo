@@ -10,6 +10,8 @@ _logger = logging.getLogger(__name__)
 class SaleOrderLine(models.Model):
     _inherit="sale.order.line"
     
+    as_image = fields.Binary(string="Imagen")
+
     @api.depends('price_unit','product_uom_qty')
     def get_margin_porcentaje(self):
         for sale_line in self:
