@@ -14,13 +14,15 @@ odoo.define('as_mcym_pos.as_order_line', function (require) {
     models.Order = models.Order.extend({
     add_product : function (product, options) {
         var result = _super_order.add_product.apply(this, arguments);
-
-        if(product.as_product_reseta !== undefined){
+        var order    = this.pos.get_order();
+        order.set("habilitar_lote",false)
+        if(product.as_product_reseta !== false){
             console.log('ENTRO A MOSTRAR RESETA');
             var order = this.pos.get_order();
             window.mostrat_line = order;
             order.display_reseta_popup();
             console.log('debio generar el POPUP');
+            order.set("habilitar_lote",true)
         }
         return result;
 

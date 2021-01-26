@@ -80,7 +80,20 @@ models.Order = models.Order.extend({
   display_lot_popup: function() {
     console.log('entro a al funcion de mostrar lotes');
     var order_line = this.get_selected_orderline();
-    if (order_line && !order_line.product.as_product_reseta){
+    var order = order_line.pos.get_order();
+    if (order_line){
+      if(order_line.product.as_product_reseta){
+        if (order.get("habilitar_lote")){
+          var pack_lot_lines =  order_line.compute_lot_lines();
+          this.pos.gui.show_popup('packlotline', {
+              'title': _t('Lot/Serial Number(s) Required'),
+              'pack_lot_lines': pack_lot_lines,
+              'order_line': order_line,
+              'order': this,
+          });
+  
+        }
+      }else{
         var pack_lot_lines =  order_line.compute_lot_lines();
         this.pos.gui.show_popup('packlotline', {
             'title': _t('Lot/Serial Number(s) Required'),
@@ -88,6 +101,7 @@ models.Order = models.Order.extend({
             'order_line': order_line,
             'order': this,
         });
+      }
     }
 },
 });

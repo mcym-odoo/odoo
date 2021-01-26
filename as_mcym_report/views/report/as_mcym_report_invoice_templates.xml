@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <template id="report_account_move_view_pdf">
+
+            <t t-name="web.external_layout"> 
+                <t t-foreach="docs" t-as="o"> 
+                    <div class = "header" >
+                         <style type="text/css">
+                            .header {
+                                margin: 0px;
+                                padding: 0px;
+                            }
+
+                            .cabecera {
+                                font-size: 7px;
+                                font-family: 'Arial' !important;
+                            }
+
+                            .letra {
+                                font-size: 15px !important;
+                                margin: 0px;
+                            }
+
+                            .letrita {
+                                font-size: 9px !important;
+                                margin: 0px;
+                            }
+
+                            .letra3 {
+                                font-size: 15px !important;
+                                margin: 0px;
+                                padding-left: 3px !important;
+                                padding-right: 3px !important;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                            }
+
+                            .cabecera2 {
+                                font-size: 9px;
+                                font-family: 'Arial' !important;
+                            }
+
+                            .columnasr {
+                                font-size: 12px;
+                                font-family: 'Arial' !important;
+                                margin-bottom: 10px;
+                            }
+
+                            .columnas2 {
+                                font-size: 9px;
+                                font-family: 'Arial' !important;
+                            }
+
+                            h3 {
+                                font-family: 'Arial' !important;
+                                font-size: 14px;
+                                margin: 0px !important;
+                                padding: 0px !important;
+                            }
+
+                            td {
+                                font-family: 'Arial' !important;
+                                font-size: 12px;
+                                margin: 0px !important;
+                                padding: 0px !important;
+                            }
+
+                            h4 {
+                                font-family: 'Arial' !important;
+                                font-size: 12px;
+                                margin: 0px !important;
+                                padding: 0px !important;
+                            }
+
+                            span {
+                                font-family: 'Arial' !important;
+
+                                margin: 0px !important;
+                                padding: 0px !important;
+                            }
+
+                            body {
+                                font-family: 'Arial' !important;
+                                font-size: 18px;
+                            }
+
+                            hr {
+                                border-bottom: solid;
+                                border-width: 1pt border-top:0px !important;
+                                padding: 0px !important;
+                                margin: 0px !important;
+
+                            }
+
+                            tr.border_bottom td {
+                                border-bottom: 0.5pt solid #cccccc;
+                                margin-right: 3px;
+                                padding-right: 3px;
+                                font-size: 13px;
+                                font-family: 'Arial' !important;
+                            }
+
+                            .borde1 {
+                                border-top: 2px solid #4040ff;
+                                border-left: 2px solid #4040ff;
+                                border-right: px solid #4040ff;
+                                border-bottom: 2px solid #4040ff;
+                                margin-bottom: 3px;
+
+                            }
+
+                            .borde1 thead tr td {
+                                padding-left: 5px;
+                                padding-right: 5px;
+
+                            }
+
+                            .borde2 {
+                                border-left: 1px solid grey;
+                                border-right: 1px solid grey;
+                                border-top: 1px solid grey;
+                                margin: 3px;
+                            }
+
+                            .titulo {
+                                font-size: 25px;
+                                padding-top: 40px;
+                            }
+
+                            .titulo_personalizado {
+
+                                font-size: 25px;
+                                padding-top: 40px;
+                            }
+
+                            .pe{
+                                color: navy;
+                                text-indent: 30px;
+                            }
+
+                            .hr {
+                                background-color: #4040ff;
+                                height: 20px;
+                                margin-left: 0%;
+                                width: 100%;
+                            }
+
+                            .hr_derecha {
+                                background-color: green;
+                                height: 40px;
+                                margin-left: 50%;
+                                margin-right: 30%;
+                                width: 100%;
+                            } 
+                            .letra4 {
+                                font-size: 10px;
+                                text-align: center;
+                                padding: 2px;
+                                border-bottom: 1px solid #000000;
+                                color: #000000;
+                            }
+                        </style> 
+
+                        <div  class= "row mt0 mb0" id="as_header"> 
+                            <div class="col-3" style="text-align:center; margin-bottom:10px;font-size:12px;" >
+
+                            </div> 
+                            <div class="col-6" style="text-align:center;">
+                                
+                                    <div>
+                                        <b style="color:#3E4CF0;" >KENETH JANIN CANO MALDONADO</b><br />
+                                        <b style="color:#3E4CF0;">RFC: </b> <b style="color:#3E4CF0; font-weight: 100; " > CAMK881112B19</b><br />
+                                        <b class="letrita">REGIMEN FISCAL: </b><b style="font-weight: 300;" class="letrita">612 Personas física con actividades empresariales y PROFESIONALES</b><br />
+                                        <b class="letrita" >DOMICILIO FISCAL: </b><b class="letrita" style="font-weight: 300;">Camino nuevo amanecer 28-2 Lomas de Balvanera, Querétaro, Corregidora, México, CP 76906</b><br />
+                                        <b class="letrita" >EMAIL: </b><b class="letrita" style="font-weight: 300;">servicioalcliente@mcym.com.mx                   </b><b class="letrita" style="font-weight: 300; color:white;"> nuevxxxxsxxxxxxxxxso</b><b class="letrita" >TELF: </b><b class="letrita" style="font-weight: 300;">442-2255559</b><br />
+                                        <b class="letrita" style="color:#4040ff; text-align:left;  " >WWW.MCYM.COM.MX </b><b class="letrita" style="font-weight: 300; color:white;"> nuevxxxxsxxxxxxxso</b><b class="letrita" style="font-weight: 300; color:#4040ff;">"PROFESIONALES DE LA SALUD"</b><b class="letrita" style="font-weight: 300; color:white;">PROFESIONALESPROFESIONxxxxxxxxxx</b><br />
+
+                                    </div>
+                                
+                            </div>  
+                            <div class="col-1" style="text-align:right; float:right;"> 
+                                <h4> 
+                                    <div> 
+                                        <img t-att-src="image_data_uri(o.company_id.logo)"
+                                        style="height: 160px; width: 270px; align:right;" />
+                                    </div> 
+                                </h4>     
+
+                            </div>          
+                        </div> 
+                        <table> 
+                            <tr> 
+                                
+                                <th style="width:70%; background-color:#3E4CF0;"></th>
+                                <th style="width:20%; background-color:white; text-align:center;"><b style="color:#3E4CF0">FACTURA </b></th>
+                                <th style="width:10%; background-color:#3E4CF0;"></th> 
+                            </tr>       
+                            <tr>
+                                <th style="width:70%; background-color:white;"></th>
+                                <td style="width:20%; background-color:white; text-align:center; font-size: 18px;"><b style="color:#3E4CF0"><t t-esc="o.name" /></b></td> 
+                                <th style="width:10%; background-color:white;"></th> 
+
+                            </tr> 
+                            <tr> 
+                                <td style="background-color:white; font-weight: 600;">SOCIO COMERCIAL: <b style="font-weight: 300;"><t t-esc="o.partner_shipping_id.name" /></b><br />RFC: <b style="font-weight: 300;"><t t-esc="o.partner_id.vat" /></b><br /></td>
+                                <td style="background-color:white; font-weight: 600;">FECHA DE FACTURA: <b style="font-weight: 300;"> <t t-esc="(datetime.datetime.strptime(str(o.invoice_date), '%Y-%m-%d') - datetime.timedelta(hours=4)).strftime('%d/%m/%Y')" /><br/>
+                                </b>FECHA DE VENCIMIENTO: <b style="font-weight: 300;"><t t-esc="(datetime.datetime.strptime(str(o.invoice_date_due), '%Y-%m-%d') - datetime.timedelta(hours=4)).strftime('%d/%m/%Y')" /><br/></b></td>
+
+                            </tr> 
+                            
+                            <tr>  
+                                <td style="background-color:white;font-weight: 600;">DIRECCIÓN: <b style="font-weight: 300;"><t t-esc="o.partner_id.street" /><br/></b>CONTACTO: <b style="font-weight: 300;"><t t-esc="o.partner_id.phone" /></b><br /></td>
+                                <td style="background-color:white; font-weight: 600;">ORIGEN: <b style="font-weight: 300;"><t t-esc="o.invoice_origin" /><br/></b>REFERENCIA: <b style="font-weight: 300;"><t t-esc="o.ref" /></b></td>
+                            </tr> 
+                            <tr>
+                                <td style="background-color:white; font-weight: 600;">EMAIL: <b style="font-weight: 300;"><t t-esc="o.partner_id.email" /></b></td>
+                                <td style="background-color:white; font-weight: 600;">CONDICIONES: <b style="font-weight: 300;"><t t-esc="o.invoice_payment_term_id.name" /></b></td>
+
+                            </tr> 
+                            <tr> 
+                                <td style="background-color:white; font-weight: 600;">METODO DE PAGO: <b style="font-weight: 300;"><t t-esc="o.invoice_payment_term_id.name"/><br/></b> 
+                                USO DE CFD: <b style="font-weight: 300;"><t t-esc="o.l10n_mx_edi_usage"/></b><b class="letrita" style="font-weight: 300; color:white;"> nuevxxxxsxxxxxxxso</b>FORMA DE PAGO:  <b style="font-weight: 300;"><t t-esc="o.l10n_mx_edi_payment_method_id.name"/></b>   </td>
+                            </tr> 
+                            
+                        
+                        </table>  
+                         <br/>
+                        <div > 
+                            <div style="text-align:center;"> 
+
+                            <table  width="100%" name='page_table' style='table-layout: fixed;'> 
+                                <thead style='border:2px solid #4040ff;' >  
+                                    <tr style='border:2px solid #4040ff;'> 
+
+                                        <td style="width:30%;border:2px solid #4040ff;" class='letra2'>
+                                            <b>DESCRIPCIÓN</b>
+                                        </td>
+                                        <td style="width:8%;border:2px solid #4040ff;" class='letra2'><b>CANT</b></td>
+                                            
+                                        <td style="width:10%;border:2px solid #4040ff;" class='letra2'>
+                                                <b>UNIDAD</b><br />
+                                                <b>  DE </b><br />
+                                                <b>MEDIDA</b><br />
+                                        </td>
+                                        <td style="width:10%;border:2px solid #4040ff;" class='letra2'>
+                                                <b>UNIDAD</b><br />
+                                                <b>  DE </b><br />
+                                                <b>MEDIDA SAT</b><br />
+                                        </td> 
+                                        <td style="width:10%;border:2px solid #4040ff;" class='letra2'>
+                                                <b>CLAVE DEL</b><br />
+                                                <b>    SAT </b><br />
+                                        </td>
+                                        <td style="width:10%;border:2px solid #4040ff;" class='letra2'>
+                                                <b>LOTE Y</b><br />
+                                                <b>CADUCIDAD</b><br />
+                                        </td>
+                                        <td style="width:10%;border:2px solid #4040ff;" class='letra2'>
+                                                <b>PRECIO</b><br />
+                                                <b>UNIDARIO</b><br />
+                                        </td> 
+                                        <td style="width:14%; border:2px solid #4040ff;" class='letra2'>
+                                                <b>IVA</b>
+                                        </td>
+                                        <td style="width:12%;text-align:right border:2px solid #4040ff;" class='letra2'>
+                                                <b>DESC.</b>
+                                        </td>
+                                        <td style="width:10%; border:2px solid #4040ff;" class='letra2'>
+                                                <b>TOTAL</b>
+                                        </td>
+                                    </tr>
+                                </thead> 
+                                <thead style=' border:2px solid #4040ff;'>
+                                        <t t-set="weight" t-value="0.00" />
+                                            <div t-foreach="o.invoice_line_ids" t-as="d" width="100%">  
+                                               
+                                                    <tr style=' border:2px solid #4040ff;fixed;'>
+                                                        <td style="width:10%;  border:2px solid #000000;" class='letra2f' > 
+                                                            <t t-esc="d.name" />
+                                                        </td> 
+                                                        <td style="width:10%;  border:2px solid #000000;" class='letra2f' > 
+                                                            <t t-esc="d.quantity" />
+                                                        </td>
+                                                        <td style="width:10%;  border:2px solid #000000;" class='letra2f' > 
+                                                            <t t-esc="d.product_uom_id.name" />
+                                                        </td> 
+                                                        <td style="width:10%;  border:2px solid #000000;" class='letra2f' > 
+                                                            <t t-esc="d.product_uom_id.l10n_mx_edi_code_sat_id.code"/>    
+
+                                                        </td>
+                                                        <td style="width:10%;  border:2px solid #000000;" class='letra2f' > 
+                                                            <t t-esc="d.product_id.l10n_mx_edi_code_sat_id.code"/>
+                                                        </td>
+                                                        <td style="width:10%;  border:2px solid #000000;" class='letra2f' > 
+                                                            <t t-esc="d.get_lote_two()"/>
+                                                        </td>
+                                                        <td style="width:10%;  border:2px solid #000000;" class='letra2f' > 
+                                                            <t t-esc="d.price_unit" />
+                                                        </td>
+                                                        <td style="width:10%;  border:2px solid #000000;" class='letra2f' > 
+                                                            <t t-esc="d.tax_ids.name" />
+                                                        </td>
+                                                        <td style="width:10%;  border:2px solid #4040ff;" class='letra2f' > 
+                                                            <t t-esc="d.discount" />
+                                                        </td>
+                                                        <td style="width:10%;  border:2px solid #4040ff;" class='letra2f' > 
+                                                            <t t-esc="d.price_subtotal" />
+                                                        </td>
+                                                    </tr>  
+                                            </div>    
+          
+                                </thead>  
+                                <thead style='border:1px solid #FFFFFF;line-height : 18px;' >
+                                        <tr>
+                                            <td colspan="8" style="width:5%;text-align:left" class='letra2'>
+                                                <b>
+                                                    CON LETRA:
+                                                    <span style="font-weight: 300;" t-esc="o.get_literal_amount_two(o.amount_total)"  />
+                                                </b><br/>
+                                                
+                                            </td>
+                                            <td colspan="1" style="width:10%;border-top:1px solid #4040ff; border-bottom:2px solid #4040ff; border-left:2px solid #4040ff;" class='letra2'>
+                                                <b> SUBTOTAL:</b>
+                                            </td>
+                                            <td colspan="1" style="width:10%;border-top:1px solid #4040ff; border-bottom:2px solid #4040ff; border-right:2px solid #4040ff;" class='letranumber'>
+                                                <b>
+                                                    <t t-esc="'{:,.2f}'.format(o.amount_untaxed)" /></b>
+                                            </td>
+                                        </tr>
+                                    </thead>
+                                    <thead style='border:1px solid #FFFFFF;line-height : 18px;' >
+                                        <tr>
+                                            <td colspan="8" style="width:5%;text-align:left" class='letra2'>
+                                                <b>NOTA: </b>
+                                                <b style="font-weight: 300;">Una vez recibida la mercancia el cliente acepta los términos y condiciones publicados en nuestro sitio web www.mcym.com.mx</b>
+                                                
+                                            </td>
+                                            <td colspan="1" style="width:10%;border-top:1px solid #4040ff; border-bottom:2px solid #4040ff; border-left:2px solid #4040ff;" class='letra2'>
+                                                <b> IVA 16%:</b>
+                                            </td>
+                                            <td colspan="1" style="width:10%;border-top:1px solid #4040ff; border-bottom:2px solid #4040ff; border-right:2px solid #4040ff;" class='letranumber'>
+                                                <b>
+                                                    <t t-esc="o.amount_tax" /></b>
+                                            </td>
+                                        </tr>
+                                    </thead>
+                                    <thead style='border:1px solid #FFFFFF;line-height : 18px;' >
+                                        <tr>
+                                            <td colspan="8" style="width:5%;text-align:left" class='letra2'>
+                                                <b style="font-weight: 300;">Debemos y pagaremos incondicionalmente a la órden de KENETH JANIN CANO MALDONADO la cantidad especificada en este documento, a la fecha especificada del mismo, de no ser así se causará   </b>
+                                                
+                                            </td>
+                                            <td colspan="1" style="width:10%;border-top:1px solid #4040ff; border-bottom:2px solid #4040ff; border-left:2px solid #4040ff;" class='letra2'>
+                                                <b> IVA 0%:</b>
+                                            </td>
+                                            <td colspan="1" style="width:10%;border-top:1px solid #4040ff; border-bottom:2px solid #4040ff; border-right:2px solid #4040ff;" class='letranumber'>
+                                                <b>
+                                                    <t t-esc="0.00" /></b>
+                                            </td>
+                                        </tr>
+                                    </thead>
+                                    <thead style='border:1px solid #FFFFFF;line-height : 18px;' >
+                                        <tr>
+                                            <td colspan="8" style="width:5%;text-align:left" class='letra2'>
+                                                <b style="font-weight: 300;"> un interés del 5% mensual, la firma en cualquier parte de esta factura significa la aceptación a este pagare</b>
+                                                
+                                            </td>
+                                            <td colspan="1" style="width:10%;border-top:1px solid #4040ff; border-bottom:2px solid #4040ff; border-left:2px solid #4040ff;" class='letra2'>
+                                                <b>TOTAL:</b>
+                                            </td>
+                                            <td colspan="1" style="width:10%;border-top:1px solid #4040ff; border-bottom:2px solid #4040ff; border-right:2px solid #4040ff;" class='letranumber'>
+                                                <b>
+                                                    <t t-esc="o.amount_total" /></b>
+                                            </td>
+                                        </tr>
+                                    </thead>
+                                    <thead style='border:1px solid #FFFFFF;line-height : 18px;' >
+                                        <tr>
+                                            <td colspan="6" style="width:5%;text-align:left" class='letra2'>
+                                                <b>DATOS BANCARIOS:</b><br />
+                                                <b>BANCO: BANAMEX CUENTA BANCARIA: 85254524 CLAVE INTERBANCARIA 123456789101112131415161718 SUC 5425487</b><br />
+                                                <b>OBSERVACIONES:<t t-esc="o.narration" /> </b><br />
+                                            </td>
+                                            <td colspan="1" style="width:5%;text-align:left" class='letra2'>
+                                                <b style="font-weight: 300;"></b>
+                                                
+                                            </td>
+                                            <td colspan="1" style="width:5%;text-align:left" class='letra2'>
+                                                <b style="font-weight: 300;"></b>
+                                                
+                                            </td>
+                                        </tr>
+                                    </thead>
+                                    
+
+                            </table> 
+                        </div>   
+                        </div>   
+                        <br/>  
+
+                         <xpath expr="//table" position="after">
+                                <!--New global variables-->
+                            <t t-if="o.l10n_mx_edi_cfdi_uuid">
+                                <t t-set="xml" t-value="o.l10n_mx_edi_get_xml_etree()"/>
+                                <t t-set="tfd" t-value="o.l10n_mx_edi_get_tfd_etree(xml)"/>
+                                <t t-set="tfd_original_string" t-value="o._get_l10n_mx_edi_cadena()"/>
+                             <div class="row" id='complement'>
+                                <div class="barcode col-3">
+                                    <img alt="Barcode" t-att-src="'/report/barcode/?type=QR&amp;value=%s&amp;width=180&amp;height=180' % quote_plus(
+                            'https://verificacfdi.facturaelectronica.sat.gob.mx/default.aspx?' + keep_query(
+                                re=o.l10n_mx_edi_cfdi_supplier_rfc, rr=o.l10n_mx_edi_cfdi_customer_rfc,
+                                tt=0, id=o.l10n_mx_edi_cfdi_uuid)
+                                + '&amp;fe=%s' % quote_plus(sello, 'utf-8', 'strict', '=/').replace('%2B', '+'))"/><br/>
+                                    <br/>
+                                </div>   
+                                <div class="complement-details col-9">
+                                    <div class="digital-stamp">
+                                        <span>Digital stamp of the emitter</span>
+                                    </div>
+                                    <div class="digital-stamp-content"> 
+                                        <span t-esc="xml.get('Sello', 'No identificado')"/>
+                                    </div>
+                                    <div class="digital-stamp">
+                                        <span>Digital stamp SAT</span>
+                                    </div>
+                                    <div class="digital-stamp-content">
+                                        <span t-esc="tfd.get('SelloSAT', 'No identificado')"/>
+                                    </div>
+                                    <div class="digital-stamp">
+                                        <span>Original chain complement of digital certification SAT</span>
+                                    </div>
+                                    <div class="digital-stamp-content">
+                                        <span t-esc="tfd_original_string"/>
+                                    </div>
+                                    <div class="digital-stamp-content">
+                                        <span t-esc="xml.get('LugarExpedicion', 'No identificado')"/>
+                                    </div>
+                                    <div class="digital-stamp">
+                                        <span>Extra Info</span>
+                                    </div>
+                                    <div class="digital-stamp-content">
+                                        <span>Emitter certificate:</span> <span t-esc="xml.get('NoCertificado')"/>
+                                        <span> | SAT Certificate:</span> <span t-esc="tfd.get('NoCertificadoSAT')"/>
+                                        <span> | Expedition place:</span> <span t-esc="xml.get('LugarExpedicion')"/>
+                                        <span> | Fiscal Regime:</span><span t-esc="xml.Emisor.get('RegimenFiscal', '')"/>
+                                        <span> | Emission Date:</span> <span t-esc="xml.get('Fecha', '').replace('T', ' ')"/>
+                                        <span> | Certification Date:</span> <span t-esc="tfd.get('FechaTimbrado', '').replace('T', ' ')"/>
+                                        <span> | Fiscal Folio:</span> <span t-esc="tfd.get('UUID')"/>
+                                    </div>
+                                    <div class="digital-stamp-content text-center">
+                                        <strong style="color:#3E4CF0;">This document is a printed representation of a CFDI</strong>
+                                    </div>
+                                </div> 
+                            </div>  
+                            </t>
+                        </xpath>        
+<!-- 
+                    aquiTErmuia     -->
+                    </div> 
+
+                </t>
+            </t> 
+        </template>
+    
+            <template id="report_account_move">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-set="lang" t-value="o.partner_id.lang"/>
+                    <t t-call="as_mcym_report.report_account_move_view_pdf" t-lang="lang"/>
+                </t>
+            </t>
+        </template>
+    </data>
+</openerp>
