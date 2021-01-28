@@ -34,34 +34,23 @@ odoo.define('as_mcym_pos.as_product', function (require) {
     
 screens.OrderWidget.include({
   render_orderline: function(orderline) {
-    var el_str  = QWeb.render('Orderline',{widget:this, line:orderline}); 
-    var el_node = document.createElement('div');
-        el_node.innerHTML = _.str.trim(el_str);
-        el_node = el_node.childNodes[0];
-        el_node.orderline = orderline;
-        el_node.addEventListener('click',this.line_click_handler);
-    var el_lot_icon = el_node.querySelector('.line-lot-icon');
-    var el_reseta_icon = el_node.querySelector('#botton_reseta');
-    if(el_lot_icon){
-        el_lot_icon.addEventListener('click', (function() {
-            this.show_product_lot(orderline);
-        }.bind(this)));
-    }
+    var node = this._super(orderline);
+    var el_reseta_icon = node.querySelector('#botton_reseta');
     if(el_reseta_icon){
       el_reseta_icon.addEventListener('click', (function() {
-          this.show_resetas_product(orderline);
+        this.show_resetas_product(orderline);
       }.bind(this)));
-  }
-
-    orderline.node = el_node;
-    return el_node;
+    }
+    return node;
   },
   show_resetas_product: function(orderline){
     this.pos.get_order().select_orderline(orderline);
     var order = this.pos.get_order();
     order.display_reseta_popup();
-},
+  },
 });
+
+
 var _super_Order = models.Order.prototype;
 models.Order = models.Order.extend({
   initialize: function(attr,options){
