@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name' : "Ahorasoft POS customizaciones MYCM",
-    'version' : "1.0.3",
+    'version' : "1.0.4",
     'author'  : "Ahorasoft",
     'description': """
 Customizaciones para MCYM
@@ -11,7 +11,7 @@ Custom module for MYCM
     """,
     'category' : "Sale",
     'depends' : [ "base",
-        "point_of_sale",],
+        "point_of_sale","pos_lots_selection"],
     'website': 'http://www.ahorasoft.com',
     'data' : [
         'views/as_product_template.xml',

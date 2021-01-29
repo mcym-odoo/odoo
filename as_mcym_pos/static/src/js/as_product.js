@@ -34,6 +34,7 @@ odoo.define('as_mcym_pos.as_product', function (require) {
     
 screens.OrderWidget.include({
   render_orderline: function(orderline) {
+    console.log('entro a al funcion de mostrar lotes');
     var node = this._super(orderline);
     var el_reseta_icon = node.querySelector('#botton_reseta');
     if(el_reseta_icon){
@@ -63,36 +64,76 @@ models.Order = models.Order.extend({
             'title': _t('Agregar Receta Medica'),
             'order_line': order_line,
             'order': this,
+            'name_partner': order_line.name_partner,
+            'folio' : order_line.folio,
+            'folio_receta' : order_line.folio_receta,
+            'vat' : order_line.vat,
+            'street' : order_line.street,
+            'localidad' : order_line.localidad,
+            'municipio' : order_line.municipio,
+            'estado' : order_line.estado,
+            'pais' : order_line.pais,
+            
         });
     }
-  },
-  display_lot_popup: function() {
-    console.log('entro a al funcion de mostrar lotes');
-    var order_line = this.get_selected_orderline();
-    var order = order_line.pos.get_order();
-    if (order_line){
-      if(order_line.product.as_product_reseta){
-        if (order.get("habilitar_lote")){
-          var pack_lot_lines =  order_line.compute_lot_lines();
-          this.pos.gui.show_popup('packlotline', {
-              'title': _t('Lot/Serial Number(s) Required'),
-              'pack_lot_lines': pack_lot_lines,
-              'order_line': order_line,
-              'order': this,
-          });
+  },        
+//   display_lot_popup: function() {
+    
+//     var self  = this;
+//     var order_line = this.get_selected_orderline();
+//     var product = order_line.get_product();
+//     var picking_type_id = this.pos.config.picking_type_id[0];
+//     var order = order_line.pos.get_order();
+//     if (order_line){
+//       if(order_line.product.as_product_reseta){
+//         if (order.get("habilitar_lote")){
+//           var pack_lot_lines =  order_line.compute_lot_lines();
+//           rpc.query({
+//             model: 'stock.quant',
+//             method: 'get_pos_quants',
+//             args: [[product.id, picking_type_id]],
+//         }).then(function(backend_result) {
+//             if (backend_result) {
+//                 if (order_line) {
+//                     product.lot_result = backend_result;
+//                     // order_line.compute_lot_lines();
+//                     self.pos.gui.show_popup('PackLotLinePopupWidgetNew', {
+//                         'title': 'Lot/Serial Number(s)',
+//                         'pack_lot_lines': backend_result,
+//                         'order_line': order_line,
+//                         'order': this,
+//                     });
+//                 }
+//             }
+    
+//         });
   
-        }
-      }else{
-        var pack_lot_lines =  order_line.compute_lot_lines();
-        this.pos.gui.show_popup('packlotline', {
-            'title': _t('Lot/Serial Number(s) Required'),
-            'pack_lot_lines': pack_lot_lines,
-            'order_line': order_line,
-            'order': this,
-        });
-      }
-    }
-},
+//         }
+//       }else{
+//         var pack_lot_lines =  order_line.compute_lot_lines();
+//         rpc.query({
+//           model: 'stock.quant',
+//           method: 'get_pos_quants',
+//           args: [[product.id, picking_type_id]],
+//       }).then(function(backend_result) {
+//           if (backend_result) {
+//               if (order_line) {
+//                   product.lot_result = backend_result;
+//                   // order_line.compute_lot_lines();
+//                   self.pos.gui.show_popup('PackLotLinePopupWidgetNew', {
+//                       'title': 'Lot/Serial Number(s)',
+//                       'pack_lot_lines': backend_result,
+//                       'order_line': order_line,
+//                       'order': this,
+//                   });
+//               }
+//           }
+  
+//       });
+//       }
+//     }
+// },
+
 });
 
 });

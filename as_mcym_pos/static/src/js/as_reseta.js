@@ -27,6 +27,16 @@ odoo.define('as_mcym_pos.as_reseta', function (require) {
         show: function(options){
             this._super(options);
             this.focus();
+            options['folio'] = options.order_line.folio;
+            options['folio_receta'] = options.order_line.folio_receta;
+            options['vat'] = options.order_line.vat;
+            options['name_partner'] = options.order_line.name_partner;
+            options['street'] = options.order_line.street;
+            options['localidad'] = options.order_line.localidad;
+            options['municipio'] = options.order_line.municipio;
+            options['estado'] = options.order_line.estado;
+            options['pais'] = options.order_line.pais;
+            window.poput = options;
             var product_id = options.order_line.product.id;
             this.$('#retener').click(function() {
                 rpc.query({

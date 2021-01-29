@@ -5,7 +5,8 @@
             <div class="popup popup-text" style="width: 70% !important;height: 80% !important; ">
                 <hr />
                 <header class="title">
-                    <t t-esc=" widget.options.title || '' " />
+                    <t t-esc="widget.options.title || '' " />
+                    <t t-esc="widget.options.name_partner || '' " />
                 </header>
                 <!-- <img src="/as_mcym_pos/static/description/mcym_icono.png" style="width: 100px" /> -->
                 <main style="padding:20px">
@@ -19,7 +20,7 @@
                                 Folio Receta:
                                 <div class="ui-widget">
                                     <input type="text" name="folio_receta" id="folio_receta"
-                                        autocomplete='folio_receta' />
+                                        autocomplete='folio_receta' t-att-value="widget.options.folio"/>
                                 </div>
                             </td>
                             <td style="width:40%">
@@ -30,7 +31,7 @@
                                 <group>
                                     <input type="text" name="folio_receta_correlativo" id="folio_receta_correlativo"
                                         t-attf-class="ui-autocomplete-input" autocomplete='class_product'
-                                        width="100px" />
+                                        width="100px" t-att-value="widget.options.folio_receta"/>
                                 </group>
                             </td>
                         </tr>
@@ -65,14 +66,14 @@
                             <td style="width:50%">
                                 Cédula:
                                 <div class="form-control">
-                                    <input type="text" name="cedula" id="cedula" autocomplete='cedula' />
+                                    <input type="text" name="cedula" id="cedula" autocomplete='cedula' t-att-value="widget.options.vat"/>
                                 </div>
                             </td>
 
                             <td style="width:50%">
                                 Nombre:
                                 <group class="form-control">
-                                    <input type="text" name="name_med" id="name_med" class="o_social_twitter_users_autocomplete" />
+                                    <input type="text" name="name_med" id="name_med" class="o_social_twitter_users_autocomplete" t-att-value="widget.options.name_partner"/>
                                     <input type="hidden" name="name_med_id" id="name_med_id" class="o_social_twitter_users_autocomplete" />
                                 </group>
                             </td>
@@ -81,7 +82,7 @@
                             <td colspan="2">
                                 Domicilio:
                                 <div class="form-control">
-                                    <input type="text" name="domicilio" id="domicilio" autocomplete='domicilio' />
+                                    <input type="text" name="domicilio" id="domicilio" autocomplete='domicilio'   t-att-value="widget.options.street"/>
                                 </div>
                             </td>
 
@@ -90,14 +91,14 @@
                             <td style="width:50%">
                                 Localidad:
                                 <div class="form-control">
-                                    <input type="text" name="localidad" id="localidad" autocomplete='localidad' />
+                                    <input type="text" name="localidad" id="localidad" autocomplete='localidad' t-att-value="widget.options.localidad"/>
                                 </div>
                             </td>
 
                             <td style="width:50%">
                                 Municipio:
                                 <div class="form-control">
-                                    <input type="text" name="municipio" id="municipio" />
+                                    <input type="text" name="municipio" id="municipio" t-att-value="widget.options.municipio"/>
                                 </div>
                             </td>
                         </tr>
@@ -105,14 +106,14 @@
                             <td style="width:50%">
                                 Estado:
                                 <div class="form-control">
-                                    <input type="text" name="state" id="state" autocomplete='state' />
+                                    <input type="text" name="state" id="state" autocomplete='state' t-att-value="widget.options.estado"/>
                                 </div>
                             </td>
 
                             <td style="width:50%">
                                 Pais:
                                 <div class="form-control">
-                                    <input type="text" name="country" id="country" />
+                                    <input type="text" name="country" id="country" t-att-value="widget.options.pais"/>
                                 </div>
                             </td>
                         </tr>
