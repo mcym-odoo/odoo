@@ -6,3 +6,4 @@
 * 26/01/2021 [report_xlsx] Agregado modulo necesario para generar reportes en xlsx
 * 28/01/2021 [as_mcym_pos] se ha modificado funcionalidad para no afectar o conflicto con otro modulo
 * 28/01/2021 [as_mcym_pos] agregada funcionalidad para evitar conflicto con modulo pos_lots_selection
+* 29/01/2021 [as_mcym_pos] corregido detalle en venta de productos que no tienen receta

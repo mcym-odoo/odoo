@@ -48,7 +48,11 @@ odoo.define('as_mcym_pos.as_order_line', function (require) {
             click_cancel: function(){
                 this._super();
                 var order = this.pos.get_order();
-                order.display_reseta_popup();
+                var order_line = this.options.order_line;
+                if (order_line.product.as_product_reseta){
+
+                    order.display_reseta_popup();
+                }
                 // this.pos.get_order().get_selected_orderline().set_quantity(0);
             },
             click_confirm: function() {
@@ -93,7 +97,10 @@ odoo.define('as_mcym_pos.as_order_line', function (require) {
                     order_line.set_lot_ids(lot_ids);
                     this.gui.close_popup();
                     var order = this.pos.get_order();
-                    order.display_reseta_popup();
+                    if (order_line.product.as_product_reseta){
+
+                        order.display_reseta_popup();
+                    }
                 }
             },
         });
