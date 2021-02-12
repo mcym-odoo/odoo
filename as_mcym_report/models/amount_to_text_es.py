@@ -106,7 +106,8 @@ def amount_to_text(number, currency):
     if bandera:
         start_word = (" ").join(cadena)
 #    final_result = start_word +' PESOS y ' + end_word +' '+cents_name
-    final_result = start_word + ' PESOS'
+    final_result = start_word
+    # final_result = start_word + ' PESOS'
     return final_result
 
 

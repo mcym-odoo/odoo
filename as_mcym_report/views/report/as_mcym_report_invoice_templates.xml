@@ -23,7 +23,7 @@
                             }
 
                             .letrita {
-                                font-size: 9px !important;
+                                font-size: 11px !important;
                                 margin: 0px;
                             }
 
@@ -102,10 +102,10 @@
                             }
 
                             .borde1 {
-                                border-top: 2px solid #4040ff;
-                                border-left: 2px solid #4040ff;
-                                border-right: px solid #4040ff;
-                                border-bottom: 2px solid #4040ff;
+                                border-top: 2px solid #0063be;
+                                border-left: 2px solid #0063be;
+                                border-right: px solid #0063be;
+                                border-bottom: 2px solid #0063be;
                                 margin-bottom: 3px;
 
                             }
@@ -140,7 +140,7 @@
                             }
 
                             .hr {
-                                background-color: #4040ff;
+                                background-color: #0063be;
                                 height: 20px;
                                 margin-left: 0%;
                                 width: 100%;
@@ -157,70 +157,80 @@
                                 font-size: 10px;
                                 text-align: center;
                                 padding: 2px;
-                                border-bottom: 1px solid #000000;
-                                color: #000000;
+                                border-bottom: 1px solid #0063be;
+                                color: #0063be;
                             }
                         </style> 
 
                         <div  class= "row mt0 mb0" id="as_header"> 
-                            <div class="col-3" style="text-align:center; margin-bottom:10px;font-size:12px;" >
+                            <div class="col-2" style="text-align:center; margin-bottom:10px;font-size:12px;" >
 
                             </div> 
-                            <div class="col-6" style="text-align:center;">
+                            <div class="col-8" style="text-align:center;">
                                 
                                     <div>
-                                        <b style="color:#3E4CF0;" >KENETH JANIN CANO MALDONADO</b><br />
-                                        <b style="color:#3E4CF0;">RFC: </b> <b style="color:#3E4CF0; font-weight: 100; " > CAMK881112B19</b><br />
-                                        <b class="letrita">REGIMEN FISCAL: </b><b style="font-weight: 300;" class="letrita">612 Personas física con actividades empresariales y PROFESIONALES</b><br />
-                                        <b class="letrita" >DOMICILIO FISCAL: </b><b class="letrita" style="font-weight: 300;">Camino nuevo amanecer 28-2 Lomas de Balvanera, Querétaro, Corregidora, México, CP 76906</b><br />
-                                        <b class="letrita" >EMAIL: </b><b class="letrita" style="font-weight: 300;">servicioalcliente@mcym.com.mx                   </b><b class="letrita" style="font-weight: 300; color:white;"> nuevxxxxsxxxxxxxxxso</b><b class="letrita" >TELF: </b><b class="letrita" style="font-weight: 300;">442-2255559</b><br />
-                                        <b class="letrita" style="color:#4040ff; text-align:left;  " >WWW.MCYM.COM.MX </b><b class="letrita" style="font-weight: 300; color:white;"> nuevxxxxsxxxxxxxso</b><b class="letrita" style="font-weight: 300; color:#4040ff;">"PROFESIONALES DE LA SALUD"</b><b class="letrita" style="font-weight: 300; color:white;">PROFESIONALESPROFESIONxxxxxxxxxx</b><br />
-
+                                        <b style="color:#0063be;" >KENETH JANIN CANO MALDONADO</b><br />
+                                            <b style="color:#0063be; font-weight: 100;">RFC: CAMK881112B19</b><br />
+                                        <p style="line-height: 100%">    
+                                            <b class="letrita">REGIMEN FISCAL: </b><b style="font-weight: 300;" class="letrita">612 Personas física con actividades empresariales y PROFESIONALES</b><br />
+                                            <b class="letrita" >DOMICILIO FISCAL: </b><b class="letrita" style="font-weight: 300;">Camino nuevo amanecer 28-2 Lomas de Balvanera, Querétaro, Corregidora, México, CP 76906</b><br />
+                                            <b class="letrita" >EMAIL: </b><b class="letrita" style="font-weight: 300;">servicioalcliente@mcym.com.mx</b><b  style="font-weight: 300; color:white;"> nuevxxxxxxx</b><b class="letrita" >TELF: </b><b class="letrita" style="font-weight: 300;">442-2255559</b><br />
+                                             
+                                        </p>
                                     </div>
                                 
                             </div>  
                             <div class="col-1" style="text-align:right; float:right;"> 
                                 <h4> 
                                     <div> 
-                                        <img t-att-src="image_data_uri(o.company_id.logo)"
-                                        style="height: 160px; width: 270px; align:right;" />
+                                       <img t-att-src="image_data_uri(o.company_id.logo)"
+                                        style="height: 140px; width: 190px; align:right;" />
                                     </div> 
                                 </h4>     
 
                             </div>          
                         </div> 
                         <table> 
+
+                            <tr>
+                                <th style="width:70%; background-color:white; text-align:left; font-size: 12px;"><b style="color:#0063be">WWW.MCYM.COM.MX </b><b style="color:white">WWW.MCYM.COM.MX-------------------------------------</b><b style="font-size: 12px;  font-weight: 300; color:#0063be;">"PROFESIONALES DE LA SALUD"</b></th>
+                                <th style="width:20%; background-color:white;"></th>
+                                <th style="width:10%; background-color:white;"></th>
+                            </tr>
                             <tr> 
                                 
-                                <th style="width:70%; background-color:#3E4CF0;"></th>
-                                <th style="width:20%; background-color:white; text-align:center;"><b style="color:#3E4CF0">FACTURA </b></th>
-                                <th style="width:10%; background-color:#3E4CF0;"></th> 
+                                <th style="width:70%; background-color:#0063be;"></th>
+                                <th style="width:20%; background-color:white; text-align:center;"><b style="color:#0063be">FACTURA </b></th>
+                                <th style="width:10%; background-color:#0063be;"></th> 
                             </tr>       
                             <tr>
-                                <th style="width:70%; background-color:white;"></th>
-                                <td style="width:20%; background-color:white; text-align:center; font-size: 18px;"><b style="color:#3E4CF0"><t t-esc="o.name" /></b></td> 
+                                <td style="background-color:white; font-weight: 600;">SOCIO COMERCIAL: <b style="font-weight: 300;"><t t-esc="o.partner_shipping_id.name" /></b><br />RFC: <b style="font-weight: 300;"><t t-esc="o.partner_id.vat" /></b><br /></td>
+                                <td style="width:20%; background-color:white; text-align:center; font-size: 18px;"><b style="color:#0063be"><t t-esc="o.name" /></b></td> 
                                 <th style="width:10%; background-color:white;"></th> 
 
                             </tr> 
                             <tr> 
-                                <td style="background-color:white; font-weight: 600;">SOCIO COMERCIAL: <b style="font-weight: 300;"><t t-esc="o.partner_shipping_id.name" /></b><br />RFC: <b style="font-weight: 300;"><t t-esc="o.partner_id.vat" /></b><br /></td>
+                                
+                                <td style="background-color:white;font-weight: 600;">DIRECCIÓN: <b style="font-weight: 300;"><t t-esc="o.partner_id.street" /><br/></b>CONTACTO: <b style="font-weight: 300;"><t t-esc="o.partner_id.phone" /></b><br /></td>
                                 <td style="background-color:white; font-weight: 600;">FECHA DE FACTURA: <b style="font-weight: 300;"> <t t-esc="(datetime.datetime.strptime(str(o.invoice_date), '%Y-%m-%d') - datetime.timedelta(hours=4)).strftime('%d/%m/%Y')" /><br/>
                                 </b>FECHA DE VENCIMIENTO: <b style="font-weight: 300;"><t t-esc="(datetime.datetime.strptime(str(o.invoice_date_due), '%Y-%m-%d') - datetime.timedelta(hours=4)).strftime('%d/%m/%Y')" /><br/></b></td>
 
                             </tr> 
-                            
-                            <tr>  
-                                <td style="background-color:white;font-weight: 600;">DIRECCIÓN: <b style="font-weight: 300;"><t t-esc="o.partner_id.street" /><br/></b>CONTACTO: <b style="font-weight: 300;"><t t-esc="o.partner_id.phone" /></b><br /></td>
-                                <td style="background-color:white; font-weight: 600;">ORIGEN: <b style="font-weight: 300;"><t t-esc="o.invoice_origin" /><br/></b>REFERENCIA: <b style="font-weight: 300;"><t t-esc="o.ref" /></b></td>
-                            </tr> 
+                        
                             <tr>
-                                <td style="background-color:white; font-weight: 600;">EMAIL: <b style="font-weight: 300;"><t t-esc="o.partner_id.email" /></b></td>
-                                <td style="background-color:white; font-weight: 600;">CONDICIONES: <b style="font-weight: 300;"><t t-esc="o.invoice_payment_term_id.name" /></b></td>
+                                <td style="background-color:white; font-weight: 600;">EMAIL: <b style="font-weight: 300;"><t t-esc="o.partner_id.email" /><br/></b>METODO DE PAGO: <b style="font-weight: 300;"><t t-esc="o.l10n_mx_edi_payment_method_id.name"/><br/></b></td> 
+
+                                <td style="background-color:white; font-weight: 600;">ORIGEN: <b style="font-weight: 300;"><t t-esc="o.invoice_origin" /><br/></b>REFERENCIA: <b style="font-weight: 300;"><t t-esc="o.ref" /></b></td>
+
+                                
+
+                                
 
                             </tr> 
                             <tr> 
-                                <td style="background-color:white; font-weight: 600;">METODO DE PAGO: <b style="font-weight: 300;"><t t-esc="o.invoice_payment_term_id.name"/><br/></b> 
+                                <td style="background-color:white; font-weight: 600;"> 
                                 USO DE CFD: <b style="font-weight: 300;"><t t-esc="o.l10n_mx_edi_usage"/></b><b class="letrita" style="font-weight: 300; color:white;"> nuevxxxxsxxxxxxxso</b>FORMA DE PAGO:  <b style="font-weight: 300;"><t t-esc="o.l10n_mx_edi_payment_method_id.name"/></b>   </td>
+                                <td style="background-color:white; font-weight: 600;">CONDICIONES: <b style="font-weight: 300;"><t t-esc="o.invoice_payment_term_id.name" /></b></td>
                             </tr> 
                             
                         
@@ -230,102 +240,110 @@
                             <div style="text-align:center;"> 
 
                             <table  width="100%" name='page_table' style='table-layout: fixed;'> 
-                                <thead style='border:2px solid #4040ff;' >  
-                                    <tr style='border:2px solid #4040ff;'> 
+                                <thead style='border:2px solid #0063be;' >  
+                                    <tr style='border:2px solid #0063be;'> 
 
-                                        <td style="width:30%;border:2px solid #4040ff;" class='letra2'>
+                                        <td style="width:30%;border:2px solid #0063be;" class='letra2'>
+                                            <b></b><br />
                                             <b>DESCRIPCIÓN</b>
                                         </td>
-                                        <td style="width:8%;border:2px solid #4040ff;" class='letra2'><b>CANT</b></td>
+                                        <td style="width:8%;border:2px solid #0063be;" class='letra2'>
+                                            <b></b><br />
+                                            <b>CANT</b></td>
                                             
-                                        <td style="width:10%;border:2px solid #4040ff;" class='letra2'>
+                                        <td style="width:10%;border:2px solid #0063be;" class='letra2'>
                                                 <b>UNIDAD</b><br />
                                                 <b>  DE </b><br />
                                                 <b>MEDIDA</b><br />
                                         </td>
-                                        <td style="width:10%;border:2px solid #4040ff;" class='letra2'>
+                                        <td style="width:10%;border:2px solid #0063be;" class='letra2'>
                                                 <b>UNIDAD</b><br />
                                                 <b>  DE </b><br />
                                                 <b>MEDIDA SAT</b><br />
                                         </td> 
-                                        <td style="width:10%;border:2px solid #4040ff;" class='letra2'>
+                                        <td style="width:10%;border:2px solid #0063be;" class='letra2'>
                                                 <b>CLAVE DEL</b><br />
                                                 <b>    SAT </b><br />
                                         </td>
-                                        <td style="width:10%;border:2px solid #4040ff;" class='letra2'>
+                                        <td style="width:10%;border:2px solid #0063be;" class='letra2'>
                                                 <b>LOTE Y</b><br />
                                                 <b>CADUCIDAD</b><br />
                                         </td>
-                                        <td style="width:10%;border:2px solid #4040ff;" class='letra2'>
+                                        <td style="width:10%;border:2px solid #0063be;" class='letra2'>
                                                 <b>PRECIO</b><br />
                                                 <b>UNIDARIO</b><br />
                                         </td> 
-                                        <td style="width:14%; border:2px solid #4040ff;" class='letra2'>
+                                        <td style="width:14%; border:2px solid #0063be;" class='letra2'>
+                                                <b></b><br />
                                                 <b>IVA</b>
                                         </td>
-                                        <td style="width:12%;text-align:right border:2px solid #4040ff;" class='letra2'>
+                                        <td style="width:12%;text-align:right border:2px solid #0063be;" class='letra2'>
+                                                <b></b><br />    
                                                 <b>DESC.</b>
                                         </td>
-                                        <td style="width:10%; border:2px solid #4040ff;" class='letra2'>
+                                        <td style="width:10%; border:2px solid #0063be;" class='letra2'>
+                                                <b></b><br />    
                                                 <b>TOTAL</b>
                                         </td>
                                     </tr>
                                 </thead> 
-                                <thead style=' border:2px solid #4040ff;'>
+                                <thead style=' border:2px solid #0063be;'>
                                         <t t-set="weight" t-value="0.00" />
                                             <div t-foreach="o.invoice_line_ids" t-as="d" width="100%">  
                                                
-                                                    <tr style=' border:2px solid #4040ff;fixed;'>
-                                                        <td style="width:10%;  border:2px solid #000000;" class='letra2f' > 
+                                                    <tr style=' border:2px solid #0063be;fixed;'>
+                                                        <td style="width:10%;  border:2px solid #0063be;" class='letra2f' > 
                                                             <t t-esc="d.name" />
                                                         </td> 
-                                                        <td style="width:10%;  border:2px solid #000000;" class='letra2f' > 
-                                                            <t t-esc="d.quantity" />
+                                                        <td style="width:10%;  border:2px solid #0063be;" class='letra2f' > 
+                                                            <t t-esc="int(d.quantity)" />
                                                         </td>
-                                                        <td style="width:10%;  border:2px solid #000000;" class='letra2f' > 
+                                                        <td style="width:10%;  border:2px solid #0063be;" class='letra2f' > 
                                                             <t t-esc="d.product_uom_id.name" />
                                                         </td> 
-                                                        <td style="width:10%;  border:2px solid #000000;" class='letra2f' > 
+                                                        <td style="width:10%;  border:2px solid #0063be;" class='letra2f' > 
                                                             <t t-esc="d.product_uom_id.l10n_mx_edi_code_sat_id.code"/>    
 
                                                         </td>
-                                                        <td style="width:10%;  border:2px solid #000000;" class='letra2f' > 
+                                                        <td style="width:10%;  border:2px solid #0063be;" class='letra2f' > 
                                                             <t t-esc="d.product_id.l10n_mx_edi_code_sat_id.code"/>
                                                         </td>
-                                                        <td style="width:10%;  border:2px solid #000000;" class='letra2f' > 
+                                                        <td style="width:10%;  border:2px solid #0063be;" class='letra2f' > 
                                                             <t t-esc="d.get_lote_two()"/>
                                                         </td>
-                                                        <td style="width:10%;  border:2px solid #000000;" class='letra2f' > 
-                                                            <t t-esc="d.price_unit" />
+                                                        <td style="width:10%;  border:2px solid #0063be;" class='letra2f' > 
+                                                            $<t t-esc="'{:,.2f}'.format(d.price_unit)" />
                                                         </td>
-                                                        <td style="width:10%;  border:2px solid #000000;" class='letra2f' > 
+                                                        <td style="width:10%;  border:2px solid #0063be;" class='letra2f' > 
                                                             <t t-esc="d.tax_ids.name" />
                                                         </td>
-                                                        <td style="width:10%;  border:2px solid #4040ff;" class='letra2f' > 
-                                                            <t t-esc="d.discount" />
+                                                        <td style="width:10%;  border:2px solid #0063be;" class='letra2f' > 
+                                                            <t t-esc="'{:,.2f}'.format(d.discount)" />%
                                                         </td>
-                                                        <td style="width:10%;  border:2px solid #4040ff;" class='letra2f' > 
-                                                            <t t-esc="d.price_subtotal" />
+                                                        <td style="width:10%;  border:2px solid #0063be;" class='letra2f' > 
+                                                            $<t t-esc="'{:,.2f}'.format(d.price_subtotal)" />
                                                         </td>
                                                     </tr>  
                                             </div>    
           
                                 </thead>  
-                                <thead style='border:1px solid #FFFFFF;line-height : 18px;' >
+                                <thead style='border:1px solid #FFFFFF;line-height : 18px;' > 
                                         <tr>
                                             <td colspan="8" style="width:5%;text-align:left" class='letra2'>
                                                 <b>
                                                     CON LETRA:
-                                                    <span style="font-weight: 300;" t-esc="o.get_literal_amount_two(o.amount_total)"  />
+                                                    <span style="font-weight: 300;" t-esc="o.enteros_y_centavos(o.amount_total)" />
                                                 </b><br/>
                                                 
                                             </td>
-                                            <td colspan="1" style="width:10%;border-top:1px solid #4040ff; border-bottom:2px solid #4040ff; border-left:2px solid #4040ff;" class='letra2'>
-                                                <b> SUBTOTAL:</b>
+                                            <td align="left" colspan="1" style="width:10%;border-top:1px solid #0063be; border-bottom:2px solid #0063be; border-left:2px solid #0063be;" class='letra2'>
+                                                
+                                                <b style="font-weight: 300; color:white;">h</b><b> SUBTOTAL</b>
                                             </td>
-                                            <td colspan="1" style="width:10%;border-top:1px solid #4040ff; border-bottom:2px solid #4040ff; border-right:2px solid #4040ff;" class='letranumber'>
+                                            <td align="left" colspan="1" style="width:10%;border-top:1px solid #0063be; border-bottom:2px solid #0063be; border-right:2px solid #0063be;" class='letranumber'>
+                                            
                                                 <b>
-                                                    <t t-esc="'{:,.2f}'.format(o.amount_untaxed)" /></b>
+                                                    $<t t-esc="'{:,.2f}'.format(o.amount_untaxed)" /></b>
                                             </td>
                                         </tr>
                                     </thead>
@@ -336,42 +354,49 @@
                                                 <b style="font-weight: 300;">Una vez recibida la mercancia el cliente acepta los términos y condiciones publicados en nuestro sitio web www.mcym.com.mx</b>
                                                 
                                             </td>
-                                            <td colspan="1" style="width:10%;border-top:1px solid #4040ff; border-bottom:2px solid #4040ff; border-left:2px solid #4040ff;" class='letra2'>
-                                                <b> IVA 16%:</b>
+                                            <td align="left" colspan="1" style="width:10%;border-top:1px solid #0063be; border-bottom:2px solid #0063be; border-left:2px solid #0063be;" class='letra2'>
+                                                <b style="font-weight: 300; color:white;">h</b><b> IVA 16%</b>
                                             </td>
-                                            <td colspan="1" style="width:10%;border-top:1px solid #4040ff; border-bottom:2px solid #4040ff; border-right:2px solid #4040ff;" class='letranumber'>
+                                            <td align="left" colspan="1" style="width:10%;border-top:1px solid #0063be; border-bottom:2px solid #0063be; border-right:2px solid #0063be;" class='letranumber'>
                                                 <b>
-                                                    <t t-esc="o.amount_tax" /></b>
+                                                    $<t t-esc="'{:,.2f}'.format(o.amount_tax)" /></b>
                                             </td>
                                         </tr>
                                     </thead>
                                     <thead style='border:1px solid #FFFFFF;line-height : 18px;' >
                                         <tr>
                                             <td colspan="8" style="width:5%;text-align:left" class='letra2'>
-                                                <b style="font-weight: 300;">Debemos y pagaremos incondicionalmente a la órden de KENETH JANIN CANO MALDONADO la cantidad especificada en este documento, a la fecha especificada del mismo, de no ser así se causará   </b>
+                                                <b style="font-weight: 300;">Debemos y pagaremos incondicionalmente a la órden de KENETH JANIN CANO MALDONADO la cantidad especificada en este documento, </b>
                                                 
                                             </td>
-                                            <td colspan="1" style="width:10%;border-top:1px solid #4040ff; border-bottom:2px solid #4040ff; border-left:2px solid #4040ff;" class='letra2'>
-                                                <b> IVA 0%:</b>
+                                            <td align="left" colspan="1" style="width:10%;border-top:1px solid #0063be; border-bottom:2px solid #0063be; border-left:2px solid #0063be;" class='letra2'>
+                                                <b style="font-weight: 300; color:white;">h</b><b> IVA 0%</b>
                                             </td>
-                                            <td colspan="1" style="width:10%;border-top:1px solid #4040ff; border-bottom:2px solid #4040ff; border-right:2px solid #4040ff;" class='letranumber'>
+                                            <td align="left" colspan="1" style="width:10%;border-top:1px solid #0063be; border-bottom:2px solid #0063be; border-right:2px solid #0063be;" class='letranumber'>
                                                 <b>
-                                                    <t t-esc="0.00" /></b>
+                                                    $<t t-esc="0.0" /></b>
                                             </td>
                                         </tr>
                                     </thead>
                                     <thead style='border:1px solid #FFFFFF;line-height : 18px;' >
                                         <tr>
                                             <td colspan="8" style="width:5%;text-align:left" class='letra2'>
-                                                <b style="font-weight: 300;"> un interés del 5% mensual, la firma en cualquier parte de esta factura significa la aceptación a este pagare</b>
+                                                <b style="font-weight: 300;">a la fecha especificada del mismo, de no ser así se causará un interés del 5% mensual, la firma en cualquier parte de esta factura significa</b>
                                                 
                                             </td>
-                                            <td colspan="1" style="width:10%;border-top:1px solid #4040ff; border-bottom:2px solid #4040ff; border-left:2px solid #4040ff;" class='letra2'>
-                                                <b>TOTAL:</b>
+                                            <td align="left" colspan="1" style="width:10%;border-top:1px solid #0063be; border-bottom:2px solid #0063be; border-left:2px solid #0063be;" class='letra2'>
+                                                <b style="font-weight: 300; color:white;">hh</b><b>TOTAL</b>
                                             </td>
-                                            <td colspan="1" style="width:10%;border-top:1px solid #4040ff; border-bottom:2px solid #4040ff; border-right:2px solid #4040ff;" class='letranumber'>
+                                            <td align="left" colspan="1" style="width:10%;border-top:1px solid #0063be; border-bottom:2px solid #0063be; border-right:2px solid #0063be;" class='letranumber'>
                                                 <b>
-                                                    <t t-esc="o.amount_total" /></b>
+                                                    $<t t-esc="'{:,.2f}'.format(o.amount_total)" /></b>
+                                            </td>
+                                        </tr>
+                                    </thead>
+                                    <thead style='border:1px solid #FFFFFF;line-height : 18px;' >
+                                        <tr>
+                                            <td colspan="8" style="width:5%;text-align:left" class='letra2'>
+                                                <b style="font-weight: 300;">la aceptación a este pagare</b>
                                             </td>
                                         </tr>
                                     </thead>
@@ -449,7 +474,7 @@
                                         <span> | Fiscal Folio:</span> <span t-esc="tfd.get('UUID')"/>
                                     </div>
                                     <div class="digital-stamp-content text-center">
-                                        <strong style="color:#3E4CF0;">This document is a printed representation of a CFDI</strong>
+                                        <strong style="color:#0063be;">This document is a printed representation of a CFDI</strong>
                                     </div>
                                 </div> 
                             </div>  
