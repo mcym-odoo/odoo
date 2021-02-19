@@ -8,3 +8,4 @@
 * 28/01/2021 [as_mcym_pos] agregada funcionalidad para evitar conflicto con modulo pos_lots_selection
 * 29/01/2021 [as_mcym_pos] corregido detalle en venta de productos que no tienen receta
 * 29/01/2021 [as_mcym_report] Arreglo de observaciones de reportes 13/02/01
+* 17/01/2021 [as_mcym_report] Arreglo de reportes 17/02/2021
