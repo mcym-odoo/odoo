@@ -10,3 +10,4 @@
 * 29/01/2021 [as_mcym_report] Arreglo de observaciones de reportes 13/02/01
 * 17/02/2021 [as_mcym_report] Arreglo de reportes 17/02/2021
 * 19/02/2021 [as_mcym_report] Arreglo de cabecera de reportes 19/02/2021
+* 19/02/2021 [as_mcym_report] Arreglo de detalles esteticos de reportes 23/02/2021

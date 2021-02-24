@@ -169,7 +169,7 @@
                                         <p style="line-height: 100%">    
                                             <b class="letrita">REGIMEN FISCAL: </b><b style="font-weight: 300;" class="letrita">612 Personas física con actividades empresariales y PROFESIONALES</b><br />
                                             <b class="letrita" >DOMICILIO FISCAL: </b><b class="letrita" style="font-weight: 300;">Camino nuevo amanecer 28-2 Lomas de Balvanera, Querétaro, Corregidora, México, CP 76906</b><br />
-                                            <b class="letrita" >EMAIL: </b><b class="letrita" style="font-weight: 300;">servicioalcliente@mcym.com.mx</b><b  style="font-weight: 300; color:white;"> nuevxxxxxxx</b><b class="letrita" >TELF: </b><b class="letrita" style="font-weight: 300;">442-2255559</b>
+                                            <b class="letrita" >EMAIL: </b><b class="letrita" style="font-weight: 300;">servicioalcliente@mcym.com.mx</b><b  style="font-weight: 300; color:white;"> nuevxxxxxxx</b><b class="letrita" >TEL: </b><b class="letrita" style="font-weight: 300;">442-2255559</b>
                                         </p>
                                     </div>
                                 </t>
@@ -181,7 +181,7 @@
                                         <p style="line-height: 100%">    
                                             <b class="letrita">REGIMEN FISCAL: </b><b style="font-weight: 300;" class="letrita">612 Personas física con actividades empresariales y PROFESIONALES</b><br />
                                             <b class="letrita" >DOMICILIO FISCAL: </b><b class="letrita" style="font-weight: 300;">Camino nuevo amanecer 28-2 Lomas de Balvanera, Querétaro, Corregidora, México, CP 76906</b><br />
-                                            <b class="letrita" >EMAIL: </b><b class="letrita" style="font-weight: 300;">servicioalcliente@mcym.com.mx</b><b  style="font-weight: 300; color:white;"> nuevxxxxxxx</b><b class="letrita" >TELF: </b><b class="letrita" style="font-weight: 300;">442-2255559</b><br />    
+                                            <b class="letrita" >EMAIL: </b><b class="letrita" style="font-weight: 300;">servicioalcliente@mcym.com.mx</b><b  style="font-weight: 300; color:white;"> nuevxxxxxxx</b><b class="letrita" >TEL: </b><b class="letrita" style="font-weight: 300;">442-2255559</b><br />    
                                         </p>
                                         </div>
                                 </t>
@@ -218,7 +218,7 @@
 
                                     </tr>
                                     <tr>
-                                        <td style="background-color:white;font-weight: 600;">DIRECCIÓN: <b style="font-weight: 300;"><t t-esc="o.partner_id.street"/>, <t t-esc="o.partner_id.l10n_mx_edi_colony"/>, <t t-esc="o.partner_id.state_id.name"/>, <t t-esc="o.partner_id.country_id.name"/>, <t t-esc="o.partner_id.zip"/><br /></b>CONTACTO: <b style="font-weight: 300;"><t t-esc="o.partner_id.phone" /></b><br /></td>
+                                        <td style="background-color:white;font-weight: 600;">DIRECCIÓN: <b style="font-weight: 300;" ><t t-esc="o.partner_id.street"/>, <t t-esc="o.partner_id.l10n_mx_edi_colony"/>, <t t-esc="o.partner_id.city"/>, <t t-esc="o.partner_id.state_id.name"/>, <t t-esc="o.partner_id.country_id.name"/>, <t t-esc="o.partner_id.zip"/><br /></b>CONTACTO: <b style="font-weight: 300;"> <t t-esc="o.partner_id.phone" /></b><br /></td>
 
                                         <td style="background-color:white; font-weight: 600;">FECHA COTIZACIÓN: <b style="font-weight: 300;"> <t t-esc="(datetime.datetime.strptime(str(o.date_order), '%Y-%m-%d %H:%M:%S') - datetime.timedelta(hours=4)).strftime('%d/%m/%Y')" /><br/></b>FECHA VENCIMIENTO: <b style="font-weight: 300;"><t t-if="o.validity_date != False" t-esc="(datetime.datetime.strptime(str(o.validity_date), '%Y-%m-%d')).strftime('%d/%m/%Y')" /></b></td>
                                          <td style="background-color:white;"> </td> 
@@ -263,7 +263,7 @@
                                     </tr>
                                     </tr>
                                     <tr>
-                                   <td style="background-color:white;font-weight: 600;">DIRECCIÓN: <b style="font-weight: 300;"><t t-esc="o.partner_id.street"/>, <t t-esc="o.partner_id.l10n_mx_edi_colony"/>, <t t-esc="o.partner_id.state_id.name"/>, <t t-esc="o.partner_id.country_id.name"/>, <t t-esc="o.partner_id.zip"/><br /></b>CONTACTO: <b style="font-weight: 300;"><t t-esc="o.partner_id.phone" /></b><br /></td>
+                                  <td style="background-color:white;font-weight: 600;">DIRECCIÓN: <b style="font-weight: 300;"><t t-esc="o.partner_id.street"/>, <t t-esc="o.partner_id.l10n_mx_edi_colony"/>, <t t-esc="o.partner_id.city"/>, <t t-esc="o.partner_id.state_id.name"/>, <t t-esc="o.partner_id.country_id.name"/>, <t t-esc="o.partner_id.zip"/><br /></b>CONTACTO: <b style="font-weight: 300;"> <t t-esc="o.partner_id.phone" /></b><br /></td>
 
                                         <td style="background-color:white; font-weight: 600;">FECHA DE ÓRDEN: <b style="font-weight: 300;"><t t-esc="(datetime.datetime.strptime(str(o.date_order), '%Y-%m-%d %H:%M:%S' ) - datetime.timedelta(hours=5)).strftime('%d/%m/%Y')" /><br/></b>COMERCIAL: <b style="font-weight: 300;"><t t-esc="o.user_id.partner_id.name" /></b></td>
                                         <td style="background-color:white;"></td>
