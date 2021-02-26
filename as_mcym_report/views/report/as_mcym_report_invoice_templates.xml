@@ -211,7 +211,7 @@
                             </tr> 
                             <tr> 
                                 
-                                <td style="background-color:white;font-weight: 600;">DIRECCIÓN: <b style="font-weight: 300;"><t t-esc="o.partner_id.street"/>, <t t-esc="o.partner_id.city"/>, <t t-esc="o.partner_id.l10n_mx_edi_colony"/>, <t t-esc="o.partner_id.state_id.name"/>, <t t-esc="o.partner_id.country_id.name"/>, <t t-esc="o.partner_id.zip"/><br /></b>CONTACTO: <b style="font-weight: 300;"> <t t-esc="o.partner_id.phone" /></b><br /></td>
+                                <td style="background-color:white;font-weight: 600;">DIRECCIÓN: <b style="font-weight: 300;"><t t-esc="o.partner_id.street"/>,  <t t-esc="o.partner_id.l10n_mx_edi_colony"/>, <t t-esc="o.partner_id.city"/>, <t t-esc="o.partner_id.state_id.name"/>, <t t-esc="o.partner_id.country_id.name"/>, <t t-esc="o.partner_id.zip"/><br /></b>CONTACTO: <b style="font-weight: 300;"> <t t-esc="o.partner_id.phone" /></b><br /></td>
                                 <td style="background-color:white; font-weight: 600;">FECHA DE FACTURA: <b style="font-weight: 300;"> <t t-esc="(datetime.datetime.strptime(str(o.invoice_date), '%Y-%m-%d') - datetime.timedelta(hours=4)).strftime('%d/%m/%Y')" /><br/>
                                 </b>FECHA DE VENCIMIENTO: <b style="font-weight: 300;"><t t-esc="(datetime.datetime.strptime(str(o.invoice_date_due), '%Y-%m-%d') - datetime.timedelta(hours=4)).strftime('%d/%m/%Y')" /><br/></b></td>
 

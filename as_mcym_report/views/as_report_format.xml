@@ -4,7 +4,7 @@
   <report 
         id="report_sale_order" 
         model="sale.order" 
-        string="Formato de presupuesto de ventas(PDF)"
+        string="Presupuesto de venta / Pedido de venta"
         report_type="qweb-pdf"
         name="as_mcym_report.report_sale_order"
         file="as_mcym_report.report_sale_order"
@@ -14,7 +14,7 @@
   <report 
         id="report_account_move" 
         model="account.move" 
-        string="Formato de presupuesto de ventas facturas(PDF)"
+        string="Factura"
         report_type="qweb-pdf"
         name="as_mcym_report.report_account_move"
         file="as_mcym_report.report_account_move"

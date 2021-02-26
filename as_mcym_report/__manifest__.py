@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name' : "Ahorasoft customizaciones MYCM",
-    'version' : "1.0.5",
+    'version' : "1.0.6",
     'author'  : "Ahorasoft",
     'description': """
 Customizaciones para MCYM

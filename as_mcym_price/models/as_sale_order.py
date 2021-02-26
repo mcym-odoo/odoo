@@ -26,7 +26,10 @@ class SaleOrderLine(models.Model):
     
     as_margin_porcentaje = fields.Float('Margen Porcentaje',compute='get_margin_porcentaje',store=True)
 
-
+    @api.onchange('product_id')
+    def cambiar_imagen(self):
+        for line in self:
+            line.as_image = line.product_id.product_tmpl_id.image_1920
 
 
     # @api.depends('as_margin_porcentaje')
