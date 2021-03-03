@@ -186,15 +186,15 @@
                                         </div>
                                 </t>
                             </div>
-                            <div class="col-2" style="text-align:right; float:right;">
-                                <h4>
-                                    <div>
-                                        <img t-att-src="image_data_uri(o.company_id.logo)"
-                                        style="height: 140px; width: 190px; align:right;" />
-                                    <br />
-                                    </div>
-                                </h4>
-                            </div>
+                            <div class="col-2" style="text-align:right;border-style: groove;"> 
+                                <h4> 
+                                    <div> 
+                                       <img t-att-src="image_data_uri(o.company_id.logo)"
+                                        style="height: 140px; width: 140px; align:right;" />
+                                    </div> 
+                                </h4>     
+
+                            </div>       
 
                         </div>
 
