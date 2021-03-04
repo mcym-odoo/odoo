@@ -15,3 +15,4 @@
 * 24/02/2021 [as_mcym_price] Arreglo de bug de nombres, receta folio.
 * 25/02/2021 [as_mcym_report] Arreglo de nombres de botones de impresión.
 * 01/03/2021 [as_mcym_report] Arreglo de ancho y alto de imagen de reporte
+* 03/03/2021 [as_mcym_report] Arreglo de dimensiones de reporte de acuerdo a reporte nativo

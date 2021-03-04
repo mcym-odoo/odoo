@@ -459,8 +459,9 @@
                                                 <tr style=' border:2px solid #0063be;fixed;'>
 
                                                     <td style="width:10%;  border:2px solid #0063be;" class='letra2' >
-                                                    <img t-attf-src="data:image/*;base64,{{d.as_image}}"
-                                                            style="width:60px;height:20%;padding:2px;" />
+                                                    <!-- <img t-attf-src="data:image/*;base64,{{d.as_image}}"
+                                                            style="width:60px;height:20%;padding:2px;" /> -->
+                                                    <img t-att-src="image_data_uri(d.as_image)" style="max-height: 6rem; max-width: 100%;"/>
                                                     </td>
                                                     <td style="width:40%;  border:2px solid #0063be;" class='letra2' >
                                                         <t t-esc="d.product_id.name" /><br />[<t t-esc="d.product_id.default_code"/>]
