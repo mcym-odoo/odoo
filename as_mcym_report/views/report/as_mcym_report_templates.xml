@@ -6,451 +6,266 @@
 
             <t t-name="web.external_layout">
                 <t t-foreach="docs" t-as="o">
-                    <div class="header">
-                        <style type="text/css">
-                            .header {
-                                margin: 0px;
-                                padding: 0px;
-                            }
 
-                            .cabecera {
-                                font-size: 7px;
-                                font-family: 'Arial' !important;
-                            }
-
-                            .letra {
-                                font-size: 15px !important;
-                                margin: 0px;
-                            }
-
-                            .letrita {
-                                font-size: 11px !important;
-                                margin: 0px;
-                            }
-
-                            .letra3 {
-                                font-size: 15px !important;
-                                margin: 0px;
-                                padding-left: 3px !important;
-                                padding-right: 3px !important;
-                                white-space: nowrap;
-                                text-overflow: ellipsis;
-                            }
-
-                            .cabecera2 {
-                                font-size: 9px;
-                                font-family: 'Arial' !important;
-                            }
-
-                            .columnasr {
-                                font-size: 12px;
-                                font-family: 'Arial' !important;
-                                margin-bottom: 10px;
-                            }
-
-                            .columnas2 {
-                                font-size: 9px;
-                                font-family: 'Arial' !important;
-                            }
-
-                            h3 {
-                                font-family: 'Arial' !important;
-                                font-size: 14px;
-                                margin: 0px !important;
-                                padding: 0px !important;
-                            }
-
-                            td {
-                                font-family: 'Arial' !important;
-                                font-size: 12px;
-                                margin: 0px !important;
-                                padding: 0px !important;
-                            }
-
-                            h4 {
-                                font-family: 'Arial' !important;
-                                font-size: 12px;
-                                margin: 0px !important;
-                                padding: 0px !important;
-                            }
-
-                            span {
-                                font-family: 'Arial' !important;
-
-                                margin: 0px !important;
-                                padding: 0px !important;
-                            }
-
-                            body {
-                                font-family: 'Arial' !important;
-                                font-size: 18px;
-                            }
-
-                            hr {
-                                border-bottom: solid;
-                                border-width: 1pt border-top:0px !important;
-                                padding: 0px !important;
-                                margin: 0px !important;
-
-                            }
-
-                            tr.border_bottom td {
-                                border-bottom: 0.5pt solid #cccccc;
-                                margin-right: 3px;
-                                padding-right: 3px;
-                                font-size: 13px;
-                                font-family: 'Arial' !important;
-                            }
-
-                            .borde1 {
-                                border-top: 2px solid #0063be;
-                                border-left: 2px solid #0063be;
-                                border-right: px solid #0063be;
-                                border-bottom: 2px solid #0063be;
-                                margin-bottom: 3px;
-
-                            }
-
-                            .borde1 thead tr td {
-                                padding-left: 5px;
-                                padding-right: 5px;
-
-                            }
-
-                            .borde2 {
-                                border-left: 1px solid grey;
-                                border-right: 1px solid grey;
-                                border-top: 1px solid grey;
-                                margin: 3px;
-                            }
-
-                            .titulo {
-                                font-size: 25px;
-                                padding-top: 40px;
-                            }
-
-                            .titulo_personalizado {
-
-                                font-size: 25px;
-                                padding-top: 40px;
-                            }
-
-                            .pe {
-                                color: navy;
-                                text-indent: 30px;
-                            }
-
-                            .hr {
-                                background-color: #0063be;
-                                height: 20px;
-                                margin-left: 0%;
-                                width: 100%;
-                            }
-
-                            .hr_derecha {
-                                background-color: green;
-                                height: 40px;
-                                margin-left: 50%;
-                                margin-right: 30%;
-                                width: 100%;
-                            }
-                        </style>
-                        <div class="row mt0 mb0 " id="as_header">
-
-                            <div class="col-2" style="text-align:center; margin-bottom:10px;font-size:12px;">
-
-                            </div>
-                            <div class="col-8" style="text-align:center;">
-                                <t t-if="o.state == 'sale'" width="100%">
-                                    <div>
-
-                                        <b style="color:#0063be;">KENETH JANIN CANO MALDONADO</b><br />
-                                        <b style="color:#0063be; font-weight: 100;">RFC: CAMK881112B19</b><br />
-                                        <p style="line-height: 100%">
-                                            <b class="letrita">REGIMEN FISCAL: </b><b style="font-weight: 300;"
-                                                class="letrita">612 Personas física con actividades empresariales y
-                                                PROFESIONALES</b><br />
-                                            <b class="letrita">DOMICILIO FISCAL: </b><b class="letrita"
-                                                style="font-weight: 300;">Camino nuevo amanecer 28-2 Lomas de Balvanera,
-                                                Querétaro, Corregidora, México, CP 76906</b><br />
-                                            <b class="letrita">EMAIL: </b><b class="letrita"
-                                                style="font-weight: 300;">servicioalcliente@mcym.com.mx</b><b
-                                                style="font-weight: 300; color:white;"> nuevxxxxxxx</b><b
-                                                class="letrita">TEL: </b><b class="letrita"
-                                                style="font-weight: 300;">442-2255559</b>
-                                        </p>
-                                    </div>
-                                </t>
-                                <t t-if="o.state == 'draft'" width="100%">
-
-                                    <div>
-                                        <b style="color:#0063be;">KENETH JANIN CANO MALDONADO</b><br />
-                                        <b style="color:#0063be; font-weight: 100;">RFC: CAMK881112B19</b><br />
-                                        <p style="line-height: 100%">
-                                            <b class="letrita">REGIMEN FISCAL: </b><b style="font-weight: 300;"
-                                                class="letrita">612 Personas física con actividades empresariales y
-                                                PROFESIONALES</b><br />
-                                            <b class="letrita">DOMICILIO FISCAL: </b><b class="letrita"
-                                                style="font-weight: 300;">Camino nuevo amanecer 28-2 Lomas de Balvanera,
-                                                Querétaro, Corregidora, México, CP 76906</b><br />
-                                            <b class="letrita">EMAIL: </b><b class="letrita"
-                                                style="font-weight: 300;">servicioalcliente@mcym.com.mx</b><b
-                                                style="font-weight: 300; color:white;"> nuevxxxxxxx</b><b
-                                                class="letrita">TEL: </b><b class="letrita"
-                                                style="font-weight: 300;">442-2255559</b><br />
-                                        </p>
-                                    </div>
-                                </t>
-                            </div>
-                            <div class="col-2" style="text-align:right;border-style: groove;">
-                                <h4>
-                                    <div>
-                                        <img t-att-src="image_data_uri(o.company_id.logo)"
-                                            style="height: 140px; width: 140px; align:right;" />
-                                    </div>
-                                </h4>
-
-                            </div>
-
-                        </div>
-
-                        <table width="100%">
-                            <t t-if="o.state == 'draft'" width="100%">
-                                <tr>
-                                    <th style="width:70%; background-color:white; text-align:left; font-size: 12px;"><b
-                                            style="color:#0063be">WWW.MCYM.COM.MX </b><b
-                                            style="color:white">WWW.MCYM.COM.MX------------------------------------</b><b
-                                            style="font-size: 12px;  font-weight: 300; color:#0063be;">"PROFESIONALES DE
-                                            LA SALUD"</b></th>
-                                    <th style="width:20%; background-color:white;"></th>
-                                    <th style="width:10%; background-color:white;"></th>
-                                </tr>
-                                <tr>
-
-                                    <th style="width:70%; background-color:#0063be;"></th>
-                                    <th style="width:20%; background-color:white; text-align:center;"><b
-                                            style="color:#0063be">PRESUPUESTO </b></th>
-                                    <th style="width:10%; background-color:#0063be;"></th>
-                                </tr>
-                                <tr>
-                                    <td style="background-color:white; font-weight: 600;">SOCIO COMERCIAL: <b
-                                            style="font-weight: 300;">
-                                            <t t-esc="o.partner_id.name" /></b><br />RFC: <b style="font-weight: 300;">
-                                            <t t-esc="o.partner_id.vat" /></b><br /></td>
-                                    <td style="width:20%; background-color:white; text-align:center; font-size: 18px;">
-                                        <b style="color:#0063be">#
-                                            <t t-esc="o.name" /></b></td>
-                                    <th style="width:10%; background-color:white;"></th>
-
-                                </tr>
-                                <tr>
-                                    <td style="background-color:white;font-weight: 600;">DIRECCIÓN: <b
-                                            style="font-weight: 300;">
-                                            <t t-esc="o.partner_id.street" />,
-                                            <t t-esc="o.partner_id.l10n_mx_edi_colony" />,
-                                            <t t-esc="o.partner_id.city" />,
-                                            <t t-esc="o.partner_id.state_id.name" />,
-                                            <t t-esc="o.partner_id.country_id.name" />,
-                                            <t t-esc="o.partner_id.zip" /><br /></b>CONTACTO: <b
-                                            style="font-weight: 300;">
-                                            <t t-esc="o.partner_id.phone" /></b><br /></td>
-
-                                    <td style="background-color:white; font-weight: 600;">FECHA COTIZACIÓN: <b
-                                            style="font-weight: 300;">
-                                            <t
-                                                t-esc="(datetime.datetime.strptime(str(o.date_order), '%Y-%m-%d %H:%M:%S') - datetime.timedelta(hours=4)).strftime('%d/%m/%Y')" />
-                                            <br /></b>FECHA VENCIMIENTO: <b style="font-weight: 300;">
-                                            <t t-if="o.validity_date != False"
-                                                t-esc="(datetime.datetime.strptime(str(o.validity_date), '%Y-%m-%d')).strftime('%d/%m/%Y')" />
-                                            </b></td>
-                                    <td style="background-color:white;"> </td>
-                                </tr>
-                                <tr>
-
-                                    <td style="background-color:white; font-weight: 600;">EMAIL: <b
-                                            style="font-weight: 300;">
-                                            <t t-esc="o.partner_id.email" /></b></td>
-                                    <td style="background-color:white; font-weight: 600;">COMERCIAL: <b
-                                            style="font-weight: 300;">
-                                            <t t-esc="o.user_id.partner_id.name" /></b></td>
-                                    <td style="background-color:white; font-weight: 600;"></td>
-                                    <td style="background-color:white;"></td>
-                                </tr>
-                                <tr>
-
-                                    <td style="background-color:white;"></td>
-                                </tr>
-                                <tr>
-                                    <td style="background-color:white;"></td>
-                                    <td style="background-color:white; font-weight: 600;">CONDICIONES: <b
-                                            style="font-weight: 300;">
-                                            <t t-esc="o.payment_term_id.name" /></b></td>
-                                    <td style="background-color:white;"></td>
-                                </tr>
-
-                            </t>
-                            <t t-if="o.state == 'sale'" width="100%">
-                                <tr>
-                                <tr>
-                                    <th style="width:70%; background-color:white; text-align:left; font-size: 12px;"><b
-                                            style="color:#0063be">WWW.MCYM.COM.MX </b><b
-                                            style="color:white">WWW.MCYM.COM.MX--------------------------------------</b><b
-                                            style="font-size: 12px;  font-weight: 300; color:#0063be;">"PROFESIONALES DE
-                                            LA SALUD"</b></th>
-                                    <th style="width:20%; background-color:white;"></th>
-                                    <th style="width:10%; background-color:white;"></th>
-                                </tr>
-                                <tr>
-                                    <th style="width:70%; background-color:#0063be;"></th>
-                                    <th style="width:20%; background-color:white; text-align:center;"><b
-                                            style="color:#0063be">PEDIDO </b><br /></th>
-                                    <th style="width:10%; background-color:#0063be;"></th>
-                                </tr>
-                                <tr>
-                                    <td style="background-color:white; font-weight: 600;">SOCIO COMERCIAL: <b
-                                            style="font-weight: 300;">
-                                            <t t-esc="o.partner_id.name" /></b><br />RFC: <b style="font-weight: 300;">
-                                            <t t-esc="o.partner_id.vat" /></b><br /></td>
-                                    <td style="width:20%; background-color:white; text-align:center; font-size: 18px;">
-                                        <b style="color:#0063be">#
-                                            <t t-esc="o.name" /></b></td>
-                                    <th style="width:10%; background-color:white;"></th>
-                                    <td style="background-color:white;"></td>
-                                    <td style="background-color:white;"></td>
-
-                                </tr>
-                                </tr>
-                                <tr>
-                                    <td style="background-color:white;font-weight: 600;">DIRECCIÓN: <b
-                                            style="font-weight: 300;">
-                                            <t t-esc="o.partner_id.street" />,
-                                            <t t-esc="o.partner_id.l10n_mx_edi_colony" />,
-                                            <t t-esc="o.partner_id.city" />,
-                                            <t t-esc="o.partner_id.state_id.name" />,
-                                            <t t-esc="o.partner_id.country_id.name" />,
-                                            <t t-esc="o.partner_id.zip" /><br /></b>CONTACTO: <b
-                                            style="font-weight: 300;">
-                                            <t t-esc="o.partner_id.phone" /></b><br /></td>
-
-                                    <td style="background-color:white; font-weight: 600;">FECHA DE ÓRDEN: <b
-                                            style="font-weight: 300;">
-                                            <t
-                                                t-esc="(datetime.datetime.strptime(str(o.date_order), '%Y-%m-%d %H:%M:%S' ) - datetime.timedelta(hours=5)).strftime('%d/%m/%Y')" />
-                                            <br /></b>COMERCIAL: <b style="font-weight: 300;">
-                                            <t t-esc="o.user_id.partner_id.name" /></b></td>
-                                    <td style="background-color:white;"></td>
-                                    <td style="background-color:white;"></td>
-
-                                    <td style="background-color:white; font-weight: 600;"><b
-                                            style="font-weight: 300;"><br /></b> <br /></td>
-                                    <td style="background-color:white;"> </td>
-
-                                <tr>
-                                    <td style="background-color:white; font-weight: 600;">EMAIL: <b
-                                            style="font-weight: 300;">
-                                            <t t-esc="o.partner_id.email" /></b></td>
-                                    <td style="background-color:white; font-weight: 600;">CONDICIONES: <b
-                                            style="font-weight: 300;">
-                                            <t t-esc="o.payment_term_id.name" /></b></td>
-                                    <td style="background-color:white;"></td>
-                                    <td style="background-color:white;"></td>
-                                    <td style="background-color:white;"></td>
-                                </tr>
-                                </tr>
-                            </t>
-
-                        </table>
-
-                    </div>
 
                     <t t-call="web.internal_layout">
 
                         <div class="page" style="font-family: 'Arial' !important; ">
-                            <style type="text/css">
-                                .page {
-                                    margin: 0px;
-                                    padding: 0px;
-                                }
+                            <div class="header_page" >
+                                <style type="text/css">
+                                    .header {
+                                        margin: 0px;
+                                        padding: 0px;
+                                    }
 
-                                .totales1 {
-                                    font-family: 'Arial' !important;
-                                    font-size: 25px;
-                                    font-weight: bold;
-                                    border-collapse: collapse;
-                                    border-top: solid;
-                                    border-width: 2pt
-                                }
+                                    .cabecera {
+                                        font-size: 7px;
+                                        font-family: 'Arial' !important;
+                                    }
 
-                                .totales2 {
-                                    font-family: 'Arial' !important;
-                                    font-size: 15px;
-                                    font-weight: bold;
-                                }
+                                    .letra {
+                                        font-size: 15px !important;
+                                        margin: 0px;
+                                    }
 
-                                .totales3 {
-                                    font-family: 'Arial' !important;
-                                    font-size: 25px;
-                                    font-weight: bold;
-                                    border-collapse: collapse;
-                                    border-top: solid;
-                                    border-bottom: solid;
-                                    border-width: 2pt
-                                }
+                                    .letrita {
+                                        font-size: 11px !important;
+                                        margin: 0px;
+                                    }
 
-                                .columnas {
-                                    font-family: 'Arial' !important;
-                                    font-size: 12px;
-                                    font-weight: bold;
-                                }
+                                    .letra3 {
+                                        font-size: 15px !important;
+                                        margin: 0px;
+                                        padding-left: 3px !important;
+                                        padding-right: 3px !important;
+                                        white-space: nowrap;
+                                        text-overflow: ellipsis;
+                                    }
 
-                                body {
-                                    font-family: 'Arial' !important;
-                                }
+                                    .cabecera2 {
+                                        font-size: 9px;
+                                        font-family: 'Arial' !important;
+                                    }
 
-                                .borde1 {
-                                    border: 1px solid grey;
+                                    .columnasr {
+                                        font-size: 12px;
+                                        font-family: 'Arial' !important;
+                                        margin-bottom: 10px;
+                                    }
 
-                                }
+                                    .columnas2 {
+                                        font-size: 9px;
+                                        font-family: 'Arial' !important;
+                                    }
 
-                                .borde3 {
-                                    border-bottom: 1px solid grey;
+                                    h3 {
+                                        font-family: 'Arial' !important;
+                                        font-size: 14px;
+                                        margin: 0px !important;
+                                        padding: 0px !important;
+                                    }
 
-                                }
+                                    td {
+                                        font-family: 'Arial' !important;
+                                        font-size: 12px;
+                                        margin: 0px !important;
+                                        padding: 0px !important;
+                                    }
 
-                                .borde2 {
-                                    border: 1px solid grey;
-                                    border-radius: 8px 8px 8px 8px;
-                                    max-height: 2.5cm;
-                                    max-width: 2cm;
-                                }
+                                    h4 {
+                                        font-family: 'Arial' !important;
+                                        font-size: 12px;
+                                        margin: 0px !important;
+                                        padding: 0px !important;
+                                    }
 
-                                .borde_inferior {
-                                    margin-bottom: 5px;
-                                    margin-top: 5px;
-                                }
+                                    span {
+                                        font-family: 'Arial' !important;
 
-                                .columnasr tr td {
-                                    font-size: 15px !important;
-                                    font-family: 'Arial' !important;
-                                    margin-bottom: 0px;
-                                    border-bottom: 0px;
-                                }
+                                        margin: 0px !important;
+                                        padding: 0px !important;
+                                    }
+
+                                    body {
+                                        font-family: 'Arial' !important;
+                                        font-size: 18px;
+                                    }
+
+                                    hr {
+                                        border-bottom: solid;
+                                        border-width: 1pt border-top:0px !important;
+                                        padding: 0px !important;
+                                        margin: 0px !important;
+
+                                    }
+
+                                    tr.border_bottom td {
+                                        border-bottom: 0.5pt solid #cccccc;
+                                        margin-right: 3px;
+                                        padding-right: 3px;
+                                        font-size: 13px;
+                                        font-family: 'Arial' !important;
+                                    }
+
+                                    .borde1 {
+                                        border-top: 2px solid #0063be;
+                                        border-left: 2px solid #0063be;
+                                        border-right: px solid #0063be;
+                                        border-bottom: 2px solid #0063be;
+                                        margin-bottom: 3px;
+
+                                    }
+
+                                    .borde1 thead tr td {
+                                        padding-left: 5px;
+                                        padding-right: 5px;
+
+                                    }
+
+                                    .borde2 {
+                                        border-left: 1px solid grey;
+                                        border-right: 1px solid grey;
+                                        border-top: 1px solid grey;
+                                        margin: 3px;
+                                    }
+
+                                    .titulo {
+                                        font-size: 25px;
+                                        padding-top: 40px;
+                                    }
+
+                                    .titulo_personalizado {
+
+                                        font-size: 25px;
+                                        padding-top: 40px;
+                                    }
+
+                                    .pe {
+                                        color: navy;
+                                        text-indent: 30px;
+                                    }
+
+                                    .hr {
+                                        background-color: #0063be;
+                                        height: 20px;
+                                        margin-left: 0%;
+                                        width: 100%;
+                                    }
+
+                                    .hr_derecha {
+                                        background-color: green;
+                                        height: 40px;
+                                        margin-left: 50%;
+                                        margin-right: 30%;
+                                        width: 100%;
+                                    }
+
+                                    b1 {
+                                        font-size: 14pt;
+                                        font-weight: bold;
+                                    }
+
+                                    b2 {
+                                        font-size: 11pt;
+                                    }
+
+                                    b_profsalud {
+                                        font-size: 12pt;
+                                    }
+
+                                    bh1 {
+                                        font-size: 10pt;
+                                    }
+
+                                    b16 {
+                                        font-size: 16pt;
+                                    }
+
+                                    .page {
+                                        margin: 0px;
+                                        padding: 0px;
+                                    }
+
+                                    .totales1 {
+                                        font-family: 'Arial' !important;
+                                        font-size: 25px;
+                                        font-weight: bold;
+                                        border-collapse: collapse;
+                                        border-top: solid;
+                                        border-width: 2pt
+                                    }
+
+                                    .totales2 {
+                                        font-family: 'Arial' !important;
+                                        font-size: 15px;
+                                        font-weight: bold;
+                                    }
+
+                                    .totales3 {
+                                        font-family: 'Arial' !important;
+                                        font-size: 25px;
+                                        font-weight: bold;
+                                        border-collapse: collapse;
+                                        border-top: solid;
+                                        border-bottom: solid;
+                                        border-width: 2pt
+                                    }
+
+                                    .columnas {
+                                        font-family: 'Arial' !important;
+                                        font-size: 12px;
+                                        font-weight: bold;
+                                    }
+
+                                    body {
+                                        font-family: 'Arial' !important;
+                                    }
+
+                                    .borde1 {
+                                        border: 1px solid grey;
+
+                                    }
+
+                                    .borde3 {
+                                        border-bottom: 1px solid grey;
+
+                                    }
+
+                                    .borde2 {
+                                        border: 1px solid grey;
+                                        border-radius: 8px 8px 8px 8px;
+                                        max-height: 2.5cm;
+                                        max-width: 2cm;
+                                    }
+
+                                    .borde_inferior {
+                                        margin-bottom: 5px;
+                                        margin-top: 5px;
+                                    }
+
+                                    .columnasr tr td {
+                                        font-size: 15px !important;
+                                        font-family: 'Arial' !important;
+                                        margin-bottom: 0px;
+                                        border-bottom: 0px;
+                                    }
 
 
 
-                                .letranumber {
-                                    font-size: 12px;
+                                    .letranumber {
+                                        font-size: 12px;
 
-                                    white-space: nowrap;
-                                    word-wrap: break-word;
-                                }
+                                        white-space: nowrap;
+                                        word-wrap: break-word;
+                                    }
 
 
-                                .letra2 {
-                                    font-size: 11px;
+                                    .letra2 {
+                                        font-size: 11px;
 
-                                    padding: 2px;
-                                    color: #000000;
+                                        padding: 2px;
+                                        color: #000000;
+                                    }
 
 
                                     .letra3 {
@@ -475,57 +290,294 @@
 
                                     }
 
-                                    .table thead tr th {
-                                        padding: 1px;
-                                        color: #000000;
-                                        background-color: #FFFFFF;
-                                        border: 1px solid #000000;
-                                    }
-
                                     .margen {
                                         margin: 3px;
                                     }
-                            </style>
+                                </style>
+                                <div class="row mt0 mb0 " id="as_header" style="align:center;">
+
+                                    <div class="col-8" style="text-align:center;">
+                                        <t t-if="o.state == 'sale'" width="100%">
+                                            <div>
+
+                                                <b1 style="color:#0063be;">KENETH JANIN CANO MALDONADO</b1><br />
+                                                <b1 style="color:#0063be; font-weight: 100;">RFC: CAMK881112B19</b1>
+                                                <br />
+                                                <p style="line-height: 100%">
+                                                    <b2><strong>REGIMEN FISCAL: </strong></b2>
+                                                    <b2>612 Personas física con actividades empresariales y
+                                                        PROFESIONALES</b2><br />
+                                                    <b2><strong>DOMICILIO FISCAL: </strong></b2>
+                                                    <b2>Camino nuevo amanecer 28-2 Lomas de Balvanera,
+                                                        Querétaro, Corregidora, México, CP 76906</b2><br />
+                                                    <b2> <strong>EMAIL:</strong></b2>
+                                                    <b2>servicioalcliente@mcym.com.mx</b2>
+                                                    <b2 style="font-weight: 300; color:white;"> nuevxxxxxxx</b2>
+                                                    <b2><strong>TEL:</strong></b2>
+                                                    <b2>442-2255559</b2>
+                                                </p>
+                                            </div>
+                                        </t>
+                                        <t t-if="o.state == 'draft'" width="100%">
+
+                                            <div>
+                                                <b1 style="color:#0063be;">KENETH JANIN CANO MALDONADO</b1><br />
+                                                <b1 style="color:#0063be; font-weight: 100;">RFC: CAMK881112B19</b1>
+                                                <br />
+                                                <p style="line-height: 100%">
+                                                    <b2><strong>REGIMEN FISCAL: </strong></b2>
+                                                    <b2>612 Personas física con actividades empresariales y
+                                                        PROFESIONALES</b2><br />
+                                                    <b2><strong>DOMICILIO FISCAL: </strong></b2>
+                                                    <b2>Camino nuevo amanecer 28-2 Lomas de Balvanera,
+                                                        Querétaro, Corregidora, México, CP 76906</b2><br />
+                                                    <b2><strong>EMAIL:</strong></b2>
+                                                    <b2>servicioalcliente@mcym.com.mx</b2>
+                                                    <b2 style="font-weight: 300; color:white;">nuevxxxxxxx</b2>
+                                                    <b2><strong>TEL:</strong></b2>
+                                                    <b2>442-2255559</b2><br />
+                                                </p>
+                                            </div>
+                                        </t>
+                                    </div>
+                                    <div class="col-2" style="text-align:right;border-style: groove;">
+                                        <h4>
+                                            <div>
+                                                <img t-att-src="image_data_uri(o.company_id.logo)"
+                                                    style="height: 145px; width: 150px; align:right;" />
+                                            </div>
+                                        </h4>
+
+                                    </div>
+
+                                </div>
+
+                                <table width="100%">
+                                    <t t-if="o.state == 'draft'" width="100%">
+                                        <tr>
+                                            <th style="width:73%; background-color:white; text-align:left;">
+                                                <b_profsalud style="color:#0063be;">WWW.MCYM.COM.MX </b_profsalud>
+                                                <b_profsalud style="color:white">
+                                                    WWW.MCYM.COM.MX------------------------------------------------
+                                                </b_profsalud>
+                                                <b_profsalud style="font-weight: 300; color:#0063be;">"PROFESIONALES DE
+                                                    LA SALUD"</b_profsalud>
+                                            </th>
+                                            <th style="width:15%; background-color:white;"></th>
+                                            <th style="width:12%; background-color:white;"></th>
+                                        </tr>
+                                        <tr>
+
+                                            <th style="background-color:#0063be;"></th>
+                                            <th style="background-color:white; text-align:center;">
+                                                <b16 style="color:#0063be"><strong>PRESUPUESTO </strong></b16>
+                                            </th>
+                                            <th style="background-color:#0063be;"></th>
+                                        </tr>
+                                        <tr>
+                                            <td style="background-color:white; font-weight: 600; font-size: 10pt;">SOCIO
+                                                COMERCIAL: <bh1 style="font-weight: 300;">
+                                                    <t t-esc="o.partner_id.name" />
+                                                </bh1><br />RFC: <bh1 style="font-weight: 300;">
+                                                    <t t-esc="o.partner_id.vat" />
+                                                </bh1><br /></td>
+                                            <td style="background-color:white; text-align:center; font-size: 18px;">
+                                                <b16 style="color:#0063be"><strong>#
+                                                        <t t-esc="o.name" /></strong></b16>
+                                            </td>
+                                            <th style="background-color:white;"></th>
+
+                                        </tr>
+                                        <tr>
+                                            <td style="background-color:white;font-weight: 600;font-size: 10pt;">
+                                                DIRECCIÓN: <bh1 style="font-weight: 300;">
+                                                    <t t-esc="o.partner_id.street" />,
+                                                    <t t-esc="o.partner_id.l10n_mx_edi_colony" />,
+                                                    <t t-esc="o.partner_id.city" />,
+                                                    <t t-esc="o.partner_id.state_id.name" />,
+                                                    <t t-esc="o.partner_id.country_id.name" />,
+                                                    <t t-esc="o.partner_id.zip" /><br /></bh1>CONTACTO: <bh1
+                                                    style="font-weight: 300;">
+                                                    <t t-esc="o.partner_id.phone" />
+                                                </bh1><br /></td>
+
+                                            <td style="background-color:white; font-weight: 600;font-size: 10pt;">FECHA
+                                                COTIZACIÓN: <bh1 style="font-weight: 300;">
+                                                    <t
+                                                        t-esc="(datetime.datetime.strptime(str(o.date_order), '%Y-%m-%d %H:%M:%S') - datetime.timedelta(hours=4)).strftime('%d/%m/%Y')" />
+                                                    <br /></bh1>FECHA VENCIMIENTO: <bh1 style="font-weight: 300;">
+                                                    <t t-if="o.validity_date != False"
+                                                        t-esc="(datetime.datetime.strptime(str(o.validity_date), '%Y-%m-%d')).strftime('%d/%m/%Y')" />
+                                                </bh1>
+                                            </td>
+                                            <td style="background-color:white;"> </td>
+                                        </tr>
+                                        <tr>
+
+                                            <td style="background-color:white; font-weight: 600;font-size: 10pt;">EMAIL:
+                                                <bh1 style="font-weight: 300;">
+                                                    <t t-esc="o.partner_id.email" />
+                                                </bh1>
+                                            </td>
+                                            <td style="background-color:white; font-weight: 600;font-size: 10pt;">
+                                                COMERCIAL: <bh1 style="font-weight: 300;">
+                                                    <t t-esc="o.user_id.partner_id.name" />
+                                                </bh1>
+                                            </td>
+                                            <td style="background-color:white; font-weight: 600;"></td>
+                                            <td style="background-color:white;"></td>
+                                        </tr>
+                                        <tr>
+
+                                            <td style="background-color:white;"></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="background-color:white;"></td>
+                                            <td style="background-color:white; font-weight: 600;font-size: 10pt;">
+                                                CONDICIONES: <bh1 style="font-weight: 300;">
+                                                    <t t-esc="o.payment_term_id.name" />
+                                                </bh1>
+                                            </td>
+                                            <td style="background-color:white;"></td>
+                                        </tr>
+
+                                    </t>
+                                    <t t-if="o.state == 'sale'" width="100%">
+                                        <tr>
+                                        <tr>
+                                            <th style="width:70%; background-color:white; text-align:left;">
+                                                <b_profsalud style="color:#0063be">WWW.MCYM.COM.MX </b_profsalud>
+                                                <b_profsalud style="color:white">
+                                                    WWW.MCYM.COM.MX------------------------------------------------
+                                                </b_profsalud>
+                                                <b_profsalud style="font-weight: 300; color:#0063be;">"PROFESIONALES DE
+                                                    LA SALUD"</b_profsalud>
+                                            </th>
+                                            <th style="width:20%; background-color:white;"></th>
+                                            <th style="width:10%; background-color:white;"></th>
+                                        </tr>
+                                        <tr>
+                                            <th style="width:70%; background-color:#0063be;"></th>
+                                            <th style="width:20%; background-color:white; text-align:center;">
+                                                <b16 style="color:#0063be"><strong>PEDIDO </strong></b16><br />
+                                            </th>
+                                            <th style="width:10%; background-color:#0063be;"></th>
+                                        </tr>
+                                        <tr>
+                                            <td style="background-color:white; font-weight: 600;font-size: 10pt;">SOCIO
+                                                COMERCIAL: <bh1 style="font-weight: 300;">
+                                                    <t t-esc="o.partner_id.name" />
+                                                </bh1><br />RFC: <bh1 style="font-weight: 300;">
+                                                    <t t-esc="o.partner_id.vat" />
+                                                </bh1><br /></td>
+                                            <td
+                                                style="width:20%; background-color:white; text-align:center; font-size: 18px;">
+                                                <b16 style="color:#0063be"><strong>#
+                                                        <t t-esc="o.name" /></strong></b16>
+                                            </td>
+                                            <th style="width:10%; background-color:white;"></th>
+                                            <td style="background-color:white;"></td>
+                                            <td style="background-color:white;"></td>
+
+                                        </tr>
+                                        </tr>
+                                        <tr>
+                                            <td style="background-color:white;font-weight: 600;font-size: 10pt;">
+                                                DIRECCIÓN: <bh1 style="font-weight: 300;">
+                                                    <t t-esc="o.partner_id.street" />,
+                                                    <t t-esc="o.partner_id.l10n_mx_edi_colony" />,
+                                                    <t t-esc="o.partner_id.city" />,
+                                                    <t t-esc="o.partner_id.state_id.name" />,
+                                                    <t t-esc="o.partner_id.country_id.name" />,
+                                                    <t t-esc="o.partner_id.zip" /><br /></bh1>CONTACTO: <bh1
+                                                    style="font-weight: 300;">
+                                                    <t t-esc="o.partner_id.phone" />
+                                                </bh1><br /></td>
+
+                                            <td style="background-color:white; font-weight: 600;font-size: 10pt;">FECHA
+                                                DE ÓRDEN: <bh1 style="font-weight: 300;">
+                                                    <t
+                                                        t-esc="(datetime.datetime.strptime(str(o.date_order), '%Y-%m-%d %H:%M:%S' ) - datetime.timedelta(hours=5)).strftime('%d/%m/%Y')" />
+                                                    <br /></bh1>COMERCIAL: <bh1 style="font-weight: 300;">
+                                                    <t t-esc="o.user_id.partner_id.name" />
+                                                </bh1>
+                                            </td>
+                                            <td style="background-color:white;"></td>
+                                            <td style="background-color:white;"></td>
+
+                                            <td style="background-color:white; font-weight: 600;">
+                                                <bh1 style="font-weight: 300;"><br /></bh1> <br />
+                                            </td>
+                                            <td style="background-color:white;"> </td>
+
+                                        <tr>
+                                            <td style="background-color:white; font-weight: 600;font-size: 10pt;">EMAIL:
+                                                <bh1 style="font-weight: 300;">
+                                                    <t t-esc="o.partner_id.email" />
+                                                </bh1>
+                                            </td>
+                                            <td style="background-color:white; font-weight: 600;font-size: 10pt;">
+                                                CONDICIONES: <bh1 style="font-weight: 300;">
+                                                    <t t-esc="o.payment_term_id.name" />
+                                                </bh1>
+                                            </td>
+                                            <td style="background-color:white;"></td>
+                                            <td style="background-color:white;"></td>
+                                            <td style="background-color:white;"></td>
+                                        </tr>
+                                        </tr>
+                                    </t>
+
+                                </table>
+
+                            </div>
+
+                            <!-- .table thead tr th {
+                                        padding: 1px;
+                                        color: white;
+                                        background-color: #0063be;
+                                        border: 1px solid #000000;
+                                    } -->
 
                             <div>
                                 <div style="text-align:center;">
                                     <table width="100%" name='page_table' style='table-layout: fixed;'>
                                         <t t-if="o.state == 'draft'" width="100%">
-                                            <thead style='border:2px solid #0063be;'>
-                                                <tr style='border:2px solid #0063be;'>
-                                                    <td style="width:10%;border:2px solid #0063be;" class='letra2'>
+                                            <thead style='border:2px solid white;'>
+                                                <tr style='border:2px solid white;background:#0063be !important;'>
+                                                    <td style="width:10%;border:2px solid white;" class='letra2'>
                                                         <b></b><br />
-                                                        <b>IMAGEN</b>
+                                                        <b style="color:white !important;">IMAGEN</b>
                                                     </td>
-                                                    <td style="width:37%;border:2px solid #0063be;" class='letra2'>
+                                                    <td style="width:37%;border:2px solid white;" class='letra2'>
                                                         <b></b><br />
-                                                        <b>DESCRIPCIÓN</b>
+                                                        <b style="color:white !important;">DESCRIPCIÓN</b>
                                                     </td>
-                                                    <td style="width:6%;border:2px solid #0063be;" class='letra2'>
+                                                    <td style="width:6%;border:2px solid white;" class='letra2'>
                                                         <b></b><br />
-                                                        <b>CANT</b></td>
+                                                        <b style="color:white !important;">CANT</b></td>
 
-                                                    <td style="width:10%;border:2px solid #0063be;" class='letra2'>
-                                                        <b>UNIDAD</b><br />
-                                                        <b> DE </b><br />
-                                                        <b>MEDIDA</b><br />
+                                                    <td style="width:10%;border:2px solid white;" class='letra2'>
+                                                        <b style="color:white !important;">UNIDAD</b><br />
+                                                        <b style="color:white !important;"> DE </b><br />
+                                                        <b style="color:white !important;">MEDIDA</b><br />
                                                     </td>
-                                                    <td style="width:10%;border:2px solid #0063be;" class='letra2'>
-                                                        <b>PRECIO</b><br />
-                                                        <b>UNITARIO</b><br />
+                                                    <td style="width:10%;border:2px solid white;" class='letra2'>
+                                                        <b style="color:white !important;">PRECIO</b><br />
+                                                        <b style="color:white !important;">UNITARIO</b><br />
                                                     </td>
-                                                    <td style="width:9%; border:2px solid #0063be;" class='letra2'>
+                                                    <td style="width:9%; border:2px solid white;" class='letra2'>
                                                         <b></b><br />
-                                                        <b>IVA</b>
+                                                        <b style="color:white !important;">IVA</b>
                                                     </td>
-                                                    <td style="width:12%;text-align:right border:2px solid #0063be;"
+                                                    <td style="width:12%;text-align:right border:2px solid white;"
                                                         class='letra2'>
                                                         <b></b><br />
-                                                        <b>DESC.</b>
+                                                        <b style="color:white !important;">DESC.</b>
                                                     </td>
-                                                    <td style="width:10%; border:2px solid #0063be;" class='letra2'>
+                                                    <td style="width:10%; border:2px solid white;" class='letra2'>
                                                         <b></b><br />
-                                                        <b>TOTAL</b>
+                                                        <b style="color:white !important;">TOTAL</b>
                                                     </td>
                                                 </tr>
                                             </thead>
@@ -539,7 +591,8 @@
                                                             class='letra2'>
                                                             <!-- <img t-attf-src="data:image/*;base64,{{d.as_image}}"
                                                             style="width:60px;height:20%;padding:2px;" /> -->
-                                                            <img t-if="d.as_image" t-att-src="image_data_uri(d.as_image)"
+                                                            <img t-if="d.as_image"
+                                                                t-att-src="image_data_uri(d.as_image)"
                                                                 style="max-height: 6rem; max-width: 100%;" />
                                                         </td>
                                                         <td style="width:40%;  border:2px solid #0063be;"

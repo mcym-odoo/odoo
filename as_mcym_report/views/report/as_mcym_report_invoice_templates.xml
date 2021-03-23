@@ -161,6 +161,22 @@
                                 border-bottom: 1px solid #0063be;
                                 color: #0063be;
                             }
+                            b1 {
+                                font-size: 14pt;
+                                font-weight: bold;
+                            }
+                            b2 {
+                                font-size: 11pt;
+                            }
+                            b_profsalud {
+                                font-size: 12pt;
+                            }
+                            bh1 {
+                                font-size: 10pt;
+                            }
+                            b16 {
+                                font-size: 16pt;
+                            }
                         </style>
 
                         <div class="row mt0 mb0" id="as_header">
@@ -170,20 +186,20 @@
                             <div class="col-8" style="text-align:center;">
 
                                 <div>
-                                    <b style="color:#0063be;">KENETH JANIN CANO MALDONADO</b><br />
-                                    <b style="color:#0063be; font-weight: 100;">RFC: CAMK881112B19</b><br />
+                                    <b1 style="color:#0063be;">KENETH JANIN CANO MALDONADO</b1><br />
+                                    <b1 style="color:#0063be; font-weight: 100;">RFC: CAMK881112B19</b1><br />
                                     <p style="line-height: 100%">
-                                        <b class="letrita">REGIMEN FISCAL: </b><b style="font-weight: 300;"
-                                            class="letrita">612 Personas física con actividades empresariales y
-                                            PROFESIONALES</b><br />
-                                        <b class="letrita">DOMICILIO FISCAL: </b><b class="letrita"
+                                        <b2 ><strong>REGIMEN FISCAL: </strong></b2><b2 style="font-weight: 300;"
+                                            >612 Personas física con actividades empresariales y
+                                            PROFESIONALES</b2><br />
+                                        <b2 ><strong>DOMICILIO FISCAL: </strong></b2><b2 
                                             style="font-weight: 300;">Camino nuevo amanecer 28-2 Lomas de Balvanera,
-                                            Querétaro, Corregidora, México, CP 76906</b><br />
-                                        <b class="letrita">EMAIL: </b><b class="letrita"
-                                            style="font-weight: 300;">servicioalcliente@mcym.com.mx</b><b
-                                            style="font-weight: 300; color:white;"> nuevxxxxxxx</b><b
-                                            class="letrita">TEL: </b><b class="letrita"
-                                            style="font-weight: 300;">442-2255559</b><br />
+                                            Querétaro, Corregidora, México, CP 76906</b2><br />
+                                        <b2 ><strong>EMAIL: </strong></b2><b2 
+                                            style="font-weight: 300;">servicioalcliente@mcym.com.mx</b2><b2
+                                            style="font-weight: 300; color:white;"> nuevxxxxxxx</b2><b2
+                                            ><strong>TEL: </strong></b2><b2 
+                                            style="font-weight: 300;">442-2255559</b2><br />
 
                                     </p>
                                 </div>
@@ -193,7 +209,7 @@
                                 <h4>
                                     <div>
                                         <img t-att-src="image_data_uri(o.company_id.logo)"
-                                            style="height: 140px; width: 140px; align:right;" />
+                                            style="height: 145px; width: 150px; align:right;" />
                                     </div>
                                 </h4>
 
@@ -202,60 +218,60 @@
                         <table width="100%">
 
                             <tr>
-                                <th style="width:65%; background-color:white; text-align:left; font-size: 12px;"><b
-                                        style="color:#0063be">WWW.MCYM.COM.MX </b><b
-                                        style="color:white">WWW.MCYM.COM.MX--------------------------------------------</b><b
+                                <th style="width:70%; background-color:white; text-align:left; font-size: 12px;"><b_profsalud
+                                        style="color:#0063be">WWW.MCYM.COM.MX </b_profsalud><b_profsalud
+                                        style="color:white">WWW.MCYM.COM.MX----------------------------------------------------</b_profsalud><b_profsalud
                                         style="font-size: 12px;  font-weight: 300; color:#0063be;">"PROFESIONALES DE LA
-                                        SALUD"</b></th>
-                                <th style="width:25%; background-color:white;"></th>
-                                <th style="width:10%; background-color:white;"></th>
+                                        SALUD"</b_profsalud></th>
+                                <th style="width:17%; background-color:white;"></th>
+                                <th style="width:13%; background-color:white;"></th>
                             </tr>
                             <tr>
 
-                                <th style="width:65%; background-color:#0063be;"></th>
-                                <th style="width:25%; background-color:white; text-align:center;"><b
-                                        style="color:#0063be">FACTURA </b></th>
-                                <th style="width:10%; background-color:#0063be;"></th>
+                                <th style="background-color:#0063be;"></th>
+                                <th style="background-color:white; text-align:center;"><b16
+                                        style="color:#0063be"><strong>FACTURA </strong></b16></th>
+                                <th style="background-color:#0063be;"></th>
                             </tr>
                             <tr>
-                                <td style="background-color:white; font-weight: 600; width:65%;">SOCIO COMERCIAL: <b
+                                <td style="background-color:white; font-weight: 600;font-size: 10pt;">SOCIO COMERCIAL: <bh1
                                         style="font-weight: 300;">
-                                        <t t-esc="o.partner_shipping_id.name" /></b><br />RFC: <b
+                                        <t t-esc="o.partner_shipping_id.name" /></bh1><br />RFC: <bh1
                                         style="font-weight: 300;">
-                                        <t t-esc="o.partner_id.vat" /></b><br /></td>
-                                <td style="width:25%; background-color:white; text-align:center; font-size: 18px;"><b
-                                        style="color:#0063be">
-                                        <t t-esc="o.name" /></b></td>
-                                <th style="width:10%; background-color:white;"></th>
+                                        <t t-esc="o.partner_id.vat" /></bh1><br /></td>
+                                <td style="background-color:white; text-align:center; font-size: 18px;"><b16
+                                        style="color:#0063be"><strong>
+                                        <t t-esc="o.name" /></strong></b16></td>
+                                <th style="background-color:white;"></th>
 
                             </tr>
                             <tr>
 
-                                <td style="background-color:white;font-weight: 600;">DIRECCIÓN: <b
+                                <td style="background-color:white;font-weight: 600; font-size: 10pt;">DIRECCIÓN: <bh1
                                         style="font-weight: 300;">
                                         <t t-esc="o.partner_id.street" />,
                                         <t t-esc="o.partner_id.l10n_mx_edi_colony" />,
                                         <t t-esc="o.partner_id.city" />,
                                         <t t-esc="o.partner_id.state_id.name" />,
                                         <t t-esc="o.partner_id.country_id.name" />,
-                                        <t t-esc="o.partner_id.zip" /><br /></b>CONTACTO: <b style="font-weight: 300;">
-                                        <t t-esc="o.partner_id.phone" /></b><br /></td>
-                                <td style="background-color:white; font-weight: 600;">FECHA DE FACTURA: <b
+                                        <t t-esc="o.partner_id.zip" /><br /></bh1>CONTACTO: <bh1 style="font-weight: 300;">
+                                        <t t-esc="o.partner_id.phone" /></bh1><br /></td>
+                                <td style="background-color:white; font-weight: 600; font-size: 10pt;">FECHA DE FACTURA: <bh1
                                         style="font-weight: 300;">
                                         <t
                                             t-esc="(datetime.datetime.strptime(str(o.invoice_date), '%Y-%m-%d') - datetime.timedelta(hours=4)).strftime('%d/%m/%Y')" />
                                         <br />
-                                    </b>FECHA DE VENCIMIENTO: <b style="font-weight: 300;">
+                                    </bh1>FECHA DE VENCIMIENTO: <bh1 style="font-weight: 300;">
                                         <t
                                             t-esc="(datetime.datetime.strptime(str(o.invoice_date_due), '%Y-%m-%d') - datetime.timedelta(hours=4)).strftime('%d/%m/%Y')" />
-                                        <br /></b></td>
+                                        <br /></bh1></td>
 
                             </tr>
 
                             <tr>
-                                <td style="background-color:white; font-weight: 600;">EMAIL: <b
+                                <td style="background-color:white; font-weight: 600;font-size: 10pt;">EMAIL: <bh1
                                         style="font-weight: 300;">
-                                        <t t-esc="o.partner_id.email" /><br /></b>METODO DE PAGO: <b
+                                        <t t-esc="o.partner_id.email" /><br /></bh1>METODO DE PAGO: <bh1
                                         style="font-weight: 300;">
 
                                         <t t-if="o.l10n_mx_edi_cfdi_uuid">
@@ -266,26 +282,26 @@
 
 
                                         <br />
-                                    </b></td>
+                                    </bh1></td>
 
-                                <td style="background-color:white; font-weight: 600;">ORIGEN: <b
+                                <td style="background-color:white; font-weight: 600;font-size: 10pt;">ORIGEN: <bh1
                                         style="font-weight: 300;">
-                                        <t t-esc="o.invoice_origin" /><br /></b>REFERENCIA: <b
+                                        <t t-esc="o.invoice_origin" /><br /></bh1>REFERENCIA: <bh1
                                         style="font-weight: 300;">
-                                        <t t-esc="o.ref" /></b></td>
+                                        <t t-esc="o.ref" /></bh1></td>
 
 
                             </tr>
                             <tr>
-                                <td style="background-color:white; font-weight: 600;">
-                                    USO DE CFD: <b style="font-weight: 300;">
-                                        <t t-esc="o.lxn_usage(o.l10n_mx_edi_usage)" /></b><b class="letrita"
-                                        style="font-weight: 300; color:white;"> nuevxxxxsxxxxxxxso</b>FORMA DE PAGO: <b
+                                <td style="background-color:white; font-weight: 600; font-size: 10pt;">
+                                    USO DE CFD: <bh1 style="font-weight: 300;">
+                                        <t t-esc="o.lxn_usage(o.l10n_mx_edi_usage)" /></bh1><bh1
+                                        style="font-weight: 300; color:white;"> nuevxxxxsxxxxxxxso</bh1>FORMA DE PAGO: <bh1
                                         style="font-weight: 300;">
-                                        <t t-esc="o.l10n_mx_edi_payment_method_id.name" /></b> </td>
-                                <td style="background-color:white; font-weight: 600;">CONDICIONES: <b
+                                        <t t-esc="o.l10n_mx_edi_payment_method_id.name" /></bh1> </td>
+                                <td style="background-color:white; font-weight: 600;font-size: 10pt;">CONDICIONES: <bh1
                                         style="font-weight: 300;">
-                                        <t t-esc="o.invoice_payment_term_id.name" /></b></td>
+                                        <t t-esc="o.invoice_payment_term_id.name" /></bh1></td>
                             </tr>
 
 
@@ -398,9 +414,12 @@
                                     <thead style='border:1px solid #FFFFFF;line-height : 18px;'>
                                         <tr>
                                             <td colspan="8" style="width:5%;text-align:left" class='letra2'>
-                                                <b>
+                                                <b style="color:white">
                                                     CON LETRA:
-                                                    <span style="font-weight: 300;"
+                                                </b><br />
+                                                <b style="font-size: 10pt;">
+                                                    CON LETRA:
+                                                    <span style="font-weight: 300;font-size: 10pt;"
                                                         t-esc="o.enteros_y_centavos(o.amount_total)" />
                                                 </b><br />
 
@@ -424,8 +443,8 @@
                                     <thead style='border:1px solid #FFFFFF;line-height : 18px;'>
                                         <tr>
                                             <td colspan="8" style="width:5%;text-align:left" class='letra2'>
-                                                <b>NOTA: </b>
-                                                <b style="font-weight: 300;">Una vez recibida la mercancia el cliente
+                                                <b style="font-size: 10pt;">NOTA: </b>
+                                                <b style="font-weight: 300;font-size: 10pt;">Una vez recibida la mercancia el cliente
                                                     acepta los términos y condiciones publicados en nuestro sitio web
                                                     www.mcym.com.mx</b>
 
@@ -447,7 +466,7 @@
                                     <thead style='border:1px solid #FFFFFF;line-height : 18px;'>
                                         <tr>
                                             <td colspan="8" style="width:5%;text-align:left" class='letra2'>
-                                                <b style="font-weight: 300;">Debemos y pagaremos incondicionalmente a la
+                                                <b style="font-weight: 300;font-size: 10pt;">Debemos y pagaremos incondicionalmente a la
                                                     órden de KENETH JANIN CANO MALDONADO la cantidad especificada en
                                                     este documento, </b>
 
@@ -469,7 +488,7 @@
                                     <thead style='border:1px solid #FFFFFF;line-height : 18px;'>
                                         <tr>
                                             <td colspan="8" style="width:5%;text-align:left" class='letra2'>
-                                                <b style="font-weight: 300;">a la fecha especificada del mismo, de no
+                                                <b style="font-weight: 300;font-size: 10pt;">a la fecha especificada del mismo, de no
                                                     ser así se causará un interés del 5% mensual, la firma en cualquier
                                                     parte de esta factura significa</b>
 
@@ -491,18 +510,21 @@
                                     <thead style='border:1px solid #FFFFFF;line-height : 18px;'>
                                         <tr>
                                             <td colspan="8" style="width:5%;text-align:left" class='letra2'>
-                                                <b style="font-weight: 300;">la aceptación a este pagare</b>
+                                                <b style="font-weight: 300;font-size: 10pt;">la aceptación a este pagare</b>
                                             </td>
                                         </tr>
                                     </thead>
                                     <thead style='border:1px solid #FFFFFF;line-height : 18px;'>
                                         <tr>
-                                            <td colspan="6" style="width:5%;text-align:left" class='letra2'>
-                                                <b>DATOS BANCARIOS:</b><br />
-                                                <b>BANCO: BANAMEX CUENTA BANCARIA: 85254524 CLAVE INTERBANCARIA
-                                                    123456789101112131415161718 SUC 5425487</b><br />
-                                                <b>OBSERVACIONES:
-                                                    <t t-esc="o.narration" /> </b><br />
+                                            <td colspan="6" style="width:5%;text-align:left;font-size: 10pt;">
+                                                <b style="color:white;">DATOS BANCARIOS:</b><br />
+                                                <strong>
+                                                    <b>DATOS BANCARIOS:</b><br />
+                                                    <b>BANCO: BANAMEX CUENTA BANCARIA: 85254524 CLAVE INTERBANCARIA
+                                                        123456789101112131415161718 SUC 5425487</b><br />
+                                                    <b>OBSERVACIONES:
+                                                        <t t-esc="o.narration" /> </b><br />
+                                                </strong>
                                             </td>
                                             <td colspan="1" style="width:5%;text-align:left" class='letra2'>
                                                 <b style="font-weight: 300;"></b>
