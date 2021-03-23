@@ -6,6 +6,7 @@
             <t t-name="web.external_layout">
                 <t t-foreach="docs" t-as="o">
                     <div class="header">
+                    </div>
                         <style type="text/css">
                             .header {
                                 margin: 0px;
@@ -177,17 +178,26 @@
                             b16 {
                                 font-size: 16pt;
                             }
+                            .page {
+                                    margin: 0px;
+                                    padding: 0px;
+                                }
                         </style>
 
-                        <div class="row mt0 mb0" id="as_header">
-                            <div class="col-2" style="text-align:center; margin-bottom:10px;font-size:12px;">
+                    <br />
+
+                    <t t-call="web.internal_layout">
+                        <div class="page">
+                            
+                            <div class="row mt0 mb0" id="as_header" style="text-align:center;">
+                            <div class="col-2" style="text-align:center;">
 
                             </div>
-                            <div class="col-8" style="text-align:center;">
+                            <div class="col-8" style="text-align:center;" width="100%">
 
                                 <div>
-                                    <b1 style="color:#0063be;">KENETH JANIN CANO MALDONADO</b1><br />
-                                    <b1 style="color:#0063be; font-weight: 100;">RFC: CAMK881112B19</b1><br />
+                                    <b1 style="color:#0063be;"><strong>KENETH JANIN CANO MALDONADO</strong></b1><br />
+                                    <b1 style="color:#0063be;">RFC: CAMK881112B19</b1><br />
                                     <p style="line-height: 100%">
                                         <b2 ><strong>REGIMEN FISCAL: </strong></b2><b2 style="font-weight: 300;"
                                             >612 Personas física con actividades empresariales y
@@ -209,7 +219,7 @@
                                 <h4>
                                     <div>
                                         <img t-att-src="image_data_uri(o.company_id.logo)"
-                                            style="height: 145px; width: 150px; align:right;" />
+                                            style="height: 160px; width: 160px; align:right;" />
                                     </div>
                                 </h4>
 
@@ -219,10 +229,10 @@
 
                             <tr>
                                 <th style="width:70%; background-color:white; text-align:left; font-size: 12px;"><b_profsalud
-                                        style="color:#0063be">WWW.MCYM.COM.MX </b_profsalud><b_profsalud
-                                        style="color:white">WWW.MCYM.COM.MX----------------------------------------------------</b_profsalud><b_profsalud
-                                        style="font-size: 12px;  font-weight: 300; color:#0063be;">"PROFESIONALES DE LA
-                                        SALUD"</b_profsalud></th>
+                                        style="color:#0063be"><strong>WWW.MCYM.COM.MX</strong></b_profsalud><b_profsalud
+                                        style="color:white">WWW.MCYM.COM.MX-----------------------------------------------------------------</b_profsalud><b_profsalud
+                                        style="font-size: 12px;  font-weight: 300; color:#0063be;"><strong>"PROFESIONALES DE LA
+                                        SALUD"</strong></b_profsalud></th>
                                 <th style="width:17%; background-color:white;"></th>
                                 <th style="width:13%; background-color:white;"></th>
                             </tr>
@@ -306,65 +316,55 @@
 
 
                         </table>
-                    </div>
-                    <br />
-
-                    <t t-call="web.internal_layout">
-                        <div class="page">
-                            <style type="text/css">
-                                .page {
-                                    margin: 0px;
-                                    padding: 0px;
-                                }
-                            </style>
+                        <br />
                             <div style="text-align:center;">
 
                                 <table width="100%" name='page_table' style='table-layout: fixed;'>
                                     <thead style='border:2px solid #0063be;'>
-                                        <tr style='border:2px solid #0063be;'>
+                                        <tr style='border:2px solid #0063be;background:#0063be !important;'>
 
-                                            <td style="width:30%;border:2px solid #0063be;" class='letra2'>
+                                            <td style="width:30%;border-right:2px solid white;" class='letra2'>
                                                 <b></b><br />
-                                                <b>DESCRIPCIÓN</b>
+                                                <b style="color:white !important;">DESCRIPCIÓN</b>
                                             </td>
-                                            <td style="width:8%;border:2px solid #0063be;" class='letra2'>
+                                            <td style="width:8%;border-right:2px solid white;" class='letra2'>
                                                 <b></b><br />
-                                                <b>CANT</b></td>
+                                                <b style="color:white !important;">CANT</b></td>
 
-                                            <td style="width:10%;border:2px solid #0063be;" class='letra2'>
-                                                <b>UNIDAD</b><br />
-                                                <b> DE </b><br />
-                                                <b>MEDIDA</b><br />
+                                            <td style="width:10%;border-right:2px solid white;" class='letra2'>
+                                                <b style="color:white !important;">UNIDAD</b><br />
+                                                <b style="color:white !important;"> DE </b><br />
+                                                <b style="color:white !important;">MEDIDA</b><br />
                                             </td>
-                                            <td style="width:10%;border:2px solid #0063be;" class='letra2'>
-                                                <b>UNIDAD</b><br />
-                                                <b> DE </b><br />
-                                                <b>MEDIDA SAT</b><br />
+                                            <td style="width:10%;border-right:2px solid white;" class='letra2'>
+                                                <b style="color:white !important;">UNIDAD</b><br />
+                                                <b style="color:white !important;"> DE </b><br />
+                                                <b style="color:white !important;">MEDIDA SAT</b><br />
                                             </td>
-                                            <td style="width:10%;border:2px solid #0063be;" class='letra2'>
-                                                <b>CLAVE DEL</b><br />
-                                                <b> SAT </b><br />
+                                            <td style="width:10%;border-right:2px solid white;" class='letra2'>
+                                                <b style="color:white !important;">CLAVE DEL</b><br />
+                                                <b style="color:white !important;"> SAT </b><br />
                                             </td>
-                                            <td style="width:10%;border:2px solid #0063be;" class='letra2'>
-                                                <b>LOTE Y</b><br />
-                                                <b>CADUCIDAD</b><br />
+                                            <td style="width:10%;border-right:2px solid white;" class='letra2'>
+                                                <b style="color:white !important;">LOTE Y</b><br />
+                                                <b style="color:white !important;">CADUCIDAD</b><br />
                                             </td>
-                                            <td style="width:10%;border:2px solid #0063be;" class='letra2'>
-                                                <b>PRECIO</b><br />
-                                                <b>UNIDARIO</b><br />
+                                            <td style="width:10%;border-right:2px solid white;" class='letra2'>
+                                                <b style="color:white !important;">PRECIO</b><br />
+                                                <b style="color:white !important;">UNITARIO</b><br />
                                             </td>
-                                            <td style="width:14%; border:2px solid #0063be;" class='letra2'>
+                                            <td style="width:14%; border-right:2px solid white;" class='letra2'>
                                                 <b></b><br />
-                                                <b>IVA</b>
+                                                <b style="color:white !important;">IVA</b>
                                             </td>
-                                            <td style="width:12%;text-align:right border:2px solid #0063be;"
+                                            <td style="width:12%;text-align:right border-right:2px solid white;"
                                                 class='letra2'>
                                                 <b></b><br />
-                                                <b>DESC.</b>
+                                                <b style="color:white !important;">DESC.</b>
                                             </td>
-                                            <td style="width:10%; border:2px solid #0063be;" class='letra2'>
+                                            <td style="width:10%; border-left:2px solid white;" class='letra2'>
                                                 <b></b><br />
-                                                <b>TOTAL</b>
+                                                <b style="color:white !important;">TOTAL</b>
                                             </td>
                                         </tr>
                                     </thead>

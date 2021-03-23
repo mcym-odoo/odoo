@@ -6,6 +6,8 @@
 
             <t t-name="web.external_layout">
                 <t t-foreach="docs" t-as="o">
+                <div class="header">
+                </div>
 
 
                     <t t-call="web.internal_layout">
@@ -294,9 +296,11 @@
                                         margin: 3px;
                                     }
                                 </style>
-                                <div class="row mt0 mb0 " id="as_header" style="align:center;">
+                                <div class="row mt0 mb0 " id="as_header" style="text-align:center;">
+                                    <div class="col-2" style="text-align:center;" width="100%">
+                                    </div>
 
-                                    <div class="col-8" style="text-align:center;">
+                                    <div class="col-8" style="text-align:center;" width="100%">
                                         <t t-if="o.state == 'sale'" width="100%">
                                             <div>
 
@@ -344,7 +348,7 @@
                                         <h4>
                                             <div>
                                                 <img t-att-src="image_data_uri(o.company_id.logo)"
-                                                    style="height: 145px; width: 150px; align:right;" />
+                                                    style="height: 160px; width: 160px; align:right;" />
                                             </div>
                                         </h4>
 
@@ -356,12 +360,12 @@
                                     <t t-if="o.state == 'draft'" width="100%">
                                         <tr>
                                             <th style="width:73%; background-color:white; text-align:left;">
-                                                <b_profsalud style="color:#0063be;">WWW.MCYM.COM.MX </b_profsalud>
+                                                <b_profsalud style="color:#0063be;"><strong>WWW.MCYM.COM.MX</strong></b_profsalud>
                                                 <b_profsalud style="color:white">
-                                                    WWW.MCYM.COM.MX------------------------------------------------
+                                                    WWW.MCYM.COM.MX---------------------------------------------
                                                 </b_profsalud>
-                                                <b_profsalud style="font-weight: 300; color:#0063be;">"PROFESIONALES DE
-                                                    LA SALUD"</b_profsalud>
+                                                <b_profsalud style="font-weight: 300; color:#0063be;"><strong>"PROFESIONALES DE
+                                                    LA SALUD"</strong></b_profsalud>
                                             </th>
                                             <th style="width:15%; background-color:white;"></th>
                                             <th style="width:12%; background-color:white;"></th>
@@ -370,7 +374,7 @@
 
                                             <th style="background-color:#0063be;"></th>
                                             <th style="background-color:white; text-align:center;">
-                                                <b16 style="color:#0063be"><strong>PRESUPUESTO </strong></b16>
+                                                <b16 style="color:#0063be"><strong>PRESUPUESTO</strong></b16>
                                             </th>
                                             <th style="background-color:#0063be;"></th>
                                         </tr>
@@ -445,23 +449,23 @@
                                     <t t-if="o.state == 'sale'" width="100%">
                                         <tr>
                                         <tr>
-                                            <th style="width:70%; background-color:white; text-align:left;">
-                                                <b_profsalud style="color:#0063be">WWW.MCYM.COM.MX </b_profsalud>
+                                            <th style="width:73%; background-color:white; text-align:left;">
+                                                <b_profsalud style="color:#0063be"><strong>WWW.MCYM.COM.MX</strong></b_profsalud>
                                                 <b_profsalud style="color:white">
                                                     WWW.MCYM.COM.MX------------------------------------------------
                                                 </b_profsalud>
-                                                <b_profsalud style="font-weight: 300; color:#0063be;">"PROFESIONALES DE
-                                                    LA SALUD"</b_profsalud>
+                                                <b_profsalud style="font-weight: 300; color:#0063be;"><strong>"PROFESIONALES DE
+                                                    LA SALUD"</strong></b_profsalud>
                                             </th>
-                                            <th style="width:20%; background-color:white;"></th>
-                                            <th style="width:10%; background-color:white;"></th>
+                                            <th style="width:15%; background-color:white;"></th>
+                                            <th style="width:12%; background-color:white;"></th>
                                         </tr>
                                         <tr>
-                                            <th style="width:70%; background-color:#0063be;"></th>
-                                            <th style="width:20%; background-color:white; text-align:center;">
+                                            <th style="background-color:#0063be;"></th>
+                                            <th style="background-color:white; text-align:center;">
                                                 <b16 style="color:#0063be"><strong>PEDIDO </strong></b16><br />
                                             </th>
-                                            <th style="width:10%; background-color:#0063be;"></th>
+                                            <th style="background-color:#0063be;"></th>
                                         </tr>
                                         <tr>
                                             <td style="background-color:white; font-weight: 600;font-size: 10pt;">SOCIO
@@ -471,11 +475,11 @@
                                                     <t t-esc="o.partner_id.vat" />
                                                 </bh1><br /></td>
                                             <td
-                                                style="width:20%; background-color:white; text-align:center; font-size: 18px;">
+                                                style="background-color:white; text-align:center; font-size: 18px;">
                                                 <b16 style="color:#0063be"><strong>#
                                                         <t t-esc="o.name" /></strong></b16>
                                             </td>
-                                            <th style="width:10%; background-color:white;"></th>
+                                            <th style="background-color:white;"></th>
                                             <td style="background-color:white;"></td>
                                             <td style="background-color:white;"></td>
 
@@ -543,39 +547,39 @@
                                 <div style="text-align:center;">
                                     <table width="100%" name='page_table' style='table-layout: fixed;'>
                                         <t t-if="o.state == 'draft'" width="100%">
-                                            <thead style='border:2px solid white;'>
-                                                <tr style='border:2px solid white;background:#0063be !important;'>
-                                                    <td style="width:10%;border:2px solid white;" class='letra2'>
+                                            <thead style='border:2px solid #0063be;'>
+                                                <tr style='border:2px solid #0063be;background:#0063be !important;'>
+                                                    <td style="width:10%;border-right:2px solid white;" class='letra2'>
                                                         <b></b><br />
                                                         <b style="color:white !important;">IMAGEN</b>
                                                     </td>
-                                                    <td style="width:37%;border:2px solid white;" class='letra2'>
+                                                    <td style="width:37%;border-right:2px solid white;" class='letra2'>
                                                         <b></b><br />
                                                         <b style="color:white !important;">DESCRIPCIÓN</b>
                                                     </td>
-                                                    <td style="width:6%;border:2px solid white;" class='letra2'>
+                                                    <td style="width:6%;border-right:2px solid white;" class='letra2'>
                                                         <b></b><br />
                                                         <b style="color:white !important;">CANT</b></td>
 
-                                                    <td style="width:10%;border:2px solid white;" class='letra2'>
+                                                    <td style="width:10%;border-right:2px solid white;" class='letra2'>
                                                         <b style="color:white !important;">UNIDAD</b><br />
                                                         <b style="color:white !important;"> DE </b><br />
                                                         <b style="color:white !important;">MEDIDA</b><br />
                                                     </td>
-                                                    <td style="width:10%;border:2px solid white;" class='letra2'>
+                                                    <td style="width:10%;border-right:2px solid white;" class='letra2'>
                                                         <b style="color:white !important;">PRECIO</b><br />
                                                         <b style="color:white !important;">UNITARIO</b><br />
                                                     </td>
-                                                    <td style="width:9%; border:2px solid white;" class='letra2'>
+                                                    <td style="width:9%; border-right:2px solid white;" class='letra2'>
                                                         <b></b><br />
                                                         <b style="color:white !important;">IVA</b>
                                                     </td>
-                                                    <td style="width:12%;text-align:right border:2px solid white;"
+                                                    <td style="width:12%;text-align:right border-right:2px solid white;"
                                                         class='letra2'>
                                                         <b></b><br />
                                                         <b style="color:white !important;">DESC.</b>
                                                     </td>
-                                                    <td style="width:10%; border:2px solid white;" class='letra2'>
+                                                    <td style="width:10%; border-left:2px solid white;" class='letra2'>
                                                         <b></b><br />
                                                         <b style="color:white !important;">TOTAL</b>
                                                     </td>
@@ -632,6 +636,10 @@
                                                 <tr>
 
                                                     <td colspan="6" style="width:5%;text-align:left" class='letra2'>
+                                                        <b style="color:white">
+                                                            CON LETRA:
+                                                            <span style="font-weight: 300;"
+                                                                t-esc="o.enteros_y_centavos(o.amount_total)" /></b><br/>
                                                         <b>
                                                             CON LETRA:
                                                             <span style="font-weight: 300;"
@@ -718,48 +726,48 @@
                                         </t>
                                         <t t-if="o.state == 'sale'" width="100%">
                                             <thead style='border:2px solid #0063be;'>
-                                                <tr style='border:2px solid #0063be;'>
-                                                    <td align="center" style="width:40%;border:2px solid #0063be;"
+                                                <tr style='border:2px solid #0063be;background:#0063be !important;'>
+                                                    <td align="center" style="width:40%;border-right:2px solid white;"
                                                         class='letra2'>
                                                         <b></b><br />
-                                                        <b>DESCRIPCIÓN</b>
+                                                        <b style="color:white !important;">DESCRIPCIÓN</b>
                                                     </td>
-                                                    <td align="center" style="width:6%;border:2px solid #0063be;"
+                                                    <td align="center" style="width:6%;border-right:2px solid white;"
                                                         class='letra2'>
                                                         <b></b><br />
-                                                        <b>CANT</b>
+                                                        <b style="color:white !important;">CANT</b>
                                                     </td>
-                                                    <td align="center" style="width:8%;border:2px solid #0063be;"
+                                                    <td align="center" style="width:8%;border-right:2px solid white;"
                                                         class='letra2'>
-                                                        <b>UNIDAD</b><br />
-                                                        <b> DE </b><br />
-                                                        <b>MEDIDA</b><br />
+                                                        <b style="color:white !important;">UNIDAD</b><br />
+                                                        <b style="color:white !important;"> DE </b><br />
+                                                        <b style="color:white !important;">MEDIDA</b><br />
                                                     </td>
-                                                    <td align="center" style="width:10%;border:2px solid #0063be;"
+                                                    <td align="center" style="width:10%;border-right:2px solid white;"
                                                         class='letra2'>
-                                                        <b>LOTE Y</b><br />
-                                                        <b>CADUCIDAD</b><br />
+                                                        <b style="color:white !important;">LOTE Y</b><br />
+                                                        <b style="color:white !important;">CADUCIDAD</b><br />
                                                     </td>
                                                     <td align="center"
-                                                        style="width:8%;text-align:right border:2px solid #0063be;"
+                                                        style="width:8%;text-align:right border-right:2px solid white;"
                                                         class='letra2'>
-                                                        <b>PRECIO</b><br />
-                                                        <b>UNITARIO</b><br />
+                                                        <b style="color:white !important;">PRECIO</b><br />
+                                                        <b style="color:white !important;">UNITARIO</b><br />
                                                     </td>
-                                                    <td align="center" style="width:8%; border:2px solid #0063be;"
+                                                    <td align="center" style="width:8%; border-left:2px solid white;"
                                                         class='letra2'>
                                                         <b></b><br />
-                                                        <b>IVA</b>
+                                                        <b style="color:white !important;">IVA</b>
                                                     </td>
-                                                    <td align="center" style="width:9%; border:2px solid #0063be;"
+                                                    <td align="center" style="width:9%; border-left:2px solid white;"
                                                         class='letra2'>
                                                         <b></b><br />
-                                                        <b>DESC.</b>
+                                                        <b style="color:white !important;">DESC.</b>
                                                     </td>
-                                                    <td align="center" style="width:11%; border:2px solid #0063be;"
+                                                    <td align="center" style="width:11%; border-left:2px solid white;"
                                                         class='letra2'>
                                                         <b></b><br />
-                                                        <b>TOTAL</b>
+                                                        <b style="color:white !important;">TOTAL</b>
                                                     </td>
                                                 </tr>
                                             </thead>
@@ -812,6 +820,10 @@
                                             <thead style='border:1px solid #FFFFFF;line-height : 18px;'>
                                                 <tr>
                                                     <td colspan="6" style="width:5%;text-align:left;font-size: 11px; ">
+                                                        <b style="color:white">
+                                                            CON LETRA:
+                                                            <span style="font-weight: 300;"
+                                                                t-esc="o.enteros_y_centavos(o.amount_total)" /></b><br/>
                                                         <b>
                                                             CON LETRA:
                                                             <span style="font-weight: 300;"
@@ -821,7 +833,7 @@
                                                     <td align="left" colspan="1"
                                                         style="width:10%;border-top:1px solid #0063be; border-bottom:2px solid #0063be; border-left:2px solid #0063be;"
                                                         class='letra2'>
-                                                        <b style="font-weight: 300; color:white;">h</b><b>SUBTOTAL</b>
+                                                        <b style="font-weight: 300; color:white;">h</b><b> SUBTOTAL</b>
                                                     </td>
                                                     <td align="left" colspan="1"
                                                         style="width:10%;border-top:1px solid #0063be; border-bottom:2px solid #0063be; border-right:2px solid #0063be;"
@@ -835,7 +847,9 @@
                                             <thead style='border:1px solid #FFFFFF;line-height : 18px;'>
                                                 <tr>
                                                     <td colspan="6" style="font-size: 12px; width:5%;text-align:left">
-                                                        <b>NOTA: </b>
+                                                        
+                                                        <b style="color:white;">NOTA:</b><br/>
+                                                        <b>NOTA:</b><br/>
                                                         <b style="font-size: 11px; font-weight: 300;">Una vez recibida
                                                             la mercancia el cliente acepta los términos y condiciones
                                                             publicados en nuestro sitio web www.mcym.com.mx</b>

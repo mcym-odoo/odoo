@@ -18,3 +18,4 @@
 * 03/03/2021 [as_mcym_report] Arreglo de dimensiones de reporte de acuerdo a reporte nativo
 * 09/03/2021 [as_mcym_report] Arreglo de dimensiones de reporte de facturas con QR
 * 12/03/2021 [as_mcym_report] Arreglo de imagenes vacias en reportes.
+* 23/03/2021 [as_mcym_report] Arreglos finales de reportes mcym.
