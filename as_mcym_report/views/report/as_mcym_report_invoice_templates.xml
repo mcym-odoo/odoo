@@ -60,12 +60,7 @@
                                 padding: 0px !important;
                             }
 
-                            td {
-                                font-family: 'Arial' !important;
-                                font-size: 12px;
-                                margin: 0px !important;
-                                padding: 0px !important;
-                            }
+                            
 
                             h4 {
                                 font-family: 'Arial' !important;
@@ -94,13 +89,7 @@
 
                             }
 
-                            tr.border_bottom td {
-                                border-bottom: 0.5pt solid #cccccc;
-                                margin-right: 3px;
-                                padding-right: 3px;
-                                font-size: 13px;
-                                font-family: 'Arial' !important;
-                            }
+                            
 
                             .borde1 {
                                 border-top: 2px solid #0063be;
@@ -111,11 +100,7 @@
 
                             }
 
-                            .borde1 thead tr td {
-                                padding-left: 5px;
-                                padding-right: 5px;
-
-                            }
+                            
 
                             .borde2 {
                                 border-left: 1px solid grey;
@@ -228,10 +213,10 @@
                         <table width="100%">
 
                             <tr>
-                                <th style="width:70%; background-color:white; text-align:left; font-size: 12px;"><b_profsalud
+                                <th style="width:70%; background-color:white; text-align:left;"><b_profsalud
                                         style="color:#0063be"><strong>WWW.MCYM.COM.MX</strong></b_profsalud><b_profsalud
-                                        style="color:white">WWW.MCYM.COM.MX-----------------------------------------------------------------</b_profsalud><b_profsalud
-                                        style="font-size: 12px;  font-weight: 300; color:#0063be;"><strong>"PROFESIONALES DE LA
+                                        style="color:white">WWW.MCYM.COM.MX--------------------------------------------</b_profsalud><b_profsalud
+                                        style="font-weight: 300; color:#0063be;"><strong>"PROFESIONALES DE LA
                                         SALUD"</strong></b_profsalud></th>
                                 <th style="width:17%; background-color:white;"></th>
                                 <th style="width:13%; background-color:white;"></th>
@@ -239,17 +224,17 @@
                             <tr>
 
                                 <th style="background-color:#0063be;"></th>
-                                <th style="background-color:white; text-align:center;"><b16
+                                <th style="background-color:white; text-align:center; font-size: 16pt !important;"><b16
                                         style="color:#0063be"><strong>FACTURA </strong></b16></th>
                                 <th style="background-color:#0063be;"></th>
                             </tr>
                             <tr>
-                                <td style="background-color:white; font-weight: 600;font-size: 10pt;">SOCIO COMERCIAL: <bh1
+                                <td style="background-color:white; font-weight: 600;font-size: 10pt !important;"><strong>SOCIO COMERCIAL: </strong><bh1
                                         style="font-weight: 300;">
-                                        <t t-esc="o.partner_shipping_id.name" /></bh1><br />RFC: <bh1
+                                        <t t-esc="o.partner_shipping_id.name" /></bh1><br /><strong>RFC: </strong><bh1
                                         style="font-weight: 300;">
                                         <t t-esc="o.partner_id.vat" /></bh1><br /></td>
-                                <td style="background-color:white; text-align:center; font-size: 18px;"><b16
+                                <td style="background-color:white; text-align:center; font-size: 16pt !important;"><b16
                                         style="color:#0063be"><strong>
                                         <t t-esc="o.name" /></strong></b16></td>
                                 <th style="background-color:white;"></th>
@@ -257,16 +242,16 @@
                             </tr>
                             <tr>
 
-                                <td style="background-color:white;font-weight: 600; font-size: 10pt;">DIRECCIÓN: <bh1
+                                <td style="background-color:white;font-weight: 600; font-size: 10pt !important;"><strong>DIRECCIÓN: </strong><bh1
                                         style="font-weight: 300;">
                                         <t t-esc="o.partner_id.street" />,
                                         <t t-esc="o.partner_id.l10n_mx_edi_colony" />,
                                         <t t-esc="o.partner_id.city" />,
                                         <t t-esc="o.partner_id.state_id.name" />,
                                         <t t-esc="o.partner_id.country_id.name" />,
-                                        <t t-esc="o.partner_id.zip" /><br /></bh1>CONTACTO: <bh1 style="font-weight: 300;">
+                                        <t t-esc="o.partner_id.zip" /><br /></bh1><strong>CONTACTO: </strong><bh1 style="font-weight: 300;">
                                         <t t-esc="o.partner_id.phone" /></bh1><br /></td>
-                                <td style="background-color:white; font-weight: 600; font-size: 10pt;">FECHA DE FACTURA: <bh1
+                                <td style="background-color:white; font-weight: 600; font-size: 10pt !important;">FECHA DE FACTURA: <bh1
                                         style="font-weight: 300;">
                                         <t
                                             t-esc="(datetime.datetime.strptime(str(o.invoice_date), '%Y-%m-%d') - datetime.timedelta(hours=4)).strftime('%d/%m/%Y')" />
@@ -279,9 +264,9 @@
                             </tr>
 
                             <tr>
-                                <td style="background-color:white; font-weight: 600;font-size: 10pt;">EMAIL: <bh1
+                                <td style="background-color:white; font-weight: 600;font-size: 10pt !important;"><strong>EMAIL: </strong><bh1
                                         style="font-weight: 300;">
-                                        <t t-esc="o.partner_id.email" /><br /></bh1>METODO DE PAGO: <bh1
+                                        <t t-esc="o.partner_id.email" /><br /></bh1><strong>METODO DE PAGO:</strong> <bh1
                                         style="font-weight: 300;">
 
                                         <t t-if="o.l10n_mx_edi_cfdi_uuid">
@@ -294,22 +279,22 @@
                                         <br />
                                     </bh1></td>
 
-                                <td style="background-color:white; font-weight: 600;font-size: 10pt;">ORIGEN: <bh1
+                                <td style="background-color:white; font-weight: 600;font-size: 10pt !important;"><strong>ORIGEN: </strong><bh1
                                         style="font-weight: 300;">
-                                        <t t-esc="o.invoice_origin" /><br /></bh1>REFERENCIA: <bh1
+                                        <t t-esc="o.invoice_origin" /><br /></bh1><strong>REFERENCIA: </strong><bh1
                                         style="font-weight: 300;">
                                         <t t-esc="o.ref" /></bh1></td>
 
 
                             </tr>
                             <tr>
-                                <td style="background-color:white; font-weight: 600; font-size: 10pt;">
+                                <td style="background-color:white; font-weight: 600; font-size: 10pt !important;">
                                     USO DE CFD: <bh1 style="font-weight: 300;">
                                         <t t-esc="o.lxn_usage(o.l10n_mx_edi_usage)" /></bh1><bh1
-                                        style="font-weight: 300; color:white;"> nuevxxxxsxxxxxxxso</bh1>FORMA DE PAGO: <bh1
+                                        style="font-weight: 300; color:white;"> nuevxxxxsxxxxxxxso</bh1><strong>FORMA DE PAGO: </strong><bh1
                                         style="font-weight: 300;">
                                         <t t-esc="o.l10n_mx_edi_payment_method_id.name" /></bh1> </td>
-                                <td style="background-color:white; font-weight: 600;font-size: 10pt;">CONDICIONES: <bh1
+                                <td style="background-color:white; font-weight: 600;font-size: 10pt !important;"><strong>CONDICIONES: </strong><bh1
                                         style="font-weight: 300;">
                                         <t t-esc="o.invoice_payment_term_id.name" /></bh1></td>
                             </tr>
