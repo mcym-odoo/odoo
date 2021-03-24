@@ -88,27 +88,6 @@
                                         padding: 0px !important;
                                     }
 
-                                    body {
-                                        font-family: 'Arial' !important;
-                                        font-size: 18px;
-                                    }
-
-                                    hr {
-                                        border-bottom: solid;
-                                        border-width: 1pt border-top:0px !important;
-                                        padding: 0px !important;
-                                        margin: 0px !important;
-
-                                    }
-
-                                    tr.border_bottom td {
-                                        border-bottom: 0.5pt solid #cccccc;
-                                        margin-right: 3px;
-                                        padding-right: 3px;
-                                        font-size: 13px;
-                                        font-family: 'Arial' !important;
-                                    }
-
                                     .borde1 {
                                         border-top: 2px solid #0063be;
                                         border-left: 2px solid #0063be;
@@ -118,11 +97,6 @@
 
                                     }
 
-                                    .borde1 thead tr td {
-                                        padding-left: 5px;
-                                        padding-right: 5px;
-
-                                    }
 
                                     .borde2 {
                                         border-left: 1px solid grey;
@@ -147,20 +121,6 @@
                                         text-indent: 30px;
                                     }
 
-                                    .hr {
-                                        background-color: #0063be;
-                                        height: 20px;
-                                        margin-left: 0%;
-                                        width: 100%;
-                                    }
-
-                                    .hr_derecha {
-                                        background-color: green;
-                                        height: 40px;
-                                        margin-left: 50%;
-                                        margin-right: 30%;
-                                        width: 100%;
-                                    }
 
                                     b1 {
                                         font-size: 14pt;
@@ -219,9 +179,6 @@
                                         font-weight: bold;
                                     }
 
-                                    body {
-                                        font-family: 'Arial' !important;
-                                    }
 
                                     .borde1 {
                                         border: 1px solid grey;
@@ -245,7 +202,7 @@
                                         margin-top: 5px;
                                     }
 
-                                    .columnasr tr td {
+                                    .columnasr {
                                         font-size: 15px !important;
                                         font-family: 'Arial' !important;
                                         margin-bottom: 0px;
@@ -263,9 +220,9 @@
 
 
                                     .letra2 {
-                                        font-size: 11px;
+                                        font-size: 14px;
 
-                                        padding: 2px;
+                                        padding-left: 10px;
                                         color: #000000;
                                     }
 
@@ -285,13 +242,7 @@
                                         color: #000000;
                                     }
 
-                                    .table thead tr td {
-                                        padding: 1px;
-                                        color: #000000;
-                                        background-color: #FFFFFF;
-
-                                    }
-
+                                    
                                     .margen {
                                         margin: 3px;
                                     }
@@ -547,91 +498,91 @@
                                 <div style="text-align:center;">
                                     <table width="100%" name='page_table' style='table-layout: fixed;'>
                                         <t t-if="o.state == 'draft'" width="100%">
-                                            <thead style='border:2px solid #0063be;'>
+                                            <!-- <thead style='border:2px solid #0063be;'> -->
                                                 <tr style='border:2px solid #0063be;background:#0063be !important;'>
-                                                    <td style="width:10%;border-right:2px solid white;" class='letra2'>
+                                                    <td style="width:10%;border-right:2px solid white;" >
                                                         <b></b><br />
-                                                        <b style="color:white !important;">IMAGEN</b>
+                                                        <b style="color:white !important; font-size: 16px !important;">IMAGEN</b>
                                                     </td>
-                                                    <td style="width:37%;border-right:2px solid white;" class='letra2'>
+                                                    <td style="width:37%;border-right:2px solid white;" >
                                                         <b></b><br />
-                                                        <b style="color:white !important;">DESCRIPCIÓN</b>
+                                                        <b style="color:white !important; font-size: 16px !important;">DESCRIPCIÓN</b>
                                                     </td>
-                                                    <td style="width:6%;border-right:2px solid white;" class='letra2'>
+                                                    <td style="width:6%;border-right:2px solid white;" >
                                                         <b></b><br />
-                                                        <b style="color:white !important;">CANT</b></td>
+                                                        <b style="color:white !important; font-size: 16px !important;">CANT</b></td>
 
-                                                    <td style="width:10%;border-right:2px solid white;" class='letra2'>
-                                                        <b style="color:white !important;">UNIDAD</b><br />
-                                                        <b style="color:white !important;"> DE </b><br />
-                                                        <b style="color:white !important;">MEDIDA</b><br />
+                                                    <td style="width:10%;border-right:2px solid white;" >
+                                                        <b style="color:white !important; font-size: 16px !important;">UNIDAD</b><br />
+                                                        <b style="color:white !important; font-size: 16px !important;"> DE </b><br />
+                                                        <b style="color:white !important; font-size: 16px !important;">MEDIDA</b><br />
                                                     </td>
-                                                    <td style="width:10%;border-right:2px solid white;" class='letra2'>
-                                                        <b style="color:white !important;">PRECIO</b><br />
-                                                        <b style="color:white !important;">UNITARIO</b><br />
+                                                    <td style="width:10%;border-right:2px solid white;" >
+                                                        <b style="color:white !important; font-size: 16px !important;">PRECIO</b><br />
+                                                        <b style="color:white !important; font-size: 16px !important;">UNITARIO</b><br />
                                                     </td>
-                                                    <td style="width:9%; border-right:2px solid white;" class='letra2'>
+                                                    <td style="width:9%; border-right:2px solid white;" >
                                                         <b></b><br />
-                                                        <b style="color:white !important;">IVA</b>
+                                                        <b style="color:white !important;font-size: 16px !important;">IVA</b>
                                                     </td>
                                                     <td style="width:12%;text-align:right border-right:2px solid white;"
-                                                        class='letra2'>
+                                                        >
                                                         <b></b><br />
-                                                        <b style="color:white !important;">DESC.</b>
+                                                        <b style="color:white !important;font-size: 16px !important;">DESC.</b>
                                                     </td>
-                                                    <td style="width:10%; border-left:2px solid white;" class='letra2'>
+                                                    <td style="width:10%; border-left:2px solid white;" >
                                                         <b></b><br />
-                                                        <b style="color:white !important;">TOTAL</b>
+                                                        <b style="color:white !important;font-size: 16px !important;">TOTAL</b>
                                                     </td>
                                                 </tr>
-                                            </thead>
-                                            <thead style=' border:2px solid #0063be;'>
+                                            <!-- </thead> -->
+                                            <!-- <thead style=' border:2px solid #0063be;'> -->
                                                 <t t-set="weight" t-value="0.00" />
                                                 <div t-foreach="o.order_line" t-as="d" width="100%">
 
                                                     <tr style=' border:2px solid #0063be;fixed;'>
 
                                                         <td style="width:10%;  border:2px solid #0063be;"
-                                                            class='letra2'>
+                                                            >
                                                             <!-- <img t-attf-src="data:image/*;base64,{{d.as_image}}"
                                                             style="width:60px;height:20%;padding:2px;" /> -->
                                                             <img t-if="d.as_image"
                                                                 t-att-src="image_data_uri(d.as_image)"
                                                                 style="max-height: 6rem; max-width: 100%;" />
                                                         </td>
-                                                        <td style="width:40%;  border:2px solid #0063be;"
-                                                            class='letra2'>
+                                                        <td style="width:40%; text-align:left; padding-left:10px !important; border:2px solid #0063be;font-size: 16px !important;"
+                                                            >
                                                             <t t-esc="d.product_id.name" /><br />[
                                                             <t t-esc="d.product_id.default_code" />]
                                                         </td>
-                                                        <td style="width:6%;  border:2px solid #0063be;" class='letra2'>
+                                                        <td style="width:6%;  border:2px solid #0063be;font-size: 16px !important;" >
                                                             <t t-esc="int(d.product_uom_qty)" />
                                                         </td>
-                                                        <td style="width:10%;  border:2px solid #0063be;"
-                                                            class='letra2'>
+                                                        <td style="width:10%;  border:2px solid #0063be;font-size: 16px !important;"
+                                                            >
                                                             <t t-esc="d.product_uom.name" />
                                                         </td>
-                                                        <td style="width:10%;  border:2px solid #0063be;"
-                                                            class='letra2'>
+                                                        <td style="width:10%;  border:2px solid #0063be;font-size: 16px !important;"
+                                                            >
                                                             $
                                                             <t t-esc="'{:,.2f}'.format(d.price_unit)" />
                                                         </td>
-                                                        <td style="width:14%; border:2px solid #0063be;" class='letra2'>
+                                                        <td style="width:14%; border:2px solid #0063be;font-size: 16px !important;" >
                                                             <t t-esc="d.tax_id.description" />
                                                         </td>
-                                                        <td style="width:12%; border:2px solid #0063be;" class='letra2'>
+                                                        <td style="width:12%; border:2px solid #0063be;font-size: 16px !important;" >
                                                             <t t-esc="'{:,.2f}'.format(d.discount)" />%
                                                         </td>
-                                                        <td style="width:10%; border:2px solid #0063be;" class='letra2'>
+                                                        <td style="width:10%; border:2px solid #0063be;font-size: 16px !important;" >
                                                             $
                                                             <t t-esc="'{:,.2f}'.format(d.price_subtotal)" />
                                                         </td>
 
                                                     </tr>
                                                 </div>
-                                            </thead>
+                                            <!-- </thead> -->
                                             <br />
-                                            <thead style='border:1px solid #FFFFFF;line-height : 18px;'>
+                                            <!-- <thead style='border:1px solid #FFFFFF;line-height : 18px;'> -->
                                                 <tr>
                                                 <tr>
 
@@ -647,12 +598,12 @@
 
                                                     </td>
                                                     <td align="left" colspan="1"
-                                                        style="width:10%;border-top:1px solid #0063be; border-bottom:2px solid #0063be; border-left:2px solid #0063be;"
+                                                        style="width:10%;border-top:1px solid #0063be; border-bottom:2px solid #0063be; border-left:2px solid #0063be;font-size: 16px !important;"
                                                         class='letra2'>
                                                         <b style="font-weight: 300; color:white;">h</b><b> SUBTOTAL</b>
                                                     </td>
                                                     <td align="left" colspan="1"
-                                                        style="width:10%;border-top:1px solid #0063be; border-bottom:2px solid #0063be; border-right:2px solid #0063be;"
+                                                        style="width:10%;border-top:1px solid #0063be; border-bottom:2px solid #0063be; border-right:2px solid #0063be;font-size: 16px !important;"
                                                         class='letranumber'>
                                                         <b>
                                                             $
@@ -660,8 +611,8 @@
                                                     </td>
                                                 </tr>
                                                 </tr>
-                                            </thead>
-                                            <thead style='border:1px solid #FFFFFF;line-height : 18px;'>
+                                            <!-- </thead> -->
+                                            <!-- <thead style='border:1px solid #FFFFFF;line-height : 18px;'> -->
                                                 <tr>
                                                     <td colspan="6" style="width:5%;text-align:left" class='letrita'>
 
@@ -669,155 +620,155 @@
 
                                                     </td>
                                                     <td align="left" colspan="1"
-                                                        style="width:10%;border-top:1px solid #0063be; border-bottom:2px solid #0063be; border-left:2px solid #0063be;"
+                                                        style="width:10%;border-top:1px solid #0063be; border-bottom:2px solid #0063be; border-left:2px solid #0063be;font-size: 16px !important;"
                                                         class='letra2'>
-                                                        <b style="font-weight: 300; color:white;">h</b><b> IVA 16% </b>
+                                                        <b style="font-weight: 300; color:white;font-size: 16px !important;">h</b><b> IVA 16% </b>
                                                     </td>
                                                     <td align="left" colspan="1"
-                                                        style="width:10%;border-top:1px solid #0063be; border-bottom:2px solid #0063be; border-right:2px solid #0063be;"
+                                                        style="width:10%;border-top:1px solid #0063be; border-bottom:2px solid #0063be; border-right:2px solid #0063be;font-size: 16px !important;"
                                                         class='letranumber'>
                                                         <b>
                                                             $
                                                             <t t-esc="'{:,.2f}'.format(o.amount_tax)" /></b>
                                                     </td>
                                                 </tr>
-                                            </thead>
-                                            <thead style='border:1px solid #FFFFFF;line-height : 18px;'>
+                                            <!-- </thead> -->
+                                            <!-- <thead style='border:1px solid #FFFFFF;line-height : 18px;'> -->
                                                 <tr>
                                                     <td colspan="6" style="width:5%;text-align:left" class='letrita'>
                                                         <b style="font-weight: 300;"></b>
 
                                                     </td>
                                                     <td align="left" colspan="1"
-                                                        style="width:10%;border-top:1px solid #0063be; border-bottom:2px solid #0063be; border-left:2px solid #0063be;"
-                                                        class='letra2'>
+                                                        style="width:10%;border-top:1px solid #0063be; border-bottom:2px solid #0063be; border-left:2px solid #0063be;font-size: 16px !important;"
+                                                        >
                                                         <b style="font-weight: 300; color:white;">h</b><b> IVA 0% </b>
                                                     </td>
                                                     <td align="left" colspan="1"
-                                                        style="width:10%;border-top:1px solid #0063be; border-bottom:2px solid #0063be; border-right:2px solid #0063be;"
+                                                        style="width:10%;border-top:1px solid #0063be; border-bottom:2px solid #0063be; border-right:2px solid #0063be;font-size: 16px !important;"
                                                         class='letranumber'>
                                                         <b>
                                                             $
                                                             <t t-esc="0.0" /></b>
                                                     </td>
                                                 </tr>
-                                            </thead>
-                                            <thead style='border:1px solid #FFFFFF;line-height : 18px;'>
+                                            <!-- </thead> -->
+                                            <!-- <thead style='border:1px solid #FFFFFF;line-height : 18px;'> -->
                                                 <tr>
-                                                    <td colspan="6" style="width:5%;text-align:left" class='letrita'>
+                                                    <td colspan="6" style="width:5%;text-align:left;font-size: 16px !important;" class='letrita'>
                                                         <b style="font-weight: 300;"> </b>
 
                                                     </td>
                                                     <td align="left" colspan="1"
-                                                        style="width:10%;border-top:1px solid #0063be; border-bottom:2px solid #0063be; border-left:2px solid #0063be;"
-                                                        class='letra2'>
+                                                        style="width:10%;border-top:1px solid #0063be; border-bottom:2px solid #0063be; border-left:2px solid #0063be;font-size: 16px !important;"
+                                                        >
                                                         <b style="font-weight: 300; color:white;">h</b><b>TOTAL </b>
                                                     </td>
                                                     <td align="left" colspan="1"
-                                                        style="width:10%;border-top:1px solid #0063be; border-bottom:2px solid #0063be; border-right:2px solid #0063be;"
+                                                        style="width:10%;border-top:1px solid #0063be; border-bottom:2px solid #0063be; border-right:2px solid #0063be;font-size: 16px !important;"
                                                         class='letranumber'>
                                                         <b>
                                                             $
                                                             <t t-esc="'{:,.2f}'.format(o.amount_total)" /></b>
                                                     </td>
                                                 </tr>
-                                            </thead>
+                                            <!-- </thead> -->
 
                                         </t>
                                         <t t-if="o.state == 'sale'" width="100%">
-                                            <thead style='border:2px solid #0063be;'>
+                                            <!-- <thead style='border:2px solid #0063be;'> -->
                                                 <tr style='border:2px solid #0063be;background:#0063be !important;'>
                                                     <td align="center" style="width:40%;border-right:2px solid white;"
-                                                        class='letra2'>
+                                                        >
                                                         <b></b><br />
-                                                        <b style="color:white !important;">DESCRIPCIÓN</b>
+                                                        <b style="color:white !important;font-size: 16px !important;">DESCRIPCIÓN</b>
                                                     </td>
                                                     <td align="center" style="width:6%;border-right:2px solid white;"
-                                                        class='letra2'>
+                                                        >
                                                         <b></b><br />
-                                                        <b style="color:white !important;">CANT</b>
+                                                        <b style="color:white !important;font-size: 16px !important;">CANT</b>
                                                     </td>
                                                     <td align="center" style="width:8%;border-right:2px solid white;"
-                                                        class='letra2'>
-                                                        <b style="color:white !important;">UNIDAD</b><br />
-                                                        <b style="color:white !important;"> DE </b><br />
-                                                        <b style="color:white !important;">MEDIDA</b><br />
+                                                        >
+                                                        <b style="color:white !important;font-size: 16px !important;">UNIDAD</b><br />
+                                                        <b style="color:white !important;font-size: 16px !important;"> DE </b><br />
+                                                        <b style="color:white !important;font-size: 16px !important;">MEDIDA</b><br />
                                                     </td>
                                                     <td align="center" style="width:10%;border-right:2px solid white;"
-                                                        class='letra2'>
-                                                        <b style="color:white !important;">LOTE Y</b><br />
-                                                        <b style="color:white !important;">CADUCIDAD</b><br />
+                                                        >
+                                                        <b style="color:white !important;font-size: 16px !important;">LOTE Y</b><br />
+                                                        <b style="color:white !important;font-size: 16px !important;">CADUCIDAD</b><br />
                                                     </td>
                                                     <td align="center"
                                                         style="width:8%;text-align:right border-right:2px solid white;"
-                                                        class='letra2'>
-                                                        <b style="color:white !important;">PRECIO</b><br />
-                                                        <b style="color:white !important;">UNITARIO</b><br />
+                                                        >
+                                                        <b style="color:white !important;font-size: 16px !important;">PRECIO</b><br />
+                                                        <b style="color:white !important;font-size: 16px !important;">UNITARIO</b><br />
                                                     </td>
                                                     <td align="center" style="width:8%; border-left:2px solid white;"
-                                                        class='letra2'>
+                                                        >
                                                         <b></b><br />
-                                                        <b style="color:white !important;">IVA</b>
+                                                        <b style="color:white !important;font-size: 16px !important;">IVA</b>
                                                     </td>
                                                     <td align="center" style="width:9%; border-left:2px solid white;"
-                                                        class='letra2'>
+                                                        >
                                                         <b></b><br />
-                                                        <b style="color:white !important;">DESC.</b>
+                                                        <b style="color:white !important;font-size: 16px !important;">DESC.</b>
                                                     </td>
                                                     <td align="center" style="width:11%; border-left:2px solid white;"
-                                                        class='letra2'>
+                                                        >
                                                         <b></b><br />
-                                                        <b style="color:white !important;">TOTAL</b>
+                                                        <b style="color:white !important;font-size: 16px !important;">TOTAL</b>
                                                     </td>
                                                 </tr>
-                                            </thead>
-                                            <thead style=' border:2px solid #0063be;'>
+                                            <!-- </thead> -->
+                                            <!-- <thead style=' border:2px solid #0063be;'> -->
                                                 <t t-set="weight" t-value="0.00" />
                                                 <div t-foreach="o.order_line" t-as="d" width="100%">
 
-                                                    <tr style=' border:2px solid #0063be;fixed;'>
+                                                    <tr style='border:2px solid #0063be;fixed;'>
 
-                                                        <td style="width:40%;  border:2px solid #0063be;"
-                                                            class='letra2'>
+                                                        <td style="width:40%; text-align:left;font-size: 16px !important; border:2px solid #0063be;  padding-left:10px !important;"
+                                                            >
                                                             <t t-esc="d.product_id.name" /><br />[
                                                             <t t-esc="d.product_id.default_code" />]
                                                         </td>
 
-                                                        <td style="width:6%;  border:2px solid #0063be;" class='letra2'>
+                                                        <td style="width:6%; font-size: 16px !important; border:2px solid #0063be;" >
                                                             <t t-esc="int(d.product_uom_qty)" />
                                                         </td>
 
-                                                        <td style="width:8%;  border:2px solid #0063be;" class='letra2'>
+                                                        <td style="width:8%;  border:2px solid #0063be;font-size: 16px !important;" >
                                                             <t t-esc="d.product_uom.name" />
                                                         </td>
 
-                                                        <td style="width:8%;  border:2px solid #0063be;" class='letra2'>
+                                                        <td style="width:8%;  border:2px solid #0063be;font-size: 16px !important;" >
                                                             <t t-esc="o.get_lote(d.product_id)" />
                                                         </td>
 
-                                                        <td style="width:8%; border:2px solid #0063be;" class='letra2'>
+                                                        <td style="width:8%; border:2px solid #0063be;font-size: 16px !important;" >
                                                             $
                                                             <t t-esc="'{:,.2f}'.format(d.price_unit)" />
                                                         </td>
 
-                                                        <td style="width:8%; border:2px solid #0063be;" class='letra2'>
+                                                        <td style="width:8%; border:2px solid #0063be;font-size: 16px !important;" >
                                                             <t t-esc="d.tax_id.description" />
                                                         </td>
 
-                                                        <td style="width:9%; border:2px solid #0063be;" class='letra2'>
+                                                        <td style="width:9%; border:2px solid #0063be;font-size: 16px !important;" >
                                                             <t t-esc="'{:,.2f}'.format(d.discount)" />%
                                                         </td>
 
-                                                        <td style="width:11%; border:2px solid #0063be;" class='letra2'>
+                                                        <td style="width:11%; border:2px solid #0063be;font-size: 16px !important;" >
                                                             $
                                                             <t t-esc="'{:,.2f}'.format(d.price_subtotal)" />
                                                         </td>
                                                     </tr>
 
                                                 </div>
-                                            </thead>
+                                            <!-- </thead> -->
                                             <br />
-                                            <thead style='border:1px solid #FFFFFF;line-height : 18px;'>
+                                            <!-- <thead style='border:1px solid #FFFFFF;line-height : 18px;'> -->
                                                 <tr>
                                                     <td colspan="6" style="width:5%;text-align:left;font-size: 11px; ">
                                                         <b style="color:white">
@@ -831,20 +782,20 @@
 
                                                     </td>
                                                     <td align="left" colspan="1"
-                                                        style="width:10%;border-top:1px solid #0063be; border-bottom:2px solid #0063be; border-left:2px solid #0063be;"
+                                                        style="width:10%;border-top:1px solid #0063be; border-bottom:2px solid #0063be; border-left:2px solid #0063be;font-size: 16px !important; "
                                                         class='letra2'>
-                                                        <b style="font-weight: 300; color:white;">h</b><b> SUBTOTAL</b>
+                                                        <b style="font-weight: 300;color:white;">h</b><b> SUBTOTAL</b>
                                                     </td>
                                                     <td align="left" colspan="1"
-                                                        style="width:10%;border-top:1px solid #0063be; border-bottom:2px solid #0063be; border-right:2px solid #0063be;"
+                                                        style="width:10%;border-top:1px solid #0063be; border-bottom:2px solid #0063be; border-right:2px solid #0063be;font-size: 16px !important;"
                                                         class='letranumber'>
                                                         <b>
                                                             $
                                                             <t t-esc="'{:,.2f}'.format(o.amount_untaxed)" /></b>
                                                     </td>
                                                 </tr>
-                                            </thead>
-                                            <thead style='border:1px solid #FFFFFF;line-height : 18px;'>
+                                            <!-- </thead>
+                                            <thead style='border:1px solid #FFFFFF;line-height : 18px;'> -->
                                                 <tr>
                                                     <td colspan="6" style="font-size: 12px; width:5%;text-align:left">
                                                         
@@ -855,20 +806,20 @@
                                                             publicados en nuestro sitio web www.mcym.com.mx</b>
                                                     </td>
                                                     <td align="left" colspan="1"
-                                                        style="width:10%;border-top:1px solid #0063be; border-bottom:2px solid #0063be; border-left:2px solid #0063be;"
+                                                        style="width:10%;border-top:1px solid #0063be; border-bottom:2px solid #0063be; border-left:2px solid #0063be;font-size: 16px !important;"
                                                         class='letra2'>
                                                         <b style="font-weight: 300; color:white;">h</b><b>IVA 16% </b>
                                                     </td>
                                                     <td align="left" colspan="1"
-                                                        style="width:10%;border-top:1px solid #0063be; border-bottom:2px solid #0063be; border-right:2px solid #0063be;"
+                                                        style="width:10%;border-top:1px solid #0063be;font-size: 16px !important; border-bottom:2px solid #0063be; border-right:2px solid #0063be;"
                                                         class='letranumber'>
                                                         <b>
                                                             $
                                                             <t t-esc="o.amount_tax" /></b>
                                                     </td>
                                                 </tr>
-                                            </thead>
-                                            <thead style='border:1px solid #FFFFFF;line-height : 18px;'>
+                                            <!-- </thead>
+                                            <thead style='border:1px solid #FFFFFF;line-height : 18px;'> -->
                                                 <tr>
                                                     <td colspan="6" style="width:5%;text-align:left" class='letra2'>
                                                         <b style=" font-size: 12px; font-weight: 300;">Debemos y
@@ -876,20 +827,20 @@
                                                             MALDONADO la cantidad especificada en este documento, </b>
                                                     </td>
                                                     <td align="left" colspan="1"
-                                                        style="width:10%;border-top:1px solid #0063be; border-bottom:2px solid #0063be; border-left:2px solid #0063be;"
+                                                        style="width:10%;border-top:1px solid #0063be; border-bottom:2px solid #0063be; border-left:2px solid #0063be;font-size: 16px !important;"
                                                         class='letra2'>
                                                         <b style="font-weight: 300; color:white;">h</b><b>IVA 0%</b>
                                                     </td>
                                                     <td align="left" colspan="1"
-                                                        style="width:10%;border-top:1px solid #0063be; border-bottom:2px solid #0063be; border-right:2px solid #0063be;"
+                                                        style="width:10%;border-top:1px solid #0063be; border-bottom:2px solid #0063be; border-right:2px solid #0063be;font-size: 16px !important; "
                                                         class='letranumber'>
                                                         <b>
                                                             $
                                                             <t t-esc="0.0" /></b>
                                                     </td>
                                                 </tr>
-                                            </thead>
-                                            <thead style='border:1px solid #FFFFFF;line-height : 18px;'>
+                                            <!-- </thead>
+                                            <thead style='border:1px solid #FFFFFF;line-height : 18px;'> -->
                                                 <tr>
                                                     <td colspan="6" style="width:5%;text-align:left" class='letra2'>
                                                         <b style="font-size: 12px; font-weight: 300;"> a la fecha
@@ -898,29 +849,29 @@
                                                         </b>
                                                     </td>
                                                     <td align="left" colspan="1"
-                                                        style="width:10%;border-top:1px solid #0063be; border-bottom:2px solid #0063be; border-left:2px solid #0063be;"
+                                                        style="width:10%;border-top:1px solid #0063be; border-bottom:2px solid #0063be; border-left:2px solid #0063be;font-size: 16px !important;"
                                                         class='letra2'>
 
                                                         <b style="font-weight: 300; color:white;">h</b><b>TOTAL</b>
                                                     </td>
                                                     <td align="left" colspan="1"
-                                                        style="width:10%;border-top:1px solid #0063be; border-bottom:2px solid #0063be; border-right:2px solid #0063be;"
+                                                        style="width:10%;border-top:1px solid #0063be; border-bottom:2px solid #0063be; border-right:2px solid #0063be;font-size: 16px !important;"
                                                         class='letranumber'>
                                                         <b>
                                                             $
                                                             <t t-esc="'{:,.2f}'.format(o.amount_total)" /></b>
                                                     </td>
                                                 </tr>
-                                            </thead>
-                                            <thead style='border:1px solid #FFFFFF;line-height : 18px;'>
+                                            <!-- </thead>
+                                            <thead style='border:1px solid #FFFFFF;line-height : 18px;'> -->
                                                 <tr>
                                                     <td colspan="6" style="width:5%;text-align:left" class='letra2'>
                                                         <b style="font-size: 12px; font-weight: 300;">significa la
                                                             aceptación a este pagare</b>
                                                     </td>
                                                 </tr>
-                                            </thead>
-                                            <thead style='border:1px solid #FFFFFF;line-height : 18px;'>
+                                            <!-- </thead>
+                                            <thead style='border:1px solid #FFFFFF;line-height : 18px;'> -->
                                                 <tr>
                                                     <td colspan="6" style="font-size: 12px; width:5%;text-align:left"
                                                         class='letrita'>
@@ -939,7 +890,7 @@
 
                                                     </td>
                                                 </tr>
-                                            </thead>
+                                            <!-- </thead> -->
 
                                         </t>
                                     </table>

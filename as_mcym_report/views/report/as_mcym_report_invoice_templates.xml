@@ -196,8 +196,8 @@
                             <div class="col-8" style="text-align:center;" width="100%">
 
                                 <div>
-                                    <b1 style="color:#0063be;"><strong>KENETH JANIN CANO MALDONADO</strong></b1><br />
-                                    <b1 style="color:#0063be;">RFC: CAMK881112B19</b1><br />
+                                    <b1 style="color:#0063be;font-size: 20px !important;"><strong>KENETH JANIN CANO MALDONADO</strong></b1><br />
+                                    <b1 style="color:#0063be;font-size: 20px !important;">RFC: CAMK881112B19</b1><br />
                                     <p style="line-height: 100%">
                                         <b2 ><strong>REGIMEN FISCAL: </strong></b2><b2 style="font-weight: 300;"
                                             >612 Personas física con actividades empresariales y
@@ -320,7 +320,7 @@
                             <div style="text-align:center;">
 
                                 <table width="100%" name='page_table' style='table-layout: fixed;'>
-                                    <thead style='border:2px solid #0063be;'>
+                                    <!-- <thead style='border:2px solid #0063be;'> -->
                                         <tr style='border:2px solid #0063be;background:#0063be !important;'>
 
                                             <td style="width:30%;border-right:2px solid white;" class='letra2'>
@@ -367,13 +367,13 @@
                                                 <b style="color:white !important;">TOTAL</b>
                                             </td>
                                         </tr>
-                                    </thead>
-                                    <thead style=' border:2px solid #0063be;'>
+                                    <!-- </thead>
+                                    <thead style=' border:2px solid #0063be;'> -->
                                         <t t-set="weight" t-value="0.00" />
                                         <div t-foreach="o.invoice_line_ids" t-as="d" width="100%">
 
                                             <tr style=' border:2px solid #0063be;fixed;'>
-                                                <td style="width:10%;  border:2px solid #0063be;" class='letra2f'>
+                                                <td style="width:10%;  text-align:left; border:2px solid #0063be; padding-left:10px !important;" class='letra2f'>
                                                     <t t-esc="d.product_id.name" /><br />[
                                                     <t t-esc="d.product_id.default_code" />]
                                                 </td>
@@ -410,8 +410,8 @@
                                             </tr>
                                         </div>
 
-                                    </thead>
-                                    <thead style='border:1px solid #FFFFFF;line-height : 18px;'>
+                                    <!-- </thead>
+                                    <thead style='border:1px solid #FFFFFF;line-height : 18px;'> -->
                                         <tr>
                                             <td colspan="8" style="width:5%;text-align:left" class='letra2'>
                                                 <b style="color:white">
@@ -439,8 +439,8 @@
                                                     <t t-esc="'{:,.2f}'.format(o.amount_untaxed)" /></b>
                                             </td>
                                         </tr>
-                                    </thead>
-                                    <thead style='border:1px solid #FFFFFF;line-height : 18px;'>
+                                    <!-- </thead>
+                                    <thead style='border:1px solid #FFFFFF;line-height : 18px;'> -->
                                         <tr>
                                             <td colspan="8" style="width:5%;text-align:left" class='letra2'>
                                                 <b style="font-size: 10pt;">NOTA: </b>
@@ -462,8 +462,8 @@
                                                     <t t-esc="'{:,.2f}'.format(o.amount_tax)" /></b>
                                             </td>
                                         </tr>
-                                    </thead>
-                                    <thead style='border:1px solid #FFFFFF;line-height : 18px;'>
+                                    <!-- </thead>
+                                    <thead style='border:1px solid #FFFFFF;line-height : 18px;'> -->
                                         <tr>
                                             <td colspan="8" style="width:5%;text-align:left" class='letra2'>
                                                 <b style="font-weight: 300;font-size: 10pt;">Debemos y pagaremos incondicionalmente a la
@@ -484,8 +484,8 @@
                                                     <t t-esc="0.0" /></b>
                                             </td>
                                         </tr>
-                                    </thead>
-                                    <thead style='border:1px solid #FFFFFF;line-height : 18px;'>
+                                    <!-- </thead>
+                                    <thead style='border:1px solid #FFFFFF;line-height : 18px;'> -->
                                         <tr>
                                             <td colspan="8" style="width:5%;text-align:left" class='letra2'>
                                                 <b style="font-weight: 300;font-size: 10pt;">a la fecha especificada del mismo, de no
@@ -506,15 +506,15 @@
                                                     <t t-esc="'{:,.2f}'.format(o.amount_total)" /></b>
                                             </td>
                                         </tr>
-                                    </thead>
-                                    <thead style='border:1px solid #FFFFFF;line-height : 18px;'>
+                                    <!-- </thead>
+                                    <thead style='border:1px solid #FFFFFF;line-height : 18px;'> -->
                                         <tr>
                                             <td colspan="8" style="width:5%;text-align:left" class='letra2'>
                                                 <b style="font-weight: 300;font-size: 10pt;">la aceptación a este pagare</b>
                                             </td>
                                         </tr>
-                                    </thead>
-                                    <thead style='border:1px solid #FFFFFF;line-height : 18px;'>
+                                    <!-- </thead>
+                                    <thead style='border:1px solid #FFFFFF;line-height : 18px;'> -->
                                         <tr>
                                             <td colspan="6" style="width:5%;text-align:left;font-size: 10pt;">
                                                 <b style="color:white;">DATOS BANCARIOS:</b><br />
@@ -535,7 +535,7 @@
 
                                             </td>
                                         </tr>
-                                    </thead>
+                                    <!-- </thead> -->
 
 
                                 </table>
