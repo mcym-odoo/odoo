@@ -299,7 +299,7 @@
                                         <h4>
                                             <div>
                                                 <img t-att-src="image_data_uri(o.company_id.logo)"
-                                                    style="height: 160px; width: 160px; align:right;" />
+                                                    style="height: 190px; width: 190px; align:right;" />
                                             </div>
                                         </h4>
 
